@@ -5,30 +5,32 @@ export default function Home() {
         style={{
           maxWidth: "1240px",
           margin: "0 auto",
-          padding: "24px",
+          padding: "22px 24px 10px",
           display: "flex",
           justifyContent: "space-between",
           alignItems: "center",
         }}
       >
-        <div style={{ display: "flex", alignItems: "center", gap: "12px" }}>
+        <div style={{ display: "flex", alignItems: "center", gap: "11px" }}>
           <div
             style={{
-              width: "38px",
-              height: "38px",
-              borderRadius: "14px",
-              background: "#1F1F1F",
-              color: "#D7BE8A",
+              width: "34px",
+              height: "34px",
+              borderRadius: "50%",
+              border: "1px solid rgba(31,31,31,0.16)",
+              background: "rgba(255,255,255,0.55)",
               display: "grid",
               placeItems: "center",
+              color: "#9B7A45",
               fontWeight: 800,
+              fontSize: "13px",
               letterSpacing: "-0.08em",
             }}
           >
             CH
           </div>
           <div>
-            <div style={{ fontSize: "22px", fontWeight: 800, letterSpacing: "-0.05em" }}>
+            <div style={{ fontSize: "21px", fontWeight: 800, letterSpacing: "-0.05em" }}>
               Creator House
             </div>
             <div style={{ fontSize: "12px", color: "#8A6A3B", marginTop: "2px" }}>
@@ -51,10 +53,10 @@ export default function Home() {
         style={{
           maxWidth: "1240px",
           margin: "0 auto",
-          padding: "42px 24px 80px",
+          padding: "26px 24px 72px",
           display: "grid",
           gridTemplateColumns: "1fr 0.95fr",
-          gap: "54px",
+          gap: "46px",
           alignItems: "center",
         }}
       >
@@ -81,9 +83,9 @@ export default function Home() {
           </div>
         </div>
 
-        <div style={{ position: "relative", minHeight: "620px" }}>
-          <div style={{ position: "absolute", right: "46px", top: "64px", width: "78%", height: "500px", borderRadius: "46px", background: "rgba(255,255,255,0.34)", border: "1px solid rgba(31,31,31,0.06)", transform: "rotate(5deg)" }} />
-          <div style={{ position: "absolute", right: "22px", top: "32px", width: "84%", height: "535px", borderRadius: "48px", background: "rgba(255,255,255,0.58)", border: "1px solid rgba(31,31,31,0.08)", transform: "rotate(-3deg)", boxShadow: "0 30px 90px rgba(31,31,31,0.08)" }} />
+        <div style={{ position: "relative", minHeight: "610px" }}>
+          <div style={{ position: "absolute", right: "48px", top: "62px", width: "78%", height: "500px", borderRadius: "46px", background: "rgba(255,255,255,0.34)", border: "1px solid rgba(31,31,31,0.06)", transform: "rotate(5deg)" }} />
+          <div style={{ position: "absolute", right: "22px", top: "30px", width: "84%", height: "535px", borderRadius: "48px", background: "rgba(255,255,255,0.58)", border: "1px solid rgba(31,31,31,0.08)", transform: "rotate(-3deg)", boxShadow: "0 30px 90px rgba(31,31,31,0.08)" }} />
 
           <div
             style={{
@@ -105,19 +107,46 @@ export default function Home() {
             <div
               style={{
                 position: "relative",
-                height: "360px",
+                height: "380px",
                 borderRadius: "36px",
                 overflow: "hidden",
-                background: "linear-gradient(135deg, #DEC7A2 0%, #9A7443 100%)",
+                background:
+                  "radial-gradient(circle at 50% 18%, #F7E8D2 0%, #D8B985 28%, #9B7442 62%, #5B3F25 100%)",
                 marginBottom: "18px",
               }}
             >
               <div
                 style={{
                   position: "absolute",
+                  left: "50%",
+                  top: "68px",
+                  transform: "translateX(-50%)",
+                  width: "168px",
+                  height: "168px",
+                  borderRadius: "50%",
+                  background: "rgba(255,255,255,0.28)",
+                  boxShadow: "0 0 80px rgba(255,255,255,0.35)",
+                }}
+              />
+              <div
+                style={{
+                  position: "absolute",
+                  left: "50%",
+                  bottom: "76px",
+                  transform: "translateX(-50%)",
+                  width: "240px",
+                  height: "250px",
+                  borderRadius: "120px 120px 40px 40px",
+                  background: "linear-gradient(180deg, rgba(255,255,255,0.42), rgba(255,255,255,0.10))",
+                  filter: "blur(0.2px)",
+                }}
+              />
+              <div
+                style={{
+                  position: "absolute",
                   inset: 0,
                   background:
-                    "radial-gradient(circle at 50% 20%, rgba(255,255,255,0.42), transparent 32%), linear-gradient(180deg, transparent 45%, rgba(0,0,0,0.72))",
+                    "linear-gradient(180deg, transparent 42%, rgba(0,0,0,0.78))",
                 }}
               />
 
@@ -144,7 +173,19 @@ export default function Home() {
 
             <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "14px", marginBottom: "14px" }}>
               <div style={{ background: "rgba(31,31,31,0.04)", borderRadius: "22px", padding: "16px" }}>
-                <p style={{ margin: "0 0 6px", color: "#9B7A45", fontSize: "14px" }}>Проверено</p>
+                <p style={{ margin: "0 0 6px", color: "#9B7A45", fontSize: "14px", display: "flex", alignItems: "center", gap: "8px" }}>
+                  <span
+                    style={{
+                      width: "10px",
+                      height: "10px",
+                      borderRadius: "50%",
+                      background: "#A8D8B9",
+                      boxShadow: "0 0 0 6px rgba(168,216,185,0.22)",
+                      display: "inline-block",
+                    }}
+                  />
+                  Проверено
+                </p>
                 <strong>аналитикой</strong>
               </div>
               <div style={{ background: "rgba(31,31,31,0.04)", borderRadius: "22px", padding: "16px" }}>
