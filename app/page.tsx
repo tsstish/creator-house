@@ -50,7 +50,7 @@ export default function Home() {
             <button
               style={{
                 border: "none",
-                background: "#1f1f1f",
+                background: "#2F2D2A",
                 color: "white",
                 borderRadius: 999,
                 padding: "12px 24px",
@@ -122,7 +122,7 @@ export default function Home() {
               <button
                 style={{
                   border: "none",
-                  background: "#1f1f1f",
+                  background: "#2F2D2A",
                   color: "white",
                   borderRadius: 999,
                   padding: "13px 24px",
@@ -166,7 +166,7 @@ export default function Home() {
                 width: 405,
                 height: 490,
                 borderRadius: 34,
-                background: "#1f1f1f",
+                background: "#2F2D2A",
                 transform: "rotate(8deg)",
                 boxShadow: "0 24px 58px rgba(31,31,31,.18)",
                 padding: 24,
@@ -309,7 +309,7 @@ export default function Home() {
 
               <div
                 style={{
-                  background: "#1f1f1f",
+                  background: "#2F2D2A",
                   borderRadius: 22,
                   padding: 16,
                   display: "flex",
@@ -333,7 +333,7 @@ export default function Home() {
                   style={{
                     border: "none",
                     background: "white",
-                    color: "#1f1f1f",
+                    color: "#2F2D2A",
                     borderRadius: 999,
                     padding: "13px 18px",
                     fontSize: 14,
