@@ -1,3 +1,4 @@
+import "./globals.css";
 export const metadata = {
   title: "Creator House",
   description: "Professional Creator Profile",
