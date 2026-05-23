@@ -1,14 +1,14 @@
 import "./globals.css";
-import { Playfair_Display } from "next/font/google";
-
-const playfair = Playfair_Display({
-  subsets: ["latin", "cyrillic"],
-  weight: ["600", "700"],
-});
-import { Inter } from "next/font/google";
+import { Inter, Playfair_Display } from "next/font/google";
 
 const inter = Inter({
   subsets: ["latin", "cyrillic"],
+});
+
+const playfair = Playfair_Display({
+  subsets: ["latin", "cyrillic"],
+  weight: ["500", "600"],
+  variable: "--font-display",
 });
 
 export const metadata = {
@@ -23,7 +23,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="ru">
-      <body className={playfair.className}>
+      <body className={`${inter.className} ${playfair.variable}`}>
         {children}
       </body>
     </html>
