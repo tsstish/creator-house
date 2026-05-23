@@ -1,9 +1,6 @@
-* {
-  box-sizing: border-box;
-}
+* { box-sizing: border-box; }
 
-html,
-body {
+html, body {
   margin: 0;
   min-height: 100%;
   background: #f6f1e8;
@@ -13,94 +10,20 @@ body {
 body {
   font-family: var(--font-sans), Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
-  text-rendering: geometricPrecision;
 }
 
-button,
-input,
-textarea,
-select {
-  font: inherit;
-}
-
-button {
-  cursor: pointer;
-}
+button { font: inherit; cursor: pointer; }
 
 .display {
   font-family: var(--font-display), Georgia, serif;
   font-weight: 400;
-  letter-spacing: -0.025em;
+  letter-spacing: -0.018em;
 }
 
 .hero-page {
   min-height: 100vh;
   background:
-    radial-gradient(circle at 52% 42%, rgba(255, 255, 255, 0.78), transparent 34%),
+    radial-gradient(circle at 52% 42%, rgba(255,255,255,0.8), transparent 35%),
     linear-gradient(135deg, #fbf7ef 0%, #f2eadc 100%);
   overflow: hidden;
-}
-
-.logo-mark {
-  width: 38px;
-  height: 38px;
-  position: relative;
-  flex: 0 0 auto;
-}
-
-.logo-mark span {
-  position: absolute;
-  border-color: #b08957;
-}
-
-.logo-mark .lt {
-  left: 0;
-  top: 0;
-  width: 12px;
-  height: 12px;
-  border-left: 3px solid;
-  border-top: 3px solid;
-}
-
-.logo-mark .lb {
-  left: 0;
-  bottom: 0;
-  width: 12px;
-  height: 12px;
-  border-left: 3px solid;
-  border-bottom: 3px solid;
-}
-
-.logo-mark .rt {
-  right: 0;
-  top: 0;
-  width: 12px;
-  height: 12px;
-  border-top: 3px solid;
-}
-
-/* правая грань без разрыва */
-.logo-mark .right-full {
-  right: 0;
-  top: 0;
-  height: 38px;
-  border-right: 3px solid #b08957;
-}
-
-.logo-mark .rb {
-  right: 0;
-  bottom: 0;
-  width: 12px;
-  height: 12px;
-  border-bottom: 3px solid;
-}
-
-.logo-mark .dot {
-  left: 50%;
-  top: 50%;
-  width: 7px;
-  height: 7px;
-  border-radius: 999px;
-  background: #b08957;
-  transform: translate(-50%, -50%);
 }
