@@ -12,6 +12,8 @@ body {
 
 body {
   font-family: var(--font-sans), Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: geometricPrecision;
 }
 
 button,
@@ -22,20 +24,140 @@ select {
 }
 
 button {
-  -webkit-font-smoothing: antialiased;
-}
-
-a {
-  color: inherit;
-  text-decoration: none;
+  cursor: pointer;
 }
 
 .display {
-  font-family: var(--font-display), serif;
+  font-family: var(--font-display), Georgia, serif;
   font-weight: 400;
-  letter-spacing: -0.045em;
+  letter-spacing: -0.035em;
 }
 
-.sans {
-  font-family: var(--font-sans), Arial, sans-serif;
+.hero-page {
+  min-height: 100vh;
+  background:
+    radial-gradient(circle at 52% 44%, rgba(255, 255, 255, 0.72), transparent 34%),
+    linear-gradient(135deg, #fbf7ef 0%, #f2eadc 100%);
+  overflow: hidden;
+}
+
+.logo-mark {
+  width: 42px;
+  height: 42px;
+  position: relative;
+  flex: 0 0 auto;
+}
+
+.logo-mark span {
+  position: absolute;
+  border-color: #b08957;
+}
+
+.logo-mark .lt {
+  left: 0;
+  top: 0;
+  width: 13px;
+  height: 13px;
+  border-left: 3px solid;
+  border-top: 3px solid;
+  border-radius: 3px 0 0 0;
+}
+
+.logo-mark .lb {
+  left: 0;
+  bottom: 0;
+  width: 13px;
+  height: 13px;
+  border-left: 3px solid;
+  border-bottom: 3px solid;
+  border-radius: 0 0 0 3px;
+}
+
+.logo-mark .rt {
+  right: 0;
+  top: 0;
+  width: 13px;
+  height: 13px;
+  border-right: 3px solid;
+  border-top: 3px solid;
+  border-radius: 0 3px 0 0;
+}
+
+/* правая грань без прерывания */
+.logo-mark .right-full {
+  right: 0;
+  top: 0;
+  height: 42px;
+  border-right: 3px solid #b08957;
+}
+
+.logo-mark .rb {
+  right: 0;
+  bottom: 0;
+  width: 13px;
+  height: 13px;
+  border-bottom: 3px solid;
+  border-radius: 0 0 3px 0;
+}
+
+.logo-mark .dot {
+  left: 50%;
+  top: 50%;
+  width: 7px;
+  height: 7px;
+  border-radius: 999px;
+  background: #b08957;
+  transform: translate(-50%, -50%);
+}
+
+@media (max-width: 980px) {
+  .hero-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  .hero-title {
+    font-size: 68px !important;
+  }
+
+  .preview-wrap {
+    height: 760px !important;
+  }
+}
+
+@media (max-width: 640px) {
+  .hero-shell {
+    padding: 24px 20px 56px !important;
+  }
+
+  .hero-header {
+    margin-bottom: 56px !important;
+  }
+
+  .hero-title {
+    font-size: 54px !important;
+    line-height: 0.96 !important;
+  }
+
+  .hero-subtitle {
+    font-size: 19px !important;
+  }
+
+  .hero-actions {
+    flex-direction: column !important;
+    align-items: stretch !important;
+  }
+
+  .hero-actions button {
+    width: 100% !important;
+  }
+
+  .hero-features {
+    flex-direction: column !important;
+    gap: 18px !important;
+  }
+
+  .preview-card {
+    width: 100% !important;
+    right: 0 !important;
+  }
 }
