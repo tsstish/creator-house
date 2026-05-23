@@ -7,7 +7,6 @@ export default function Home() {
       justifyContent: "center",
       background: "#F7F2EA",
       color: "#1F1F1F",
-      fontFamily: "Arial, sans-serif",
       padding: "24px"
     }}>
       <section style={{
