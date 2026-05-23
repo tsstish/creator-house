@@ -1,131 +1,50 @@
 export default function Home() {
   return (
-    <main
-      style={{
-        minHeight: "100vh",
-        background: "#F6F1E8",
-      }}
-    >
+    <main className="hero-page">
       <section
+        className="hero-shell"
         style={{
-          maxWidth: "1420px",
+          maxWidth: "1500px",
           margin: "0 auto",
-          padding: "34px 44px 80px",
+          padding: "42px 72px 76px",
         }}
       >
-        {/* HEADER */}
-
         <header
+          className="hero-header"
           style={{
             display: "flex",
             justifyContent: "space-between",
             alignItems: "center",
-            marginBottom: "54px",
+            marginBottom: "96px",
           }}
         >
-          <div
-            style={{
-              display: "flex",
-              alignItems: "center",
-              gap: "18px",
-            }}
-          >
-            {/* LOGO */}
-
-            <div
-              style={{
-                width: "34px",
-                height: "34px",
-                position: "relative",
-              }}
-            >
-              {/* left top */}
-              <div
-                style={{
-                  position: "absolute",
-                  left: 0,
-                  top: 0,
-                  width: "12px",
-                  height: "12px",
-                  borderLeft: "3px solid #B08957",
-                  borderTop: "3px solid #B08957",
-                  borderRadius: "3px 0 0 0",
-                }}
-              />
-
-              {/* right top */}
-              <div
-                style={{
-                  position: "absolute",
-                  right: 0,
-                  top: 0,
-                  width: "12px",
-                  height: "12px",
-                  borderRight: "3px solid #B08957",
-                  borderTop: "3px solid #B08957",
-                  borderRadius: "0 3px 0 0",
-                }}
-              />
-
-              {/* left bottom */}
-              <div
-                style={{
-                  position: "absolute",
-                  left: 0,
-                  bottom: 0,
-                  width: "12px",
-                  height: "12px",
-                  borderLeft: "3px solid #B08957",
-                  borderBottom: "3px solid #B08957",
-                  borderRadius: "0 0 0 3px",
-                }}
-              />
-
-              {/* right bottom FULL */}
-              <div
-                style={{
-                  position: "absolute",
-                  right: 0,
-                  bottom: 0,
-                  width: "12px",
-                  height: "12px",
-                  borderRight: "3px solid #B08957",
-                  borderBottom: "3px solid #B08957",
-                  borderRadius: "0 0 3px 0",
-                }}
-              />
-
-              <div
-                style={{
-                  position: "absolute",
-                  width: "8px",
-                  height: "8px",
-                  borderRadius: "50%",
-                  background: "#B08957",
-                  left: "50%",
-                  top: "50%",
-                  transform: "translate(-50%, -50%)",
-                }}
-              />
+          <div style={{ display: "flex", alignItems: "center", gap: "18px" }}>
+            <div className="logo-mark" aria-label="Creator House logo">
+              <span className="lt" />
+              <span className="lb" />
+              <span className="rt" />
+              <span className="right-full" />
+              <span className="rb" />
+              <span className="dot" />
             </div>
 
             <div>
               <div
                 style={{
-                  fontSize: "19px",
-                  fontWeight: 600,
-                  letterSpacing: "0.28em",
+                  fontSize: "23px",
+                  fontWeight: 700,
+                  letterSpacing: "0.24em",
+                  lineHeight: 1,
                 }}
               >
                 CREATOR HOUSE
               </div>
-
               <div
                 style={{
-                  fontSize: "13px",
-                  color: "#B08957",
-                  marginTop: "4px",
-                  letterSpacing: "0.05em",
+                  fontSize: "16px",
+                  color: "#b08957",
+                  marginTop: "9px",
+                  letterSpacing: "0.02em",
                 }}
               >
                 professional creator profile
@@ -133,20 +52,14 @@ export default function Home() {
             </div>
           </div>
 
-          <div
-            style={{
-              display: "flex",
-              alignItems: "center",
-              gap: "18px",
-            }}
-          >
+          <div style={{ display: "flex", gap: "28px", alignItems: "center" }}>
             <button
               style={{
                 border: "none",
                 background: "transparent",
-                fontSize: "18px",
-                cursor: "pointer",
-                color: "#1F1F1F",
+                color: "#1f1f1f",
+                fontSize: "19px",
+                fontWeight: 600,
               }}
             >
               Войти
@@ -155,13 +68,13 @@ export default function Home() {
             <button
               style={{
                 border: "none",
-                background: "#1F1F1F",
+                background: "#1f1f1f",
                 color: "white",
-                padding: "18px 34px",
                 borderRadius: "999px",
-                fontSize: "18px",
-                cursor: "pointer",
-                boxShadow: "0 18px 40px rgba(0,0,0,0.12)",
+                padding: "20px 38px",
+                fontSize: "19px",
+                fontWeight: 600,
+                boxShadow: "0 22px 44px rgba(31,31,31,0.16)",
               }}
             >
               Создать профиль
@@ -169,35 +82,33 @@ export default function Home() {
           </div>
         </header>
 
-        {/* HERO */}
-
         <div
+          className="hero-grid"
           style={{
             display: "grid",
             gridTemplateColumns: "1fr 620px",
+            gap: "74px",
             alignItems: "center",
-            gap: "40px",
           }}
         >
-          {/* LEFT */}
-
           <div>
             <div
               style={{
                 display: "inline-flex",
-                padding: "16px 26px",
+                alignItems: "center",
+                padding: "15px 26px",
                 borderRadius: "999px",
-                border: "1px solid rgba(176,137,87,0.16)",
-                background: "rgba(255,255,255,0.52)",
-                marginBottom: "36px",
+                border: "1px solid rgba(176,137,87,0.20)",
+                background: "rgba(255,255,255,0.48)",
+                marginBottom: "46px",
               }}
             >
               <span
                 style={{
+                  color: "#b08957",
                   fontSize: "18px",
-                  color: "#B08957",
                   fontWeight: 500,
-                  letterSpacing: "0.04em",
+                  letterSpacing: "0.045em",
                 }}
               >
                 Новый формат профессионального профиля
@@ -205,47 +116,55 @@ export default function Home() {
             </div>
 
             <h1
-              className="display"
+              className="display hero-title"
               style={{
-                fontSize: "112px",
-                lineHeight: "0.92",
-                margin: "0 0 36px",
-                maxWidth: "760px",
+                fontSize: "88px",
+                lineHeight: "1.03",
+                margin: "0 0 32px",
+                maxWidth: "780px",
               }}
             >
-              Выгляди как блогер, которого выбирают бренды
+              Выгляди как
+              <br />
+              блогер, которого
+              <br />
+              выбирают бренды
             </h1>
 
             <p
+              className="hero-subtitle"
               style={{
-                fontSize: "26px",
-                lineHeight: "1.55",
-                color: "#5D5A55",
+                fontSize: "23px",
+                lineHeight: "1.58",
+                color: "#5f5b55",
                 maxWidth: "720px",
-                marginBottom: "44px",
+                margin: "0 0 42px",
               }}
             >
-              Один красивый Creator House вместо PDF, бесконечных сообщений и
-              устаревших медиакитов.
+              Один красивый Creator House вместо PDF,
+              <br />
+              бесконечных сообщений и устаревших медиакитов.
             </p>
 
             <div
+              className="hero-actions"
               style={{
                 display: "flex",
-                gap: "18px",
-                marginBottom: "56px",
+                gap: "24px",
+                marginBottom: "66px",
+                alignItems: "center",
               }}
             >
               <button
                 style={{
                   border: "none",
-                  background: "#1F1F1F",
+                  background: "#1f1f1f",
                   color: "white",
-                  padding: "24px 40px",
                   borderRadius: "999px",
-                  fontSize: "22px",
-                  cursor: "pointer",
-                  boxShadow: "0 20px 40px rgba(0,0,0,0.14)",
+                  padding: "22px 38px",
+                  fontSize: "20px",
+                  fontWeight: 650,
+                  boxShadow: "0 22px 44px rgba(31,31,31,0.15)",
                 }}
               >
                 Создать Creator House
@@ -253,142 +172,174 @@ export default function Home() {
 
               <button
                 style={{
-                  border: "1px solid rgba(31,31,31,0.18)",
-                  background: "rgba(255,255,255,0.5)",
-                  padding: "24px 40px",
+                  border: "1px solid rgba(31,31,31,0.20)",
+                  background: "rgba(255,255,255,0.44)",
+                  color: "#1f1f1f",
                   borderRadius: "999px",
-                  fontSize: "22px",
-                  cursor: "pointer",
+                  padding: "21px 38px",
+                  fontSize: "20px",
+                  fontWeight: 600,
                 }}
               >
                 Посмотреть пример
               </button>
             </div>
 
-            {/* FEATURES */}
-
             <div
+              className="hero-features"
               style={{
                 display: "flex",
-                gap: "44px",
+                gap: "46px",
+                alignItems: "center",
               }}
             >
               {[
-                "Проверено аналитикой",
-                "Актуальная статистика",
-                "Закрыто от посторонних",
-              ].map((item) => (
+                ["⌁", "Проверено аналитикой"],
+                ["▥", "Актуальная статистика"],
+                ["▢", "Закрыто от посторонних"],
+              ].map(([icon, text]) => (
                 <div
-                  key={item}
+                  key={text}
                   style={{
                     display: "flex",
+                    gap: "14px",
                     alignItems: "center",
-                    gap: "12px",
                   }}
                 >
-                  <div
-                    style={{
-                      width: "22px",
-                      height: "22px",
-                      borderRadius: "50%",
-                      background: "rgba(176,137,87,0.16)",
-                    }}
-                  />
-
                   <span
                     style={{
-                      fontSize: "18px",
-                      color: "#5A5751",
+                      color: "#b08957",
+                      fontSize: "30px",
+                      lineHeight: 1,
                     }}
                   >
-                    {item}
+                    {icon}
+                  </span>
+                  <span
+                    style={{
+                      fontSize: "17px",
+                      lineHeight: "1.25",
+                      color: "#3e3b37",
+                      maxWidth: "150px",
+                    }}
+                  >
+                    {text}
                   </span>
                 </div>
               ))}
             </div>
           </div>
 
-          {/* RIGHT */}
-
           <div
+            className="preview-wrap"
             style={{
               position: "relative",
-              height: "860px",
+              height: "820px",
             }}
           >
-            {/* back card */}
-
             <div
               style={{
                 position: "absolute",
-                right: "-10px",
-                top: "120px",
-                width: "480px",
-                height: "700px",
-                borderRadius: "44px",
-                background:
-                  "linear-gradient(180deg, #1D1D1D 0%, #262626 100%)",
+                right: "-40px",
+                top: "126px",
+                width: "500px",
+                height: "650px",
+                borderRadius: "42px",
+                background: "linear-gradient(180deg, #1d1d1d 0%, #292929 100%)",
                 transform: "rotate(7deg)",
-                opacity: 0.98,
+                boxShadow: "0 30px 80px rgba(31,31,31,0.18)",
               }}
             />
-
-            {/* middle card */}
 
             <div
               style={{
                 position: "absolute",
-                right: "70px",
-                top: "70px",
+                right: "78px",
+                top: "88px",
                 width: "470px",
-                height: "720px",
-                borderRadius: "44px",
-                background:
-                  "linear-gradient(180deg, #F8EDE7 0%, #E7D4CC 100%)",
-                transform: "rotate(-6deg)",
-                boxShadow: "0 20px 60px rgba(0,0,0,0.06)",
-              }}
-            />
-
-            {/* front */}
-
-            <div
-              style={{
-                position: "absolute",
-                right: "20px",
-                top: 0,
-                width: "520px",
-                borderRadius: "44px",
-                background: "rgba(255,255,255,0.88)",
-                backdropFilter: "blur(12px)",
-                border: "1px solid rgba(255,255,255,0.7)",
-                boxShadow: "0 30px 90px rgba(0,0,0,0.10)",
+                height: "660px",
+                borderRadius: "42px",
+                background: "linear-gradient(180deg, #fff2ee 0%, #ead0c6 100%)",
+                transform: "rotate(-7deg)",
+                boxShadow: "0 26px 70px rgba(159,105,88,0.13)",
                 padding: "28px",
+                overflow: "hidden",
               }}
             >
               <div
                 style={{
-                  color: "#B08957",
-                  fontSize: "18px",
-                  fontWeight: 600,
-                  letterSpacing: "0.14em",
-                  marginBottom: "22px",
+                  fontSize: "15px",
+                  fontWeight: 700,
+                  letterSpacing: "0.12em",
+                  color: "#6a3f34",
+                }}
+              >
+                Beauty profile
+              </div>
+
+              <div
+                style={{
+                  position: "absolute",
+                  top: "112px",
+                  left: "42px",
+                  width: "170px",
+                  height: "220px",
+                  borderRadius: "90px 90px 38px 38px",
+                  background:
+                    "linear-gradient(180deg, rgba(255,255,255,0.75), rgba(255,255,255,0.18))",
+                }}
+              />
+            </div>
+
+            <div
+              style={{
+                position: "absolute",
+                right: "34px",
+                top: "48px",
+                width: "500px",
+                height: "680px",
+                borderRadius: "42px",
+                background: "rgba(255,255,255,0.88)",
+                transform: "rotate(-2deg)",
+                boxShadow: "0 26px 70px rgba(31,31,31,0.08)",
+              }}
+            />
+
+            <div
+              className="preview-card"
+              style={{
+                position: "absolute",
+                right: "44px",
+                top: "0",
+                width: "520px",
+                borderRadius: "44px",
+                background: "rgba(255,255,255,0.92)",
+                border: "1px solid rgba(255,255,255,0.78)",
+                boxShadow: "0 34px 95px rgba(31,31,31,0.12)",
+                padding: "30px",
+              }}
+            >
+              <div
+                style={{
+                  color: "#b08957",
+                  fontSize: "17px",
+                  fontWeight: 700,
+                  letterSpacing: "0.16em",
+                  marginBottom: "24px",
                 }}
               >
                 ТАК БРЕНД УВИДИТ ТЕБЯ
               </div>
 
-              {/* PHOTO */}
-
               <div
                 style={{
-                  height: "320px",
-                  borderRadius: "36px",
+                  height: "300px",
+                  borderRadius: "32px",
                   overflow: "hidden",
                   position: "relative",
-                  marginBottom: "22px",
+                  marginBottom: "24px",
                   background:
-                    "linear-gradient(180deg, #E5C28F 0%, #B37A33 45%, #24170D 100%)",
+                    "linear-gradient(180deg, #e9c48d 0%, #b47a31 48%, #25170d 100%)",
                 }}
               >
                 <div
@@ -396,23 +347,22 @@ export default function Home() {
                     position: "absolute",
                     inset: 0,
                     background:
-                      "radial-gradient(circle at 72% 20%, rgba(255,255,255,0.45), transparent 24%), linear-gradient(180deg, transparent 40%, rgba(0,0,0,0.70))",
+                      "radial-gradient(circle at 72% 22%, rgba(255,255,255,0.46), transparent 24%), linear-gradient(180deg, transparent 42%, rgba(0,0,0,0.72))",
                   }}
                 />
 
                 <div
                   style={{
                     position: "absolute",
-                    left: "28px",
+                    left: "30px",
                     bottom: "30px",
-                    zIndex: 2,
                     color: "white",
                   }}
                 >
                   <div
                     className="display"
                     style={{
-                      fontSize: "72px",
+                      fontSize: "52px",
                       lineHeight: 1,
                       marginBottom: "12px",
                     }}
@@ -422,16 +372,14 @@ export default function Home() {
 
                   <div
                     style={{
-                      fontSize: "22px",
-                      opacity: 0.92,
+                      fontSize: "19px",
+                      opacity: 0.9,
                     }}
                   >
                     Lifestyle блогер • Instagram • TikTok
                   </div>
                 </div>
               </div>
-
-              {/* STATS */}
 
               <div
                 style={{
@@ -448,25 +396,25 @@ export default function Home() {
                   <div
                     key={value}
                     style={{
-                      background: "#F5F1EA",
-                      borderRadius: "26px",
-                      padding: "28px",
+                      background: "#f6f1e8",
+                      borderRadius: "24px",
+                      padding: "24px 26px",
                     }}
                   >
                     <div
                       className="display"
                       style={{
-                        fontSize: "52px",
+                        fontSize: "38px",
+                        lineHeight: 1,
                         marginBottom: "10px",
                       }}
                     >
                       {value}
                     </div>
-
                     <div
                       style={{
-                        fontSize: "22px",
-                        color: "#66625D",
+                        fontSize: "17px",
+                        color: "#625e58",
                       }}
                     >
                       {label}
@@ -474,8 +422,6 @@ export default function Home() {
                   </div>
                 ))}
               </div>
-
-              {/* bottom blocks */}
 
               <div
                 style={{
@@ -487,81 +433,59 @@ export default function Home() {
               >
                 <div
                   style={{
-                    background: "rgba(245,241,234,0.7)",
-                    borderRadius: "24px",
-                    padding: "24px",
+                    background: "rgba(246,241,232,0.76)",
+                    borderRadius: "22px",
+                    padding: "22px 24px",
                   }}
                 >
                   <div
                     style={{
                       display: "flex",
-                      alignItems: "center",
                       gap: "10px",
-                      marginBottom: "10px",
+                      alignItems: "center",
+                      color: "#b08957",
+                      fontSize: "17px",
+                      marginBottom: "8px",
                     }}
                   >
-                    <div
-                      style={{
-                        width: "14px",
-                        height: "14px",
-                        borderRadius: "50%",
-                        background: "#BFE2C6",
-                        boxShadow: "0 0 0 8px rgba(191,226,198,0.22)",
-                      }}
-                    />
-
                     <span
                       style={{
-                        color: "#B08957",
-                        fontSize: "18px",
+                        width: "10px",
+                        height: "10px",
+                        borderRadius: "50%",
+                        background: "#73bf78",
+                        boxShadow: "0 0 0 8px rgba(115,191,120,0.16)",
                       }}
-                    >
-                      Проверено
-                    </span>
+                    />
+                    Проверено
                   </div>
-
-                  <strong
-                    style={{
-                      fontSize: "24px",
-                    }}
-                  >
-                    аналитикой
-                  </strong>
+                  <strong style={{ fontSize: "19px" }}>аналитикой</strong>
                 </div>
 
                 <div
                   style={{
-                    background: "rgba(245,241,234,0.7)",
-                    borderRadius: "24px",
-                    padding: "24px",
+                    background: "rgba(246,241,232,0.76)",
+                    borderRadius: "22px",
+                    padding: "22px 24px",
                   }}
                 >
                   <div
                     style={{
-                      color: "#B08957",
-                      fontSize: "18px",
-                      marginBottom: "10px",
+                      color: "#b08957",
+                      fontSize: "17px",
+                      marginBottom: "8px",
                     }}
                   >
                     Кейс
                   </div>
-
-                  <strong
-                    style={{
-                      fontSize: "24px",
-                    }}
-                  >
-                    248K просмотров
-                  </strong>
+                  <strong style={{ fontSize: "19px" }}>248K просмотров</strong>
                 </div>
               </div>
 
-              {/* CTA */}
-
               <div
                 style={{
-                  background: "#1F1F1F",
-                  borderRadius: "30px",
+                  background: "#1f1f1f",
+                  borderRadius: "28px",
                   padding: "24px",
                   display: "flex",
                   alignItems: "center",
@@ -572,19 +496,22 @@ export default function Home() {
                 <div>
                   <div
                     style={{
-                      color: "#D8B885",
-                      fontSize: "18px",
-                      marginBottom: "10px",
+                      color: "#d8b885",
+                      fontSize: "17px",
+                      lineHeight: "1.25",
+                      marginBottom: "8px",
                     }}
                   >
-                    Рекламное предложение
+                    Рекламное
+                    <br />
+                    предложение
                   </div>
 
                   <div
                     className="display"
                     style={{
                       color: "white",
-                      fontSize: "58px",
+                      fontSize: "36px",
                       lineHeight: 1,
                     }}
                   >
@@ -596,15 +523,18 @@ export default function Home() {
                   style={{
                     border: "none",
                     background: "white",
-                    color: "#1F1F1F",
-                    padding: "24px 34px",
+                    color: "#1f1f1f",
                     borderRadius: "999px",
-                    fontSize: "22px",
-                    fontWeight: 600,
-                    cursor: "pointer",
+                    padding: "20px 28px",
+                    fontSize: "18px",
+                    fontWeight: 650,
+                    lineHeight: 1.15,
+                    minWidth: "190px",
                   }}
                 >
-                  Предложить сотрудничество
+                  Предложить
+                  <br />
+                  сотрудничество
                 </button>
               </div>
             </div>
