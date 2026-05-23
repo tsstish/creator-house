@@ -59,7 +59,7 @@ export default function Home() {
                 fontWeight: 600,
               }}
             >
-              Войти
+              ТЕСТ ВЕРСИЯ 2
             </button>
 
             <button
