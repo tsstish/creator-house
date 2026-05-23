@@ -56,7 +56,7 @@ export default function Home() {
           fontSize: "16px",
           cursor: "pointer"
         }}>
-          Создать ТЕСТ РАБОТАЕТ
+          Создать Creator House
         </button>
 
         <p style={{
