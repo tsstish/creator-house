@@ -6,12 +6,12 @@ html,
 body {
   margin: 0;
   min-height: 100%;
-  background: #f7f2ea;
+  background: #f6f1e8;
   color: #1f1f1f;
 }
 
 body {
-  font-family: Arial, sans-serif;
+  font-family: var(--font-sans), Arial, sans-serif;
 }
 
 button,
@@ -19,4 +19,23 @@ input,
 textarea,
 select {
   font: inherit;
+}
+
+button {
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.display {
+  font-family: var(--font-display), serif;
+  font-weight: 400;
+  letter-spacing: -0.045em;
+}
+
+.sans {
+  font-family: var(--font-sans), Arial, sans-serif;
 }
