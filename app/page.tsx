@@ -7,12 +7,11 @@ export default function Home() {
         color: "#1F1F1F",
       }}
     >
-      {/* Верхняя панель */}
       <header
         style={{
           maxWidth: "1240px",
           margin: "0 auto",
-          padding: "24px 24px 0",
+          padding: "24px",
           display: "flex",
           justifyContent: "space-between",
           alignItems: "center",
@@ -20,21 +19,27 @@ export default function Home() {
       >
         <div
           style={{
-            fontSize: "18px",
-            fontWeight: 700,
+            display: "flex",
+            alignItems: "center",
+            gap: "10px",
+            fontSize: "20px",
+            fontWeight: 800,
             letterSpacing: "-0.04em",
           }}
         >
+          <span
+            style={{
+              width: "28px",
+              height: "28px",
+              borderRadius: "10px",
+              background: "linear-gradient(135deg, #1F1F1F, #B99A62)",
+              display: "inline-block",
+            }}
+          />
           Creator House
         </div>
 
-        <div
-          style={{
-            display: "flex",
-            gap: "12px",
-            alignItems: "center",
-          }}
-        >
+        <div style={{ display: "flex", gap: "14px", alignItems: "center" }}>
           <button
             style={{
               border: "none",
@@ -63,46 +68,43 @@ export default function Home() {
         </div>
       </header>
 
-      {/* Главный блок */}
       <section
         style={{
           maxWidth: "1240px",
           margin: "0 auto",
-          padding: "48px 24px 80px",
+          padding: "42px 24px 80px",
           display: "grid",
-          gridTemplateColumns: "1.1fr 0.9fr",
-          gap: "36px",
+          gridTemplateColumns: "1fr 0.95fr",
+          gap: "54px",
           alignItems: "center",
         }}
       >
-        {/* Левая часть */}
         <div>
           <div
             style={{
               display: "inline-flex",
               padding: "10px 14px",
               borderRadius: "999px",
-              background: "rgba(255,255,255,0.7)",
+              background: "rgba(255,255,255,0.72)",
               border: "1px solid rgba(31,31,31,0.08)",
               marginBottom: "26px",
               fontSize: "14px",
               color: "#8A6A3B",
             }}
           >
-            Новый формат creator-портфолио
+            Новый формат профессионального профиля
           </div>
 
           <h1
             style={{
-              fontSize: "clamp(54px, 7vw, 92px)",
-              lineHeight: "0.92",
-              letterSpacing: "-0.07em",
+              fontSize: "clamp(52px, 6.4vw, 86px)",
+              lineHeight: "0.94",
+              letterSpacing: "-0.065em",
               margin: "0 0 28px",
               maxWidth: "760px",
             }}
           >
-            Выгляди как creator,
-            которого выбирают бренды
+            Выгляди как блогер, которого выбирают бренды
           </h1>
 
           <p
@@ -118,14 +120,7 @@ export default function Home() {
             и устаревших медиакитов.
           </p>
 
-          <div
-            style={{
-              display: "flex",
-              gap: "14px",
-              flexWrap: "wrap",
-              marginBottom: "40px",
-            }}
-          >
+          <div style={{ display: "flex", gap: "14px", flexWrap: "wrap" }}>
             <button
               style={{
                 border: "none",
@@ -154,83 +149,84 @@ export default function Home() {
               Посмотреть пример
             </button>
           </div>
-
-          {/* Маленькие преимущества */}
-          <div
-            style={{
-              display: "flex",
-              gap: "12px",
-              flexWrap: "wrap",
-            }}
-          >
-            {[
-              "Актуальные данные",
-              "Работает на телефоне",
-              "Без PDF",
-            ].map((item) => (
-              <div
-                key={item}
-                style={{
-                  padding: "12px 16px",
-                  borderRadius: "999px",
-                  background: "rgba(255,255,255,0.68)",
-                  border: "1px solid rgba(31,31,31,0.08)",
-                  fontSize: "14px",
-                  color: "#5B564E",
-                }}
-              >
-                {item}
-              </div>
-            ))}
-          </div>
         </div>
 
-        {/* Правая часть */}
-        <div
-          style={{
-            display: "grid",
-            gap: "18px",
-          }}
-        >
-          {/* Карточка creator */}
+        <div style={{ position: "relative", minHeight: "560px" }}>
           <div
             style={{
-              background: "rgba(255,255,255,0.74)",
-              borderRadius: "34px",
-              padding: "28px",
+              position: "absolute",
+              inset: "72px 22px auto auto",
+              width: "78%",
+              height: "410px",
+              borderRadius: "38px",
+              background: "rgba(255,255,255,0.38)",
+              border: "1px solid rgba(31,31,31,0.06)",
+              transform: "rotate(4deg)",
+            }}
+          />
+
+          <div
+            style={{
+              position: "absolute",
+              inset: "38px 0 auto auto",
+              width: "84%",
+              height: "455px",
+              borderRadius: "42px",
+              background: "rgba(255,255,255,0.58)",
               border: "1px solid rgba(31,31,31,0.08)",
-              boxShadow: "0 24px 80px rgba(31,31,31,0.08)",
+              transform: "rotate(-3deg)",
+              boxShadow: "0 30px 90px rgba(31,31,31,0.08)",
+            }}
+          />
+
+          <div
+            style={{
+              position: "relative",
+              marginLeft: "auto",
+              width: "90%",
+              borderRadius: "46px",
+              background: "rgba(255,255,255,0.88)",
+              border: "1px solid rgba(31,31,31,0.08)",
+              boxShadow: "0 34px 110px rgba(31,31,31,0.12)",
+              padding: "26px",
+              overflow: "hidden",
             }}
           >
+            <p
+              style={{
+                margin: "0 0 18px",
+                color: "#9B7A45",
+                fontSize: "14px",
+                letterSpacing: "0.16em",
+                textTransform: "uppercase",
+                fontWeight: 700,
+              }}
+            >
+              Так бренд увидит тебя
+            </p>
+
             <div
               style={{
-                width: "72px",
-                height: "72px",
-                borderRadius: "22px",
+                height: "230px",
+                borderRadius: "32px",
                 background:
-                  "linear-gradient(135deg, #D8C2A0 0%, #9E7C4A 100%)",
-                marginBottom: "18px",
+                  "linear-gradient(135deg, #D8C2A0 0%, #8E6E42 100%)",
+                marginBottom: "22px",
               }}
             />
 
             <h2
               style={{
-                margin: "0 0 10px",
-                fontSize: "36px",
+                margin: "0 0 8px",
+                fontSize: "38px",
                 letterSpacing: "-0.05em",
               }}
             >
               Alexandra
             </h2>
 
-            <p
-              style={{
-                margin: "0 0 24px",
-                color: "#6A655D",
-                fontSize: "17px",
-              }}
-            >
-              Lifestyle creator • Instagram • TikTok
+            <p style={{ margin: "0 0 22px", color: "#6A655D", fontSize: "17px" }}>
+              Lifestyle блогер • Instagram • TikTok
             </p>
 
             <div
@@ -238,101 +234,38 @@ export default function Home() {
                 display: "grid",
                 gridTemplateColumns: "1fr 1fr",
                 gap: "14px",
+                marginBottom: "16px",
               }}
             >
-              <div
-                style={{
-                  background: "#F7F2EA",
-                  borderRadius: "24px",
-                  padding: "20px",
-                }}
-              >
-                <div
-                  style={{
-                    fontSize: "34px",
-                    fontWeight: 700,
-                    marginBottom: "6px",
-                  }}
-                >
-                  128K
-                </div>
-
-                <div
-                  style={{
-                    color: "#6A655D",
-                  }}
-                >
-                  аудитория
-                </div>
+              <div style={{ background: "#F7F2EA", borderRadius: "24px", padding: "18px" }}>
+                <strong style={{ fontSize: "30px" }}>128K</strong>
+                <p style={{ margin: "6px 0 0", color: "#6A655D" }}>аудитория</p>
               </div>
 
-              <div
-                style={{
-                  background: "#F7F2EA",
-                  borderRadius: "24px",
-                  padding: "20px",
-                }}
-              >
-                <div
-                  style={{
-                    fontSize: "34px",
-                    fontWeight: 700,
-                    marginBottom: "6px",
-                  }}
-                >
-                  6.8%
-                </div>
-
-                <div
-                  style={{
-                    color: "#6A655D",
-                  }}
-                >
+              <div style={{ background: "#F7F2EA", borderRadius: "24px", padding: "18px" }}>
+                <strong style={{ fontSize: "30px" }}>6.8%</strong>
+                <p style={{ margin: "6px 0 0", color: "#6A655D" }}>
                   вовлечённость
-                </div>
+                </p>
               </div>
             </div>
-          </div>
 
-          {/* Нижняя карточка */}
-          <div
-            style={{
-              background: "#1F1F1F",
-              color: "white",
-              borderRadius: "34px",
-              padding: "28px",
-              boxShadow: "0 24px 80px rgba(31,31,31,0.18)",
-            }}
-          >
             <div
               style={{
-                color: "#D5B781",
-                marginBottom: "12px",
-                fontSize: "15px",
+                borderRadius: "26px",
+                background: "#1F1F1F",
+                color: "white",
+                padding: "20px",
               }}
             >
-              Рекламное предложение
+              <p style={{ margin: "0 0 8px", color: "#D5B781" }}>
+                Пример рекламного предложения
+              </p>
+              <strong style={{ fontSize: "26px" }}>360 продвижение</strong>
+              <p style={{ margin: "8px 0 0", color: "rgba(255,255,255,0.72)" }}>
+                Instagram • Telegram • TikTok
+              </p>
             </div>
-
-            <h3
-              style={{
-                margin: "0 0 14px",
-                fontSize: "34px",
-                letterSpacing: "-0.04em",
-              }}
-            >
-              360 продвижение
-            </h3>
-
-            <p
-              style={{
-                margin: 0,
-                color: "rgba(255,255,255,0.72)",
-                fontSize: "17px",
-              }}
-            >
-              Instagram • Telegram • TikTok
-            </p>
           </div>
         </div>
       </section>
