@@ -509,9 +509,12 @@ export default function Home() {
           >
             {item.text}
           </div>
-        </div>
+                </div>
+      ))}
+    </div>
+  </div>
 </section>
-              </main>
+
+    </main>
   );
 }
-
