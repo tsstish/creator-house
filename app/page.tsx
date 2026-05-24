@@ -190,33 +190,31 @@ export default function Home() {
         </div>
 
         <section className="pain-section">
-  <div className="pain-layout">
-    <div className="info-card pain-card">
-      {[
-        ["Бренды редко отвечают", "В переписке сложно показать себя профессионально."],
-        ["Цены приходится объяснять", "Каждый раз вручную рассказывать условия рекламы."],
-        ["Статистика разбросана", "Скрины и кейсы лежат в разных местах."],
-        ["Всё выглядит слабее", "Даже хороший блог может выглядеть не дорого."],
-      ].map(([title, text]) => (
-        <div key={title} className="info-card">
-          <div className="card-label">{title}</div>
-          <div className="card-text">{text}</div>
-        </div>
-      ))}
-    </div>
+          <div className="pain-layout">
+            <div className="pain-cards">
+              {[
+                ["Бренды редко отвечают", "В переписке сложно показать себя профессионально."],
+                ["Цены приходится объяснять", "Каждый раз вручную рассказывать условия рекламы."],
+                ["Статистика разбросана", "Скрины и кейсы лежат в разных местах."],
+                ["Всё выглядит слабее", "Даже хороший блог может выглядеть не дорого."],
+              ].map(([title, text]) => (
+                <div key={title} className="pain-card">
+                  <div className="card-label">{title}</div>
+                  <div className="card-text">{text}</div>
+                </div>
+              ))}
+            </div>
 
-    <div>
-      <div className="section-kicker">Мы понимаем твою боль</div>
-
-      <h2 className="section-title">Знакомо?</h2>
-
-      <p className="section-text">
-        Ты делаешь хороший контент, но брендам всё равно сложно быстро понять:
-        кто ты, какие у тебя цифры и сколько стоит сотрудничество.
-      </p>
-    </div>
-  </div>
-</section>
+            <div>
+              <div className="section-kicker">Мы понимаем твою боль</div>
+              <h2 className="section-title">Знакомо?</h2>
+              <p className="section-text">
+                Ты делаешь хороший контент, но брендам всё равно сложно быстро понять:
+                кто ты, какие у тебя цифры и сколько стоит сотрудничество.
+              </p>
+            </div>
+          </div>
+        </section>
       </section>
     </main>
   );
