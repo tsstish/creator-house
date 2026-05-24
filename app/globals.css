@@ -224,3 +224,58 @@ button {
     transform: none !important;
   }
 }
+
+/* Финальный вид блока "Знакомо" */
+
+.pain-cards,
+.cards-grid-safe {
+  display: grid !important;
+  grid-template-columns: 240px 240px !important;
+  gap: 18px !important;
+  justify-content: start !important;
+  align-items: start !important;
+  max-width: 540px !important;
+}
+
+.pain-card,
+.info-card {
+  width: 240px !important;
+  min-height: 132px !important;
+}
+
+.pain-card:nth-child(2),
+.info-card:nth-child(2) {
+  transform: translateY(34px) !important;
+}
+
+.pain-card:nth-child(3),
+.info-card:nth-child(3) {
+  transform: translateX(42px) !important;
+}
+
+.pain-card:nth-child(4),
+.info-card:nth-child(4) {
+  transform: translate(42px, 34px) !important;
+}
+
+@media (max-width: 1080px) {
+  .pain-layout,
+  .safe-two-column {
+    grid-template-columns: 1fr !important;
+    gap: 44px !important;
+  }
+}
+
+@media (max-width: 620px) {
+  .pain-cards,
+  .cards-grid-safe {
+    grid-template-columns: 1fr !important;
+    max-width: 100% !important;
+  }
+
+  .pain-card,
+  .info-card {
+    width: 100% !important;
+    transform: none !important;
+  }
+}
