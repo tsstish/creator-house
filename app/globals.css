@@ -131,3 +131,44 @@ button { font: inherit; cursor: pointer; }
     font-size: 42px;
   }
 }
+
+.pain-section {
+  padding: 54px 0 18px;
+}
+
+.pain-layout {
+  display: grid;
+  grid-template-columns: minmax(520px, 1fr) minmax(360px, 0.8fr);
+  gap: 58px;
+  align-items: center;
+}
+
+.pain-cards {
+  display: grid;
+  grid-template-columns: repeat(2, 240px);
+  gap: 18px;
+  align-items: start;
+}
+
+.pain-card:nth-child(2) {
+  transform: translateY(28px);
+}
+
+.pain-card:nth-child(3) {
+  transform: translateX(46px);
+}
+
+.pain-card:nth-child(4) {
+  transform: translate(46px, 28px);
+}
+
+@media (max-width: 1080px) {
+  .pain-layout {
+    grid-template-columns: 1fr;
+    gap: 42px;
+  }
+
+  .pain-cards {
+    grid-template-columns: repeat(2, 240px);
+  }
+}
