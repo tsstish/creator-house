@@ -5,7 +5,7 @@ export default function Home() {
         style={{
           maxWidth: 1460,
           margin: "0 auto",
-          padding: "26px 64px 24px",
+          padding: "22px 64px 10px",
         }}
       >
         <header
@@ -13,7 +13,7 @@ export default function Home() {
             display: "flex",
             justifyContent: "space-between",
             alignItems: "center",
-            marginBottom: 34,
+            marginBottom: 22,
           }}
         >
           <div style={{ display: "flex", alignItems: "center", gap: 16 }}>
@@ -157,7 +157,7 @@ export default function Home() {
             </div>
           </div>
 
-          <div style={{ position: "relative", height: 560, transform: "translateY(-18px)" }}>
+          <div style={{ position: "relative", height: 500, transform: "translateY(-18px)" }}>
             <div
               style={{
                 position: "absolute",
@@ -252,7 +252,7 @@ export default function Home() {
 
               <div
                 style={{
-                  height: 290,
+                  height: 250,
                   borderRadius: 28,
                   overflow: "hidden",
                   position: "relative",
