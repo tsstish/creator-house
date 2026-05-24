@@ -27,3 +27,107 @@ button { font: inherit; cursor: pointer; }
     linear-gradient(135deg, #fbf7ef 0%, #f2eadc 100%);
   overflow: hidden;
 }
+
+:root {
+  --color-bg: #f6f1e8;
+  --color-text: #1f1f1f;
+  --color-muted: #5f5b55;
+  --color-card: rgba(255,255,255,.66);
+  --color-graphite: #2F2D2A;
+  --color-gold: #8C6D3E;
+  --color-burgundy: #7B4B56;
+
+  --radius-card: 26px;
+  --shadow-card: 0 18px 48px rgba(31,31,31,.045);
+}
+
+.section-block {
+  padding: 54px 0 18px;
+}
+
+.safe-two-column {
+  display: grid;
+  grid-template-columns: minmax(520px, 1fr) minmax(360px, 0.8fr);
+  gap: 58px;
+  align-items: center;
+}
+
+.cards-grid-safe {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(220px, 1fr));
+  gap: 16px;
+}
+
+.info-card {
+  background: var(--color-card);
+  border: 1px solid rgba(31,31,31,.06);
+  border-radius: var(--radius-card);
+  padding: 22px;
+  box-shadow: var(--shadow-card);
+}
+
+.card-label {
+  font-size: 13px;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  color: var(--color-burgundy);
+  font-weight: 700;
+  margin-bottom: 12px;
+  line-height: 1.35;
+}
+
+.card-text {
+  font-size: 15px;
+  line-height: 1.5;
+  color: #625E58;
+}
+
+.section-kicker {
+  display: inline-flex;
+  padding: 10px 18px;
+  border-radius: 999px;
+  border: 1px solid rgba(120,72,76,.16);
+  background: rgba(255,255,255,.48);
+  color: var(--color-burgundy);
+  font-size: 13px;
+  font-weight: 600;
+  margin-bottom: 18px;
+}
+
+.section-title {
+  font-family: var(--font-display), Georgia, serif;
+  font-size: 52px;
+  line-height: .98;
+  font-weight: 400;
+  letter-spacing: -0.018em;
+  margin: 0 0 18px;
+}
+
+.section-text {
+  font-size: 16px;
+  line-height: 1.55;
+  color: var(--color-muted);
+  max-width: 430px;
+  margin: 0;
+}
+
+@media (max-width: 1080px) {
+  .safe-two-column {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .cards-grid-safe {
+    grid-template-columns: repeat(2, minmax(220px, 1fr));
+  }
+}
+
+@media (max-width: 620px) {
+  .cards-grid-safe {
+    grid-template-columns: 1fr;
+  }
+
+  .section-title {
+    font-size: 42px;
+  }
+}
