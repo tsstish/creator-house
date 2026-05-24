@@ -383,16 +383,11 @@ export default function Home() {
           </div>
         </div>
 
-        <section
-  style={{
-    marginTop: 28,
-    padding: "44px 0 18px",
-  }}
->
+        <section style={{ marginTop: 28, padding: "44px 0 18px" }}>
   <div
     style={{
       display: "grid",
-      gridTemplateColumns: "1.1fr 0.9fr",
+      gridTemplateColumns: "minmax(560px, 1.1fr) minmax(420px, 0.9fr)",
       gap: 42,
       alignItems: "start",
     }}
@@ -405,22 +400,10 @@ export default function Home() {
       }}
     >
       {[
-        [
-          "Бренды редко отвечают",
-          "В переписке сложно сразу показать себя профессионально.",
-        ],
-        [
-          "Цены приходится объяснять заново",
-          "Каждый раз нужно вручную рассказывать, что входит в рекламу.",
-        ],
-        [
-          "Статистика разбросана",
-          "Скрины, охваты, кейсы и ссылки лежат в разных местах.",
-        ],
-        [
-          "Всё выглядит не так дорого",
-          "Даже хороший блог может выглядеть слабее без правильной упаковки.",
-        ],
+        ["Бренды редко отвечают", "В переписке сложно сразу показать себя профессионально."],
+        ["Цены приходится объяснять заново", "Каждый раз нужно вручную рассказывать, что входит в рекламу."],
+        ["Статистика разбросана", "Скрины, охваты, кейсы и ссылки лежат в разных местах."],
+        ["Всё выглядит не так дорого", "Даже хороший блог может выглядеть слабее без правильной упаковки."],
       ].map(([title, text]) => (
         <div
           key={title}
@@ -436,8 +419,12 @@ export default function Home() {
           <h3
             style={{
               margin: "0 0 10px",
-              fontSize: 20,
-              letterSpacing: "-0.02em",
+              fontSize: 15,
+              lineHeight: 1.25,
+              letterSpacing: ".14em",
+              textTransform: "uppercase",
+              color: "#8C6D3E",
+              fontWeight: 700,
             }}
           >
             {title}
@@ -447,8 +434,8 @@ export default function Home() {
             style={{
               margin: 0,
               color: "#625e58",
-              fontSize: 15,
-              lineHeight: 1.45,
+              fontSize: 16,
+              lineHeight: 1.52,
             }}
           >
             {text}
@@ -488,16 +475,133 @@ export default function Home() {
 
       <p
         style={{
-          fontSize: 18,
-          lineHeight: 1.55,
+          fontSize: 16,
+          lineHeight: 1.52,
           color: "#5f5b55",
-          maxWidth: 520,
+          maxWidth: 620,
           margin: 0,
         }}
       >
         Ты делаешь хороший контент, но брендам всё равно сложно быстро понять:
         кто ты, какие у тебя цифры и сколько стоит сотрудничество.
       </p>
+    </div>
+  </div>
+</section>
+
+<section style={{ padding: "56px 0 24px" }}>
+  <div
+    style={{
+      display: "grid",
+      gridTemplateColumns: "minmax(420px, 0.9fr) minmax(560px, 1.1fr)",
+      gap: 42,
+      alignItems: "start",
+    }}
+  >
+    <div>
+      <div
+        style={{
+          display: "inline-flex",
+          padding: "10px 18px",
+          borderRadius: 999,
+          border: "1px solid rgba(140,109,62,.22)",
+          background: "rgba(255,255,255,.46)",
+          color: "#8C6D3E",
+          fontSize: 14,
+          fontWeight: 600,
+          marginBottom: 22,
+        }}
+      >
+        Как это работает
+      </div>
+
+      <h2
+        className="display"
+        style={{
+          fontSize: 54,
+          lineHeight: 1.02,
+          margin: "0 0 18px",
+          maxWidth: 560,
+        }}
+      >
+        Собери Creator House за несколько шагов
+      </h2>
+
+      <p
+        style={{
+          fontSize: 16,
+          lineHeight: 1.52,
+          color: "#5f5b55",
+          maxWidth: 620,
+          margin: 0,
+        }}
+      >
+        Заполни профиль, добавь площадки, покажи цифры и оформи рекламные
+        предложения. В итоге у тебя будет одна красивая ссылка для брендов.
+      </p>
+    </div>
+
+    <div
+      style={{
+        display: "grid",
+        gridTemplateColumns: "repeat(3, minmax(180px, 1fr))",
+        gap: 16,
+      }}
+    >
+      {[
+        ["01", "Добавь себя", "Имя, ниша, описание и визуальный стиль профиля."],
+        ["02", "Покажи цифры", "Аудитория, вовлечённость, охваты и подтверждения."],
+        ["03", "Собери предложения", "Пакеты, цены и условия сотрудничества в одном месте."],
+      ].map(([number, title, text]) => (
+        <div
+          key={number}
+          style={{
+            minWidth: 180,
+            background: "rgba(255,255,255,.58)",
+            border: "1px solid rgba(31,31,31,.07)",
+            borderRadius: 28,
+            padding: 24,
+            boxShadow: "0 18px 48px rgba(31,31,31,.045)",
+          }}
+        >
+          <div
+            style={{
+              color: "#8C6D3E",
+              fontSize: 14,
+              fontWeight: 700,
+              letterSpacing: ".14em",
+              marginBottom: 18,
+            }}
+          >
+            {number}
+          </div>
+
+          <h3
+            style={{
+              margin: "0 0 10px",
+              fontSize: 15,
+              lineHeight: 1.25,
+              letterSpacing: ".14em",
+              textTransform: "uppercase",
+              color: "#8C6D3E",
+              fontWeight: 700,
+            }}
+          >
+            {title}
+          </h3>
+
+          <p
+            style={{
+              margin: 0,
+              color: "#625e58",
+              fontSize: 16,
+              lineHeight: 1.52,
+            }}
+          >
+            {text}
+          </p>
+        </div>
+      ))}
     </div>
   </div>
 </section>
