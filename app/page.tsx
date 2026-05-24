@@ -189,122 +189,28 @@ export default function Home() {
           </div>
         </div>
 
-        <section style={{ padding: "54px 0 18px" }}>
-  <div
-    style={{
-      display: "grid",
-      gridTemplateColumns: "1.05fr 0.95fr",
-      gap: 58,
-      alignItems: "center",
-    }}
-  >
-    <div style={{ position: "relative", height: 340 }}>
+        <section className="section-block">
+  <div className="safe-two-column">
+    <div className="cards-grid-safe">
       {[
-        {
-          title: "Бренды редко отвечают",
-          text: "В переписке сложно показать себя профессионально.",
-          top: 0,
-          left: 0,
-        },
-        {
-          title: "Цены приходится объяснять",
-          text: "Каждый раз вручную рассказывать условия рекламы.",
-          top: 28,
-          left: 270,
-        },
-        {
-          title: "Статистика разбросана",
-          text: "Скрины и кейсы лежат в разных местах.",
-          top: 182,
-          left: 52,
-        },
-        {
-          title: "Всё выглядит слабее",
-          text: "Даже хороший блог может выглядеть не дорого.",
-          top: 204,
-          left: 326,
-        },
-      ].map((item) => (
-        <div
-          key={item.title}
-          style={{
-            position: "absolute",
-            top: item.top,
-            left: item.left,
-            width: 246,
-            background: "rgba(255,255,255,.66)",
-            border: "1px solid rgba(31,31,31,.06)",
-            borderRadius: 26,
-            padding: 22,
-            backdropFilter: "blur(12px)",
-            boxShadow: "0 18px 48px rgba(31,31,31,.045)",
-          }}
-        >
-          <div
-            style={{
-              fontSize: 13,
-              letterSpacing: ".14em",
-              textTransform: "uppercase",
-              color: "#7B4B56",
-              fontWeight: 700,
-              marginBottom: 12,
-              lineHeight: 1.35,
-            }}
-          >
-            {item.title}
-          </div>
-
-          <div
-            style={{
-              fontSize: 15,
-              lineHeight: 1.5,
-              color: "#625E58",
-            }}
-          >
-            {item.text}
-          </div>
+        ["Бренды редко отвечают", "В переписке сложно показать себя профессионально."],
+        ["Цены приходится объяснять", "Каждый раз вручную рассказывать условия рекламы."],
+        ["Статистика разбросана", "Скрины и кейсы лежат в разных местах."],
+        ["Всё выглядит слабее", "Даже хороший блог может выглядеть не дорого."],
+      ].map(([title, text]) => (
+        <div key={title} className="info-card">
+          <div className="card-label">{title}</div>
+          <div className="card-text">{text}</div>
         </div>
       ))}
     </div>
 
     <div>
-      <div
-        style={{
-          display: "inline-flex",
-          padding: "10px 18px",
-          borderRadius: 999,
-          border: "1px solid rgba(120,72,76,.16)",
-          background: "rgba(255,255,255,.48)",
-          color: "#7B4B56",
-          fontSize: 13,
-          fontWeight: 600,
-          marginBottom: 18,
-        }}
-      >
-        Мы понимаем твою боль
-      </div>
+      <div className="section-kicker">Мы понимаем твою боль</div>
 
-      <h2
-        className="display"
-        style={{
-          fontSize: 52,
-          lineHeight: 0.98,
-          margin: "0 0 18px",
-          maxWidth: 420,
-        }}
-      >
-        Знакомо?
-      </h2>
+      <h2 className="section-title">Знакомо?</h2>
 
-      <p
-        style={{
-          fontSize: 16,
-          lineHeight: 1.55,
-          color: "#5F5B55",
-          maxWidth: 430,
-          margin: 0,
-        }}
-      >
+      <p className="section-text">
         Ты делаешь хороший контент, но брендам всё равно сложно быстро понять:
         кто ты, какие у тебя цифры и сколько стоит сотрудничество.
       </p>
