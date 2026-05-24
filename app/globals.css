@@ -144,25 +144,53 @@ button { font: inherit; cursor: pointer; }
 }
 
 .pain-cards {
-  display: grid;
-  grid-template-columns: repeat(2, 240px);
-  gap: 18px;
-  align-items: start;
+  position: relative;
+  width: 560px;
+  height: 360px;
+  flex-shrink: 0;
+}
+
+.pain-card {
+  position: absolute;
+  width: 240px;
+}
+
+.pain-card:nth-child(1) {
+  top: 0;
+  left: 0;
 }
 
 .pain-card:nth-child(2) {
-  transform: translateY(28px);
+  top: 34px;
+  left: 270px;
 }
 
 .pain-card:nth-child(3) {
-  transform: translateX(46px);
+  top: 170px;
+  left: 44px;
 }
 
 .pain-card:nth-child(4) {
-  transform: translate(46px, 28px);
+  top: 206px;
+  left: 314px;
 }
 
 @media (max-width: 1080px) {
+  .pain-cards {
+  width: 100%;
+  height: auto;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(220px, 1fr));
+  gap: 18px;
+}
+
+.pain-card {
+  position: relative !important;
+  top: auto !important;
+  left: auto !important;
+  width: 100%;
+}
+  
   .pain-layout {
     grid-template-columns: 1fr;
     gap: 42px;
