@@ -605,6 +605,111 @@ export default function Home() {
     </div>
   </div>
 </section>
+        <section style={{ padding: "56px 0 24px" }}>
+  <div
+    style={{
+      display: "grid",
+      gridTemplateColumns: "minmax(420px, 0.9fr) minmax(560px, 1.1fr)",
+      gap: 42,
+      alignItems: "start",
+    }}
+  >
+    <div>
+      <div
+        style={{
+          display: "inline-flex",
+          padding: "10px 18px",
+          borderRadius: 999,
+          border: "1px solid rgba(140,109,62,.22)",
+          background: "rgba(255,255,255,.46)",
+          color: "#8C6D3E",
+          fontSize: 14,
+          fontWeight: 600,
+          marginBottom: 22,
+        }}
+      >
+        Что внутри
+      </div>
+
+      <h2
+        className="display"
+        style={{
+          fontSize: 54,
+          lineHeight: 1.02,
+          margin: "0 0 18px",
+          maxWidth: 560,
+        }}
+      >
+        Всё, что нужно бренду для решения
+      </h2>
+
+      <p
+        style={{
+          fontSize: 16,
+          lineHeight: 1.52,
+          color: "#5f5b55",
+          maxWidth: 620,
+          margin: 0,
+        }}
+      >
+        Не просто красивая страница, а понятная упаковка твоей ценности:
+        цифры, площадки, кейсы, цены и кнопка для заявки.
+      </p>
+    </div>
+
+    <div
+      style={{
+        display: "grid",
+        gridTemplateColumns: "repeat(2, minmax(260px, 1fr))",
+        gap: 16,
+      }}
+    >
+      {[
+        ["Площадки", "Instagram, Telegram, TikTok, YouTube и другие каналы в одном профиле."],
+        ["Статистика", "Аудитория, охваты, вовлечённость и понятные пояснения к цифрам."],
+        ["Кейсы", "Примеры интеграций, просмотры, результаты и ссылки на контент."],
+        ["Предложения", "Рекламные форматы, пакеты, цены и дополнительные опции."],
+      ].map(([title, text]) => (
+        <div
+          key={title}
+          style={{
+            minWidth: 260,
+            background: "rgba(255,255,255,.58)",
+            border: "1px solid rgba(31,31,31,.07)",
+            borderRadius: 28,
+            padding: 24,
+            boxShadow: "0 18px 48px rgba(31,31,31,.045)",
+          }}
+        >
+          <h3
+            style={{
+              margin: "0 0 10px",
+              fontSize: 15,
+              lineHeight: 1.25,
+              letterSpacing: ".14em",
+              textTransform: "uppercase",
+              color: "#6F5A3A",
+              fontWeight: 700,
+            }}
+          >
+            {title}
+          </h3>
+
+          <p
+            style={{
+              margin: 0,
+              color: "#625e58",
+              fontSize: 16,
+              lineHeight: 1.52,
+            }}
+          >
+            {text}
+          </p>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
       </section>
     </main>
   );
