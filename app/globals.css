@@ -28,15 +28,13 @@ button {
 }
 
 :root {
-  --color-bg: #f6f1e8;
-  --color-text: #1f1f1f;
-  --color-muted: #5f5b55;
-  --color-card: rgba(255, 255, 255, 0.66);
-  --color-graphite: #2f2d2a;
-  --color-gold: #8c6d3e;
-  --color-burgundy: #7b4b56;
-
-  --radius-card: 26px;
+  --bg: #f6f1e8;
+  --text: #1f1f1f;
+  --muted: #5f5b55;
+  --graphite: #2f2d2a;
+  --gold: #8c6d3e;
+  --burgundy: #7b4b56;
+  --card: rgba(255, 255, 255, 0.68);
   --shadow-card: 0 18px 48px rgba(31, 31, 31, 0.045);
 }
 
@@ -54,48 +52,60 @@ button {
   overflow-x: hidden;
 }
 
-/* Общие секции */
-
-.section-block,
 .pain-section {
   padding: 54px 0 18px;
 }
 
-.safe-two-column,
 .pain-layout {
   display: grid;
-  grid-template-columns: minmax(520px, 1fr) minmax(360px, 0.8fr);
+  grid-template-columns: minmax(560px, 1fr) minmax(360px, 0.8fr);
   gap: 58px;
   align-items: center;
 }
 
-/* Карточки */
-
-.cards-grid-safe,
 .pain-cards {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(220px, 1fr));
-  gap: 16px;
+  position: relative;
+  width: 560px;
+  height: 390px;
 }
 
-.info-card,
 .pain-card {
-  position: static !important;
-  transform: none !important;
-  width: auto !important;
-  min-width: 0;
-  background: var(--color-card);
+  position: absolute;
+  width: 250px;
+  min-height: 142px;
+  background: var(--card);
   border: 1px solid rgba(31,31,31,.06);
-  border-radius: var(--radius-card);
+  border-radius: 26px;
   padding: 22px;
   box-shadow: var(--shadow-card);
+  backdrop-filter: blur(12px);
+}
+
+.pain-card:nth-child(1) {
+  top: 0;
+  left: 0;
+}
+
+.pain-card:nth-child(2) {
+  top: 34px;
+  left: 286px;
+}
+
+.pain-card:nth-child(3) {
+  top: 184px;
+  left: 42px;
+}
+
+.pain-card:nth-child(4) {
+  top: 220px;
+  left: 326px;
 }
 
 .card-label {
   font-size: 13px;
   letter-spacing: .14em;
   text-transform: uppercase;
-  color: var(--color-burgundy);
+  color: var(--burgundy);
   font-weight: 700;
   margin-bottom: 12px;
   line-height: 1.35;
@@ -107,15 +117,13 @@ button {
   color: #625e58;
 }
 
-/* Тексты секций */
-
 .section-kicker {
   display: inline-flex;
   padding: 10px 18px;
   border-radius: 999px;
   border: 1px solid rgba(120,72,76,.16);
   background: rgba(255,255,255,.48);
-  color: var(--color-burgundy);
+  color: var(--burgundy);
   font-size: 13px;
   font-weight: 600;
   margin-bottom: 18px;
@@ -133,30 +141,37 @@ button {
 .section-text {
   font-size: 16px;
   line-height: 1.55;
-  color: var(--color-muted);
+  color: var(--muted);
   max-width: 430px;
   margin: 0;
 }
 
-/* Адаптив */
-
 @media (max-width: 1080px) {
-  .safe-two-column,
   .pain-layout {
     grid-template-columns: 1fr;
-    gap: 34px;
+    gap: 40px;
   }
 
-  .cards-grid-safe,
   .pain-cards {
-    grid-template-columns: repeat(2, minmax(220px, 1fr));
+    width: 560px;
+    max-width: 100%;
   }
 }
 
 @media (max-width: 680px) {
-  .cards-grid-safe,
   .pain-cards {
+    display: grid;
+    position: static;
+    width: 100%;
+    height: auto;
     grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .pain-card {
+    position: static;
+    width: 100%;
+    min-height: auto;
   }
 
   .section-title {
@@ -165,117 +180,5 @@ button {
 
   .section-text {
     max-width: 100%;
-  }
-}
-
-/* Живая композиция для блока "Знакомо" */
-
-.safe-two-column {
-  grid-template-columns: minmax(520px, 1fr) minmax(360px, 0.8fr);
-  align-items: center;
-}
-
-.cards-grid-safe {
-  display: grid;
-  grid-template-columns: 240px 240px;
-  gap: 18px;
-  justify-content: start;
-  align-items: start;
-  max-width: 540px;
-}
-
-.cards-grid-safe .info-card {
-  width: 240px !important;
-  min-height: 132px;
-}
-
-.cards-grid-safe .info-card:nth-child(2) {
-  transform: translateY(34px);
-}
-
-.cards-grid-safe .info-card:nth-child(3) {
-  transform: translateX(42px);
-}
-
-.cards-grid-safe .info-card:nth-child(4) {
-  transform: translate(42px, 34px);
-}
-
-@media (max-width: 1080px) {
-  .safe-two-column {
-    grid-template-columns: 1fr;
-    gap: 44px;
-  }
-
-  .cards-grid-safe {
-    grid-template-columns: 240px 240px;
-    max-width: 540px;
-  }
-}
-
-@media (max-width: 620px) {
-  .cards-grid-safe {
-    grid-template-columns: 1fr;
-    max-width: 100%;
-  }
-
-  .cards-grid-safe .info-card {
-    width: 100% !important;
-    transform: none !important;
-  }
-}
-
-/* Финальный вид блока "Знакомо" */
-
-.pain-cards,
-.cards-grid-safe {
-  display: grid !important;
-  grid-template-columns: 240px 240px !important;
-  gap: 18px !important;
-  justify-content: start !important;
-  align-items: start !important;
-  max-width: 540px !important;
-}
-
-.pain-card,
-.info-card {
-  width: 240px !important;
-  min-height: 132px !important;
-}
-
-.pain-card:nth-child(2),
-.info-card:nth-child(2) {
-  transform: translateY(34px) !important;
-}
-
-.pain-card:nth-child(3),
-.info-card:nth-child(3) {
-  transform: translateX(42px) !important;
-}
-
-.pain-card:nth-child(4),
-.info-card:nth-child(4) {
-  transform: translate(42px, 34px) !important;
-}
-
-@media (max-width: 1080px) {
-  .pain-layout,
-  .safe-two-column {
-    grid-template-columns: 1fr !important;
-    gap: 44px !important;
-  }
-}
-
-@media (max-width: 620px) {
-  .pain-cards,
-  .cards-grid-safe {
-    grid-template-columns: 1fr !important;
-    max-width: 100% !important;
-  }
-
-  .pain-card,
-  .info-card {
-    width: 100% !important;
-    transform: none !important;
   }
 }
