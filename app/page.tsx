@@ -383,79 +383,31 @@ export default function Home() {
           </div>
         </div>
 
-        <section style={{ marginTop: 28, padding: "44px 0 18px" }}>
+        <section
+  style={{
+    padding: "34px 0 10px",
+  }}
+>
   <div
     style={{
       display: "grid",
-      gridTemplateColumns: "minmax(560px, 1.1fr) minmax(420px, 0.9fr)",
-      gap: 42,
-      alignItems: "start",
+      gridTemplateColumns: "0.95fr 1.05fr",
+      gap: 54,
+      alignItems: "center",
     }}
   >
-    <div
-      style={{
-        display: "grid",
-        gridTemplateColumns: "repeat(2, minmax(260px, 1fr))",
-        gap: 16,
-      }}
-    >
-      {[
-        ["Бренды редко отвечают", "В переписке сложно сразу показать себя профессионально."],
-        ["Цены приходится объяснять заново", "Каждый раз нужно вручную рассказывать, что входит в рекламу."],
-        ["Статистика разбросана", "Скрины, охваты, кейсы и ссылки лежат в разных местах."],
-        ["Всё выглядит не так дорого", "Даже хороший блог может выглядеть слабее без правильной упаковки."],
-      ].map(([title, text]) => (
-        <div
-          key={title}
-          style={{
-            minWidth: 260,
-            background: "rgba(255,255,255,.58)",
-            border: "1px solid rgba(31,31,31,.07)",
-            borderRadius: 28,
-            padding: 24,
-            boxShadow: "0 18px 48px rgba(31,31,31,.045)",
-          }}
-        >
-          <h3
-            style={{
-              margin: "0 0 10px",
-              fontSize: 15,
-              lineHeight: 1.25,
-              letterSpacing: ".14em",
-              textTransform: "uppercase",
-              color: "#8C6D3E",
-              fontWeight: 700,
-            }}
-          >
-            {title}
-          </h3>
-
-          <p
-            style={{
-              margin: 0,
-              color: "#625e58",
-              fontSize: 16,
-              lineHeight: 1.52,
-            }}
-          >
-            {text}
-          </p>
-        </div>
-      ))}
-    </div>
-
     <div>
       <div
         style={{
           display: "inline-flex",
           padding: "10px 18px",
           borderRadius: 999,
-          border: "1px solid rgba(140,109,62,.22)",
-          background: "rgba(255,255,255,.46)",
-          color: "#8C6D3E",
-          fontSize: 14,
+          border: "1px solid rgba(120,72,76,.16)",
+          background: "rgba(255,255,255,.48)",
+          color: "#7B4B56",
+          fontSize: 13,
           fontWeight: 600,
-          marginBottom: 22,
+          marginBottom: 18,
         }}
       >
         Мы понимаем твою боль
@@ -464,10 +416,10 @@ export default function Home() {
       <h2
         className="display"
         style={{
-          fontSize: 54,
-          lineHeight: 1.02,
+          fontSize: 52,
+          lineHeight: 0.98,
           margin: "0 0 18px",
-          maxWidth: 520,
+          maxWidth: 420,
         }}
       >
         Знакомо?
@@ -476,9 +428,9 @@ export default function Home() {
       <p
         style={{
           fontSize: 16,
-          lineHeight: 1.52,
-          color: "#5f5b55",
-          maxWidth: 620,
+          lineHeight: 1.55,
+          color: "#5F5B55",
+          maxWidth: 430,
           margin: 0,
         }}
       >
@@ -486,231 +438,80 @@ export default function Home() {
         кто ты, какие у тебя цифры и сколько стоит сотрудничество.
       </p>
     </div>
-  </div>
-</section>
-
-<section style={{ padding: "56px 0 24px" }}>
-  <div
-    style={{
-      display: "grid",
-      gridTemplateColumns: "minmax(420px, 0.9fr) minmax(560px, 1.1fr)",
-      gap: 42,
-      alignItems: "start",
-    }}
-  >
-    <div>
-      <div
-        style={{
-          display: "inline-flex",
-          padding: "10px 18px",
-          borderRadius: 999,
-          border: "1px solid rgba(140,109,62,.22)",
-          background: "rgba(255,255,255,.46)",
-          color: "#8C6D3E",
-          fontSize: 14,
-          fontWeight: 600,
-          marginBottom: 22,
-        }}
-      >
-        Как это работает
-      </div>
-
-      <h2
-        className="display"
-        style={{
-          fontSize: 54,
-          lineHeight: 1.02,
-          margin: "0 0 18px",
-          maxWidth: 560,
-        }}
-      >
-        Собери Creator House за несколько шагов
-      </h2>
-
-      <p
-        style={{
-          fontSize: 16,
-          lineHeight: 1.52,
-          color: "#5f5b55",
-          maxWidth: 620,
-          margin: 0,
-        }}
-      >
-        Заполни профиль, добавь площадки, покажи цифры и оформи рекламные
-        предложения. В итоге у тебя будет одна красивая ссылка для брендов.
-      </p>
-    </div>
 
     <div
       style={{
-        display: "grid",
-        gridTemplateColumns: "repeat(3, minmax(180px, 1fr))",
-        gap: 16,
+        position: "relative",
+        height: 320,
       }}
     >
       {[
-        ["01", "Добавь себя", "Имя, ниша, описание и визуальный стиль профиля."],
-        ["02", "Покажи цифры", "Аудитория, вовлечённость, охваты и подтверждения."],
-        ["03", "Собери предложения", "Пакеты, цены и условия сотрудничества в одном месте."],
-      ].map(([number, title, text]) => (
+        {
+          title: "Бренды редко отвечают",
+          text: "В переписке сложно показать себя профессионально.",
+          top: 0,
+          left: 0,
+        },
+        {
+          title: "Цены приходится объяснять",
+          text: "Каждый раз вручную рассказывать условия рекламы.",
+          top: 24,
+          left: 220,
+        },
+        {
+          title: "Статистика разбросана",
+          text: "Скрины и кейсы лежат в разных местах.",
+          top: 160,
+          left: 40,
+        },
+        {
+          title: "Всё выглядит слабее",
+          text: "Даже хороший блог может выглядеть не дорого.",
+          top: 182,
+          left: 260,
+        },
+      ].map((item) => (
         <div
-          key={number}
+          key={item.title}
           style={{
-            minWidth: 180,
-            background: "rgba(255,255,255,.58)",
-            border: "1px solid rgba(31,31,31,.07)",
-            borderRadius: 28,
-            padding: 24,
+            position: "absolute",
+            top: item.top,
+            left: item.left,
+            width: 240,
+            background: "rgba(255,255,255,.62)",
+            border: "1px solid rgba(31,31,31,.06)",
+            borderRadius: 26,
+            padding: 22,
+            backdropFilter: "blur(12px)",
             boxShadow: "0 18px 48px rgba(31,31,31,.045)",
           }}
         >
           <div
             style={{
-              color: "#8C6D3E",
-              fontSize: 14,
-              fontWeight: 700,
+              fontSize: 13,
               letterSpacing: ".14em",
-              marginBottom: 18,
+              textTransform: "uppercase",
+              color: "#7B4B56",
+              fontWeight: 700,
+              marginBottom: 12,
+              lineHeight: 1.35,
             }}
           >
-            {number}
+            {item.title}
           </div>
 
-          <h3
+          <div
             style={{
-              margin: "0 0 10px",
               fontSize: 15,
-              lineHeight: 1.25,
-              letterSpacing: ".14em",
-              textTransform: "uppercase",
-              color: "#8C6D3E",
-              fontWeight: 700,
+              lineHeight: 1.5,
+              color: "#625E58",
             }}
           >
-            {title}
-          </h3>
-
-          <p
-            style={{
-              margin: 0,
-              color: "#625e58",
-              fontSize: 16,
-              lineHeight: 1.52,
-            }}
-          >
-            {text}
-          </p>
+            {item.text}
+          </div>
         </div>
       ))}
     </div>
   </div>
 </section>
-        <section style={{ padding: "56px 0 24px" }}>
-  <div
-    style={{
-      display: "grid",
-      gridTemplateColumns: "minmax(420px, 0.9fr) minmax(560px, 1.1fr)",
-      gap: 42,
-      alignItems: "start",
-    }}
-  >
-    <div>
-      <div
-        style={{
-          display: "inline-flex",
-          padding: "10px 18px",
-          borderRadius: 999,
-          border: "1px solid rgba(140,109,62,.22)",
-          background: "rgba(255,255,255,.46)",
-          color: "#8C6D3E",
-          fontSize: 14,
-          fontWeight: 600,
-          marginBottom: 22,
-        }}
-      >
-        Что внутри
-      </div>
 
-      <h2
-        className="display"
-        style={{
-          fontSize: 54,
-          lineHeight: 1.02,
-          margin: "0 0 18px",
-          maxWidth: 560,
-        }}
-      >
-        Всё, что нужно бренду для решения
-      </h2>
-
-      <p
-        style={{
-          fontSize: 16,
-          lineHeight: 1.52,
-          color: "#5f5b55",
-          maxWidth: 620,
-          margin: 0,
-        }}
-      >
-        Не просто красивая страница, а понятная упаковка твоей ценности:
-        цифры, площадки, кейсы, цены и кнопка для заявки.
-      </p>
-    </div>
-
-    <div
-      style={{
-        display: "grid",
-        gridTemplateColumns: "repeat(2, minmax(260px, 1fr))",
-        gap: 16,
-      }}
-    >
-      {[
-        ["Площадки", "Instagram, Telegram, TikTok, YouTube и другие каналы в одном профиле."],
-        ["Статистика", "Аудитория, охваты, вовлечённость и понятные пояснения к цифрам."],
-        ["Кейсы", "Примеры интеграций, просмотры, результаты и ссылки на контент."],
-        ["Предложения", "Рекламные форматы, пакеты, цены и дополнительные опции."],
-      ].map(([title, text]) => (
-        <div
-          key={title}
-          style={{
-            minWidth: 260,
-            background: "rgba(255,255,255,.58)",
-            border: "1px solid rgba(31,31,31,.07)",
-            borderRadius: 28,
-            padding: 24,
-            boxShadow: "0 18px 48px rgba(31,31,31,.045)",
-          }}
-        >
-          <h3
-            style={{
-              margin: "0 0 10px",
-              fontSize: 15,
-              lineHeight: 1.25,
-              letterSpacing: ".14em",
-              textTransform: "uppercase",
-              color: "#6F5A3A",
-              fontWeight: 700,
-            }}
-          >
-            {title}
-          </h3>
-
-          <p
-            style={{
-              margin: 0,
-              color: "#625e58",
-              fontSize: 16,
-              lineHeight: 1.52,
-            }}
-          >
-            {text}
-          </p>
-        </div>
-      ))}
-    </div>
-  </div>
-</section>
-      </section>
-    </main>
-  );
-}
