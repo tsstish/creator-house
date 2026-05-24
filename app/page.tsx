@@ -189,9 +189,9 @@ export default function Home() {
           </div>
         </div>
 
-        <section className="section-block">
-  <div className="safe-two-column">
-    <div className="cards-grid-safe">
+        <section className="pain-section">
+  <div className="pain-layout">
+    <div className="info-card pain-card">
       {[
         ["Бренды редко отвечают", "В переписке сложно показать себя профессионально."],
         ["Цены приходится объяснять", "Каждый раз вручную рассказывать условия рекламы."],
