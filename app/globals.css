@@ -167,3 +167,60 @@ button {
     max-width: 100%;
   }
 }
+
+/* Живая композиция для блока "Знакомо" */
+
+.safe-two-column {
+  grid-template-columns: minmax(520px, 1fr) minmax(360px, 0.8fr);
+  align-items: center;
+}
+
+.cards-grid-safe {
+  display: grid;
+  grid-template-columns: 240px 240px;
+  gap: 18px;
+  justify-content: start;
+  align-items: start;
+  max-width: 540px;
+}
+
+.cards-grid-safe .info-card {
+  width: 240px !important;
+  min-height: 132px;
+}
+
+.cards-grid-safe .info-card:nth-child(2) {
+  transform: translateY(34px);
+}
+
+.cards-grid-safe .info-card:nth-child(3) {
+  transform: translateX(42px);
+}
+
+.cards-grid-safe .info-card:nth-child(4) {
+  transform: translate(42px, 34px);
+}
+
+@media (max-width: 1080px) {
+  .safe-two-column {
+    grid-template-columns: 1fr;
+    gap: 44px;
+  }
+
+  .cards-grid-safe {
+    grid-template-columns: 240px 240px;
+    max-width: 540px;
+  }
+}
+
+@media (max-width: 620px) {
+  .cards-grid-safe {
+    grid-template-columns: 1fr;
+    max-width: 100%;
+  }
+
+  .cards-grid-safe .info-card {
+    width: 100% !important;
+    transform: none !important;
+  }
+}
