@@ -215,6 +215,382 @@ export default function Home() {
             </div>
           </div>
         </section>
+        <section
+  style={{
+    padding: "40px 0 120px",
+  }}
+>
+  <div
+    style={{
+      display: "grid",
+      gridTemplateColumns: "minmax(420px, 0.9fr) minmax(620px, 1fr)",
+      gap: 70,
+      alignItems: "center",
+    }}
+  >
+    {/* LEFT */}
+
+    <div>
+      <div className="section-kicker">
+        Creator House вместо PDF
+      </div>
+
+      <h2
+        className="section-title"
+        style={{
+          maxWidth: 480,
+          marginBottom: 22,
+        }}
+      >
+        Всё, что нужно
+        <br />
+        бренду —
+        <br />
+        в одном месте
+      </h2>
+
+      <p
+        className="section-text"
+        style={{
+          maxWidth: 470,
+          marginBottom: 36,
+        }}
+      >
+        Не нужно собирать ссылки, отдельно
+        отправлять статистику и вручную
+        объяснять условия сотрудничества.
+      </p>
+
+      <div
+        style={{
+          display: "flex",
+          flexDirection: "column",
+          gap: 14,
+          maxWidth: 420,
+        }}
+      >
+        {[
+          "Красивый публичный профиль",
+          "Актуальная аналитика и охваты",
+          "Кейсы и рекламные предложения",
+          "Ссылки на все площадки",
+        ].map((item) => (
+          <div
+            key={item}
+            style={{
+              display: "flex",
+              alignItems: "center",
+              gap: 14,
+              padding: "16px 18px",
+              background: "rgba(255,255,255,.56)",
+              border: "1px solid rgba(31,31,31,.06)",
+              borderRadius: 22,
+              backdropFilter: "blur(10px)",
+            }}
+          >
+            <div
+              style={{
+                width: 10,
+                height: 10,
+                borderRadius: 999,
+                background: "#8C6D3E",
+                flexShrink: 0,
+              }}
+            />
+
+            <span
+              style={{
+                fontSize: 15,
+                color: "#3F3A35",
+              }}
+            >
+              {item}
+            </span>
+          </div>
+        ))}
+      </div>
+    </div>
+
+    {/* RIGHT MOCKUP */}
+
+    <div
+      style={{
+        position: "relative",
+        height: 620,
+      }}
+    >
+      {/* background glow */}
+
+      <div
+        style={{
+          position: "absolute",
+          inset: 0,
+          background:
+            "radial-gradient(circle at 70% 30%, rgba(205,168,118,.24), transparent 44%)",
+        }}
+      />
+
+      {/* floating mini card */}
+
+      <div
+        style={{
+          position: "absolute",
+          right: 0,
+          top: 34,
+          width: 180,
+          background: "rgba(255,255,255,.72)",
+          border: "1px solid rgba(31,31,31,.05)",
+          borderRadius: 24,
+          padding: 18,
+          backdropFilter: "blur(12px)",
+          boxShadow: "0 18px 44px rgba(31,31,31,.06)",
+          zIndex: 3,
+        }}
+      >
+        <div
+          style={{
+            fontSize: 12,
+            color: "#8C6D3E",
+            letterSpacing: ".14em",
+            textTransform: "uppercase",
+            marginBottom: 10,
+            fontWeight: 700,
+          }}
+        >
+          Instagram
+        </div>
+
+        <div
+          className="display"
+          style={{
+            fontSize: 32,
+            marginBottom: 4,
+          }}
+        >
+          128K
+        </div>
+
+        <div
+          style={{
+            fontSize: 13,
+            color: "#625E58",
+          }}
+        >
+          аудитория
+        </div>
+      </div>
+
+      {/* main mockup */}
+
+      <div
+        style={{
+          position: "absolute",
+          left: 40,
+          top: 40,
+          width: 560,
+          borderRadius: 34,
+          background: "rgba(255,255,255,.82)",
+          border: "1px solid rgba(31,31,31,.06)",
+          boxShadow: "0 26px 80px rgba(31,31,31,.08)",
+          overflow: "hidden",
+          backdropFilter: "blur(18px)",
+        }}
+      >
+        {/* top image */}
+
+        <div
+          style={{
+            height: 260,
+            background:
+              "linear-gradient(180deg,#ddb172 0%, #a86b29 48%, #24170d 100%)",
+            position: "relative",
+          }}
+        >
+          <div
+            style={{
+              position: "absolute",
+              inset: 0,
+              background:
+                "radial-gradient(circle at 76% 24%, rgba(255,255,255,.38), transparent 22%), linear-gradient(180deg, transparent 40%, rgba(0,0,0,.74))",
+            }}
+          />
+
+          <div
+            style={{
+              position: "absolute",
+              left: 30,
+              bottom: 28,
+              color: "white",
+            }}
+          >
+            <div
+              className="display"
+              style={{
+                fontSize: 52,
+                lineHeight: 1,
+                marginBottom: 10,
+              }}
+            >
+              Alexandra
+            </div>
+
+            <div
+              style={{
+                fontSize: 16,
+                opacity: .92,
+              }}
+            >
+              Lifestyle блогер • TikTok • Instagram
+            </div>
+          </div>
+        </div>
+
+        {/* content */}
+
+        <div
+          style={{
+            padding: 24,
+          }}
+        >
+          <div
+            style={{
+              display: "grid",
+              gridTemplateColumns: "1fr 1fr 1fr",
+              gap: 12,
+              marginBottom: 14,
+            }}
+          >
+            {[
+              ["6.8%", "вовлечённость"],
+              ["248K", "просмотров"],
+              ["14", "кейсов"],
+            ].map(([value, label]) => (
+              <div
+                key={value}
+                style={{
+                  background: "#f7f2ea",
+                  borderRadius: 20,
+                  padding: "18px 16px",
+                }}
+              >
+                <div
+                  className="display"
+                  style={{
+                    fontSize: 30,
+                    marginBottom: 6,
+                  }}
+                >
+                  {value}
+                </div>
+
+                <div
+                  style={{
+                    fontSize: 13,
+                    color: "#625E58",
+                  }}
+                >
+                  {label}
+                </div>
+              </div>
+            ))}
+          </div>
+
+          <div
+            style={{
+              display: "grid",
+              gridTemplateColumns: "1fr 1fr",
+              gap: 12,
+            }}
+          >
+            <div
+              style={{
+                background: "rgba(246,241,232,.8)",
+                borderRadius: 20,
+                padding: 18,
+              }}
+            >
+              <div
+                style={{
+                  color: "#8C6D3E",
+                  fontSize: 12,
+                  marginBottom: 8,
+                  fontWeight: 700,
+                  letterSpacing: ".08em",
+                  textTransform: "uppercase",
+                }}
+              >
+                Рекламные форматы
+              </div>
+
+              <div
+                style={{
+                  fontSize: 15,
+                  lineHeight: 1.6,
+                  color: "#3F3A35",
+                }}
+              >
+                Reels
+                <br />
+                Stories
+                <br />
+                TikTok integrations
+              </div>
+            </div>
+
+            <div
+              style={{
+                background: "#2F2D2A",
+                color: "white",
+                borderRadius: 20,
+                padding: 18,
+                display: "flex",
+                flexDirection: "column",
+                justifyContent: "space-between",
+              }}
+            >
+              <div
+                style={{
+                  color: "#D7B47D",
+                  fontSize: 12,
+                  letterSpacing: ".08em",
+                  textTransform: "uppercase",
+                  marginBottom: 18,
+                }}
+              >
+                сотрудничество
+              </div>
+
+              <div
+                className="display"
+                style={{
+                  fontSize: 42,
+                  lineHeight: 1,
+                  marginBottom: 16,
+                }}
+              >
+                от $950
+              </div>
+
+              <button
+                style={{
+                  border: "none",
+                  background: "white",
+                  color: "#1F1F1F",
+                  borderRadius: 999,
+                  padding: "12px 16px",
+                  fontSize: 14,
+                  fontWeight: 650,
+                }}
+              >
+                Предложить интеграцию
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
       </section>
     </main>
   );
