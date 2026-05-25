@@ -215,16 +215,17 @@ export default function Home() {
             </div>
           </div>
         </section>
-        <section
+        
+         <section
   style={{
-    padding: "40px 0 120px",
+    padding: "52px 0 120px",
   }}
 >
   <div
     style={{
       display: "grid",
-      gridTemplateColumns: "minmax(420px, 0.9fr) minmax(620px, 1fr)",
-      gap: 70,
+      gridTemplateColumns: "minmax(420px, 0.88fr) minmax(620px, 1fr)",
+      gap: 76,
       alignItems: "center",
     }}
   >
@@ -238,27 +239,27 @@ export default function Home() {
       <h2
         className="section-title"
         style={{
-          maxWidth: 480,
-          marginBottom: 22,
+          maxWidth: 520,
+          marginBottom: 24,
         }}
       >
-        Всё, что нужно
+        Бренд сразу видит
         <br />
-        бренду —
-        <br />
-        в одном месте
+        всё важное
       </h2>
 
       <p
         className="section-text"
         style={{
           maxWidth: 470,
-          marginBottom: 36,
+          marginBottom: 34,
         }}
       >
-        Не нужно собирать ссылки, отдельно
-        отправлять статистику и вручную
-        объяснять условия сотрудничества.
+        Без дизайнера, без маркетолога
+        и без бесконечных сообщений.
+        Creator House собирает твои
+        сильные стороны в одну
+        профессиональную страницу.
       </p>
 
       <div
@@ -266,14 +267,14 @@ export default function Home() {
           display: "flex",
           flexDirection: "column",
           gap: 14,
-          maxWidth: 420,
+          maxWidth: 430,
         }}
       >
         {[
-          "Красивый публичный профиль",
-          "Актуальная аналитика и охваты",
-          "Кейсы и рекламные предложения",
-          "Ссылки на все площадки",
+          "Покажи только нужные метрики",
+          "Подтверждённая статистика",
+          "Кейсы и результаты интеграций",
+          "Условия рекламы и цены",
         ].map((item) => (
           <div
             key={item}
@@ -290,8 +291,8 @@ export default function Home() {
           >
             <div
               style={{
-                width: 10,
-                height: 10,
+                width: 9,
+                height: 9,
                 borderRadius: 999,
                 background: "#8C6D3E",
                 flexShrink: 0,
@@ -311,38 +312,27 @@ export default function Home() {
       </div>
     </div>
 
-    {/* RIGHT MOCKUP */}
+    {/* RIGHT */}
 
     <div
       style={{
         position: "relative",
-        height: 620,
+        height: 720,
       }}
     >
-      {/* background glow */}
-
-      <div
-        style={{
-          position: "absolute",
-          inset: 0,
-          background:
-            "radial-gradient(circle at 70% 30%, rgba(205,168,118,.24), transparent 44%)",
-        }}
-      />
-
-      {/* floating mini card */}
+      {/* floating stat */}
 
       <div
         style={{
           position: "absolute",
           right: 0,
-          top: 34,
-          width: 180,
-          background: "rgba(255,255,255,.72)",
+          top: 54,
+          width: 190,
+          background: "rgba(255,255,255,.78)",
           border: "1px solid rgba(31,31,31,.05)",
-          borderRadius: 24,
-          padding: 18,
-          backdropFilter: "blur(12px)",
+          borderRadius: 28,
+          padding: 20,
+          backdropFilter: "blur(14px)",
           boxShadow: "0 18px 44px rgba(31,31,31,.06)",
           zIndex: 3,
         }}
@@ -350,24 +340,25 @@ export default function Home() {
         <div
           style={{
             fontSize: 12,
-            color: "#8C6D3E",
             letterSpacing: ".14em",
             textTransform: "uppercase",
-            marginBottom: 10,
+            color: "#7B4B56",
+            marginBottom: 12,
             fontWeight: 700,
           }}
         >
-          Instagram
+          TikTok
         </div>
 
         <div
           className="display"
           style={{
-            fontSize: 32,
-            marginBottom: 4,
+            fontSize: 38,
+            lineHeight: 1,
+            marginBottom: 6,
           }}
         >
-          128K
+          1.2M
         </div>
 
         <div
@@ -376,34 +367,34 @@ export default function Home() {
             color: "#625E58",
           }}
         >
-          аудитория
+          просмотров за 30 дней
         </div>
       </div>
 
-      {/* main mockup */}
+      {/* main card */}
 
       <div
         style={{
           position: "absolute",
-          left: 40,
-          top: 40,
-          width: 560,
+          left: 36,
+          top: 34,
+          width: 600,
           borderRadius: 34,
-          background: "rgba(255,255,255,.82)",
+          background: "rgba(255,255,255,.84)",
           border: "1px solid rgba(31,31,31,.06)",
-          boxShadow: "0 26px 80px rgba(31,31,31,.08)",
+          boxShadow: "0 30px 90px rgba(31,31,31,.08)",
           overflow: "hidden",
           backdropFilter: "blur(18px)",
         }}
       >
-        {/* top image */}
+        {/* TOP */}
 
         <div
           style={{
-            height: 260,
-            background:
-              "linear-gradient(180deg,#ddb172 0%, #a86b29 48%, #24170d 100%)",
+            height: 240,
             position: "relative",
+            background:
+              "linear-gradient(180deg,#e8d5cf 0%, #c6a198 46%, #3d2a2d 100%)",
           }}
         >
           <div
@@ -411,59 +402,94 @@ export default function Home() {
               position: "absolute",
               inset: 0,
               background:
-                "radial-gradient(circle at 76% 24%, rgba(255,255,255,.38), transparent 22%), linear-gradient(180deg, transparent 40%, rgba(0,0,0,.74))",
+                "radial-gradient(circle at 76% 22%, rgba(255,255,255,.42), transparent 22%), linear-gradient(180deg, transparent 44%, rgba(0,0,0,.72))",
             }}
           />
 
           <div
             style={{
               position: "absolute",
-              left: 30,
-              bottom: 28,
+              left: 28,
+              bottom: 24,
               color: "white",
             }}
           >
             <div
               className="display"
               style={{
-                fontSize: 52,
+                fontSize: 54,
                 lineHeight: 1,
-                marginBottom: 10,
+                marginBottom: 8,
               }}
             >
-              Alexandra
+              Mira
             </div>
 
             <div
               style={{
-                fontSize: 16,
+                fontSize: 15,
                 opacity: .92,
               }}
             >
-              Lifestyle блогер • TikTok • Instagram
+              Beauty creator • TikTok • Instagram
             </div>
           </div>
         </div>
 
-        {/* content */}
+        {/* BODY */}
 
         <div
           style={{
-            padding: 24,
+            padding: 22,
           }}
         >
+          {/* verified */}
+
+          <div
+            style={{
+              display: "flex",
+              alignItems: "center",
+              gap: 10,
+              marginBottom: 18,
+              padding: "12px 14px",
+              borderRadius: 18,
+              background: "rgba(246,241,232,.72)",
+            }}
+          >
+            <div
+              style={{
+                width: 10,
+                height: 10,
+                borderRadius: 999,
+                background: "#73bf78",
+                boxShadow: "0 0 0 7px rgba(115,191,120,.14)",
+              }}
+            />
+
+            <div
+              style={{
+                fontSize: 13,
+                color: "#4B4741",
+              }}
+            >
+              Статистика подтверждена Creator House
+            </div>
+          </div>
+
+          {/* metrics */}
+
           <div
             style={{
               display: "grid",
               gridTemplateColumns: "1fr 1fr 1fr",
               gap: 12,
-              marginBottom: 14,
+              marginBottom: 12,
             }}
           >
             {[
-              ["6.8%", "вовлечённость"],
-              ["248K", "просмотров"],
-              ["14", "кейсов"],
+              ["184K", "Instagram"],
+              ["7.2%", "ER"],
+              ["82%", "женская аудитория"],
             ].map(([value, label]) => (
               <div
                 key={value}
@@ -476,7 +502,7 @@ export default function Home() {
                 <div
                   className="display"
                   style={{
-                    fontSize: 30,
+                    fontSize: 28,
                     marginBottom: 6,
                   }}
                 >
@@ -485,7 +511,7 @@ export default function Home() {
 
                 <div
                   style={{
-                    fontSize: 13,
+                    fontSize: 12,
                     color: "#625E58",
                   }}
                 >
@@ -494,6 +520,89 @@ export default function Home() {
               </div>
             ))}
           </div>
+
+          {/* metrics 2 */}
+
+          <div
+            style={{
+              display: "grid",
+              gridTemplateColumns: "1fr 1fr",
+              gap: 12,
+              marginBottom: 14,
+            }}
+          >
+            <div
+              style={{
+                background: "#f7f2ea",
+                borderRadius: 20,
+                padding: 18,
+              }}
+            >
+              <div
+                style={{
+                  fontSize: 12,
+                  letterSpacing: ".12em",
+                  textTransform: "uppercase",
+                  color: "#7B4B56",
+                  marginBottom: 12,
+                  fontWeight: 700,
+                }}
+              >
+                География
+              </div>
+
+              <div
+                style={{
+                  display: "flex",
+                  flexDirection: "column",
+                  gap: 8,
+                  color: "#3F3A35",
+                  fontSize: 14,
+                }}
+              >
+                <div>🇺🇸 США — 34%</div>
+                <div>🇩🇪 Германия — 18%</div>
+                <div>🇫🇷 Франция — 11%</div>
+              </div>
+            </div>
+
+            <div
+              style={{
+                background: "#f7f2ea",
+                borderRadius: 20,
+                padding: 18,
+              }}
+            >
+              <div
+                style={{
+                  fontSize: 12,
+                  letterSpacing: ".12em",
+                  textTransform: "uppercase",
+                  color: "#7B4B56",
+                  marginBottom: 12,
+                  fontWeight: 700,
+                }}
+              >
+                Возраст
+              </div>
+
+              <div
+                style={{
+                  display: "flex",
+                  flexDirection: "column",
+                  gap: 8,
+                  color: "#3F3A35",
+                  fontSize: 14,
+                }}
+              >
+                <div>18–24 — 41%</div>
+                <div>25–34 — 38%</div>
+                <div>35+ — 21%</div>
+              </div>
+            </div>
+          </div>
+
+          {/* bottom */}
 
           <div
             style={{
@@ -504,71 +613,81 @@ export default function Home() {
           >
             <div
               style={{
-                background: "rgba(246,241,232,.8)",
+                background: "#f7f2ea",
                 borderRadius: 20,
                 padding: 18,
               }}
             >
               <div
                 style={{
-                  color: "#8C6D3E",
                   fontSize: 12,
-                  marginBottom: 8,
-                  fontWeight: 700,
-                  letterSpacing: ".08em",
+                  letterSpacing: ".1em",
                   textTransform: "uppercase",
+                  color: "#8C6D3E",
+                  marginBottom: 12,
+                  fontWeight: 700,
                 }}
               >
-                Рекламные форматы
+                Последний кейс
+              </div>
+
+              <div
+                className="display"
+                style={{
+                  fontSize: 34,
+                  marginBottom: 8,
+                }}
+              >
+                2.4M
               </div>
 
               <div
                 style={{
-                  fontSize: 15,
-                  lineHeight: 1.6,
-                  color: "#3F3A35",
+                  fontSize: 14,
+                  lineHeight: 1.5,
+                  color: "#4B4741",
                 }}
               >
-                Reels
+                просмотров
                 <br />
-                Stories
-                <br />
-                TikTok integrations
+                у beauty интеграции
               </div>
             </div>
 
             <div
               style={{
                 background: "#2F2D2A",
+                borderRadius: 22,
+                padding: 20,
                 color: "white",
-                borderRadius: 20,
-                padding: 18,
                 display: "flex",
                 flexDirection: "column",
                 justifyContent: "space-between",
               }}
             >
-              <div
-                style={{
-                  color: "#D7B47D",
-                  fontSize: 12,
-                  letterSpacing: ".08em",
-                  textTransform: "uppercase",
-                  marginBottom: 18,
-                }}
-              >
-                сотрудничество
-              </div>
+              <div>
+                <div
+                  style={{
+                    fontSize: 12,
+                    letterSpacing: ".12em",
+                    textTransform: "uppercase",
+                    color: "#D7B47D",
+                    marginBottom: 18,
+                  }}
+                >
+                  сотрудничество
+                </div>
 
-              <div
-                className="display"
-                style={{
-                  fontSize: 42,
-                  lineHeight: 1,
-                  marginBottom: 16,
-                }}
-              >
-                от $950
+                <div
+                  className="display"
+                  style={{
+                    fontSize: 44,
+                    lineHeight: 1,
+                    marginBottom: 18,
+                  }}
+                >
+                  от $1400
+                </div>
               </div>
 
               <button
@@ -577,12 +696,12 @@ export default function Home() {
                   background: "white",
                   color: "#1F1F1F",
                   borderRadius: 999,
-                  padding: "12px 16px",
+                  padding: "13px 16px",
                   fontSize: 14,
                   fontWeight: 650,
                 }}
               >
-                Предложить интеграцию
+                Отправить предложение
               </button>
             </div>
           </div>
