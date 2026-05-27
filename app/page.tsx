@@ -218,6 +218,8 @@ export default function Home() {
         
          {/* SHOWCASE SECTION */}
 
+{/* SHOWCASE SECTION */}
+
 <section className="section-block">
   <div className="section-grid">
     
