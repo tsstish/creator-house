@@ -1,160 +1,178 @@
 export default function Home() {
   return (
     <main className="hero-page">
-      {/* NEW HERO */}
+{/* COSMIC HERO */}
 
-<section className="new-hero">
-  <div className="new-hero-shell">
-    <div className="new-hero-grid">
-      <div
-        style={{
-          display: "flex",
-          flexDirection: "column",
-          justifyContent: "center",
-          padding: "20px 10px",
-        }}
-      >
-        <div className="section-kicker">
-          Новый формат профессионального профиля
-        </div>
+<section className="cosmic-hero">
+  <div className="cosmic-shell">
+    <div className="cosmic-orb one" />
+    <div className="cosmic-orb two" />
 
-        <h1 className="display new-hero-title">
-          Бренд видит тебя так, как ты хочешь
-        </h1>
+    <div className="cosmic-grid">
+      <div className="cosmic-left">
+        <div>
+          <div className="cosmic-kicker">
+            professional creator profile
+          </div>
 
-        <p className="new-hero-text">
-          Собери живой Creator House вместо PDF, скринов и долгих сообщений:
-          цифры, кейсы, цены и предложения — в одной красивой ссылке.
-        </p>
+          <h1 className="cosmic-title">
+            Один <em>живой</em> профиль вместо PDF и хаоса
+          </h1>
 
-        <div className="new-hero-actions">
-          <button className="new-hero-primary">Создать Creator House</button>
-          <button className="new-hero-secondary">Посмотреть пример</button>
-        </div>
+          <p className="cosmic-text">
+            Собери Creator House, который бренд захочет открыть: цифры,
+            кейсы, цены и предложения — в одной красивой ссылке.
+          </p>
 
-        <div
-          style={{
-            display: "flex",
-            gap: 22,
-            flexWrap: "wrap",
-            color: "#5F5B55",
-            fontSize: 14,
-          }}
-        >
-          <span>Без PDF</span>
-          <span>Актуальные данные</span>
-          <span>Работает на телефоне</span>
+          <div className="cosmic-actions">
+            <button className="cosmic-primary">Создать Creator House</button>
+            <button className="cosmic-secondary">Посмотреть пример</button>
+          </div>
+
+          <div className="cosmic-proof">
+            <span>Без PDF</span>
+            <span>Актуальные данные</span>
+            <span>Работает на телефоне</span>
+          </div>
         </div>
       </div>
 
-      <div className="new-builder">
-        <input id="hero-audience" name="hero-builder" type="radio" defaultChecked />
-        <input id="hero-cases" name="hero-builder" type="radio" />
-        <input id="hero-price" name="hero-builder" type="radio" />
-        <input id="hero-style" name="hero-builder" type="radio" />
+      <div className="cosmic-right">
+        <div className="cosmic-tabs">
+          <input id="cosmic-audience" name="cosmic-tabs" type="radio" defaultChecked />
+          <input id="cosmic-cases" name="cosmic-tabs" type="radio" />
+          <input id="cosmic-price" name="cosmic-tabs" type="radio" />
+          <input id="cosmic-style" name="cosmic-tabs" type="radio" />
 
-        <div className="new-builder-tabs">
-          <label htmlFor="hero-audience">Аудитория</label>
-          <label htmlFor="hero-cases">Кейсы</label>
-          <label htmlFor="hero-price">Цены</label>
-          <label htmlFor="hero-style">Стиль</label>
-        </div>
+          <div className="cosmic-tab-row">
+            <label htmlFor="cosmic-audience">Аудитория</label>
+            <label htmlFor="cosmic-cases">Кейсы</label>
+            <label htmlFor="cosmic-price">Цены</label>
+            <label htmlFor="cosmic-style">Стиль</label>
+          </div>
 
-        <div className="new-builder-scene">
-          {[
-            {
-              cls: "audience",
-              name: "Mira",
-              role: "Beauty creator • TikTok • Instagram",
-              metrics: [
-                ["184K", "аудитория"],
-                ["82%", "женщины"],
-                ["34%", "США"],
-              ],
-              float1: ["Проверено", "Данные можно подтвердить аналитикой."],
-              float2: ["Бренду понятно", "Кто твоя аудитория и почему она подходит."],
-            },
-            {
-              cls: "cases",
-              name: "Daniel",
-              role: "Travel creator • Instagram • YouTube",
-              metrics: [
-                ["2.4M", "просмотров"],
-                ["14", "кейсов"],
-                ["9.1%", "ER"],
-              ],
-              float1: ["Кейсы", "Покажи результаты прошлых интеграций."],
-              float2: ["Больше доверия", "Бренд видит не обещания, а факты."],
-            },
-            {
-              cls: "price",
-              name: "Emma",
-              role: "Family creator • Instagram • TikTok",
-              metrics: [
-                ["$950", "Stories"],
-                ["$1400", "Reels"],
-                ["$2200", "пакет"],
-              ],
-              float1: ["Цены без неловкости", "Форматы и условия уже собраны."],
-              float2: ["Быстрее решение", "Бренду проще понять бюджет."],
-            },
-            {
-              cls: "style",
-              name: "Alex",
-              role: "Business creator • LinkedIn • Telegram",
-              metrics: [
-                ["Dark", "режим"],
-                ["Brand", "версия"],
-                ["Link", "одна ссылка"],
-              ],
-              float1: ["Под свою нишу", "Beauty, travel, family или business."],
-              float2: ["Не шаблон", "Профиль выглядит как твой личный формат."],
-            },
-          ].map((item) => (
-            <div key={item.cls} className={`builder-state ${item.cls}`}>
-              <div
-                className="float-card"
-                style={{
-                  left: 0,
-                  top: 72,
-                  width: 190,
-                }}
-              >
-                <div className="float-title">{item.float1[0]}</div>
-                <div className="float-text">{item.float1[1]}</div>
-              </div>
-
-              <div
-                className="creator-main-card"
-              >
-                <div className="creator-cover">
-                  <div className="creator-name">{item.name}</div>
-                  <div className="creator-role">{item.role}</div>
+          <div className="cosmic-scene">
+            {[
+              {
+                cls: "audience",
+                name: "Mira",
+                role: "Beauty creator • TikTok • Instagram",
+                metrics: [
+                  ["184K", "аудитория"],
+                  ["82%", "женщины"],
+                  ["34%", "США"],
+                ],
+                top: ["Аудитория", "Бренд сразу видит, кто тебя смотрит."],
+                dark: ["Подтверждено", "Цифры можно отметить как проверенные."],
+                number: "7.2%",
+                numberLabel: "средний ER",
+              },
+              {
+                cls: "cases",
+                name: "Daniel",
+                role: "Travel creator • Instagram • YouTube",
+                metrics: [
+                  ["2.4M", "views"],
+                  ["14", "кейсов"],
+                  ["312K", "hotel review"],
+                ],
+                top: ["Кейсы", "Покажи результаты прошлых интеграций."],
+                dark: ["Больше доверия", "Не обещания, а реальные результаты."],
+                number: "680K",
+                numberLabel: "охваты за 30 дней",
+              },
+              {
+                cls: "price",
+                name: "Emma",
+                role: "Family creator • Instagram • TikTok",
+                metrics: [
+                  ["$950", "Stories"],
+                  ["$1400", "Reels"],
+                  ["$2200", "package"],
+                ],
+                top: ["Цены", "Форматы и условия уже собраны."],
+                dark: ["Без неловкости", "Бренд понимает бюджет заранее."],
+                number: "3",
+                numberLabel: "готовых пакета",
+              },
+              {
+                cls: "style",
+                name: "Alex",
+                role: "Business creator • LinkedIn • Telegram",
+                metrics: [
+                  ["Dark", "режим"],
+                  ["Brand", "версия"],
+                  ["Link", "одна ссылка"],
+                ],
+                top: ["Стиль", "Профиль меняется под твою нишу."],
+                dark: ["Не шаблон", "Creator House выглядит как твой формат."],
+                number: "1",
+                numberLabel: "ссылка для бренда",
+              },
+            ].map((item) => (
+              <div key={item.cls} className={`cosmic-state ${item.cls}`}>
+                <div
+                  className="cosmic-float"
+                  style={{
+                    left: 18,
+                    top: 120,
+                    width: 210,
+                  }}
+                >
+                  <div className="cosmic-float-title">{item.top[0]}</div>
+                  <div className="cosmic-float-text">{item.top[1]}</div>
                 </div>
 
-                <div className="creator-metrics">
-                  {item.metrics.map(([value, label]) => (
-                    <div key={label} className="creator-metric">
-                      <div className="creator-value">{value}</div>
-                      <div className="creator-label">{label}</div>
-                    </div>
-                  ))}
+                <div
+                  className="cosmic-float"
+                  style={{
+                    left: 78,
+                    top: 320,
+                    width: 180,
+                  }}
+                >
+                  <div className="cosmic-big-number">{item.number}</div>
+                  <div className="cosmic-float-text" style={{ marginTop: 8 }}>
+                    {item.numberLabel}
+                  </div>
+                </div>
+
+                <div className="cosmic-main-card">
+                  <div className="cosmic-cover">
+                    <div className="cosmic-name">{item.name}</div>
+                    <div className="cosmic-role">{item.role}</div>
+                  </div>
+
+                  <div className="cosmic-metrics">
+                    {item.metrics.map(([value, label]) => (
+                      <div key={label} className="cosmic-metric">
+                        <div className="cosmic-value">{value}</div>
+                        <div className="cosmic-label">{label}</div>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+
+                <div
+                  className="cosmic-float dark"
+                  style={{
+                    right: 12,
+                    bottom: 42,
+                    width: 235,
+                  }}
+                >
+                  <div className="cosmic-float-title">{item.dark[0]}</div>
+                  <div className="cosmic-float-text">{item.dark[1]}</div>
+                </div>
+
+                <div className="cosmic-mini-strip">
+                  <div className="cosmic-mini">◎</div>
+                  <div className="cosmic-mini">↗</div>
+                  <div className="cosmic-mini">●</div>
                 </div>
               </div>
-
-              <div
-                className="float-card float-dark"
-                style={{
-                  left: 38,
-                  bottom: 42,
-                  width: 230,
-                }}
-              >
-                <div className="float-title">{item.float2[0]}</div>
-                <div className="float-text">{item.float2[1]}</div>
-              </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
       </div>
     </div>
