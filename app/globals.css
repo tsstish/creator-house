@@ -1505,3 +1505,210 @@ body::before {
   text-transform: uppercase;
   color: rgba(32,31,29,.52);
 }
+
+/* NEW OBJECT HERO STAGE */
+
+.product-stage {
+  position: relative;
+  height: 100%;
+  min-height: 620px;
+}
+
+.product-tabs input {
+  display: none;
+}
+
+.product-tab-row {
+  position: absolute;
+  top: 32px;
+  right: 42px;
+  z-index: 20;
+  display: flex;
+  gap: 10px;
+}
+
+.product-tab-row label {
+  padding: 10px 15px;
+  border-radius: 999px;
+  background: rgba(255,255,255,.72);
+  border: 1px solid rgba(255,255,255,.5);
+  font-size: 13px;
+  font-weight: 800;
+  cursor: pointer;
+  backdrop-filter: blur(16px);
+}
+
+#product-audience:checked ~ .product-tab-row label[for="product-audience"],
+#product-cases:checked ~ .product-tab-row label[for="product-cases"],
+#product-price:checked ~ .product-tab-row label[for="product-price"],
+#product-style:checked ~ .product-tab-row label[for="product-style"] {
+  background: #201f1d;
+  color: white;
+}
+
+.product-scene {
+  position: relative;
+  height: 100%;
+}
+
+.product-state {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(16px) scale(.985);
+  transition: .35s ease;
+}
+
+#product-audience:checked ~ .product-scene .audience,
+#product-cases:checked ~ .product-scene .cases,
+#product-price:checked ~ .product-scene .price,
+#product-style:checked ~ .product-scene .style {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0) scale(1);
+}
+
+.product-core {
+  position: absolute;
+  right: 58px;
+  top: 118px;
+  width: 560px;
+  height: 390px;
+  border-radius: 56px 56px 150px 56px;
+  background:
+    radial-gradient(circle at 78% 20%, rgba(255,255,255,.48), transparent 24%),
+    linear-gradient(180deg, #efb7a8 0%, #a96561 48%, #211719 100%);
+  box-shadow: 0 34px 100px rgba(32,31,29,.2);
+  overflow: hidden;
+  border: 14px solid rgba(255,255,255,.58);
+}
+
+.cases .product-core {
+  background:
+    radial-gradient(circle at 78% 20%, rgba(255,255,255,.45), transparent 24%),
+    linear-gradient(180deg, #89ded4 0%, #407e78 48%, #101c1d 100%);
+}
+
+.price .product-core {
+  background:
+    radial-gradient(circle at 78% 20%, rgba(255,255,255,.42), transparent 24%),
+    linear-gradient(180deg, #f3c875 0%, #a16531 48%, #211916 100%);
+}
+
+.style .product-core {
+  background:
+    radial-gradient(circle at 78% 20%, rgba(255,255,255,.34), transparent 24%),
+    linear-gradient(180deg, #c9ccd6 0%, #6c7280 48%, #151515 100%);
+}
+
+.product-core-content {
+  position: absolute;
+  left: 34px;
+  bottom: 34px;
+  color: white;
+}
+
+.product-name {
+  font-family: var(--font-display), Georgia, serif;
+  font-size: 70px;
+  line-height: .9;
+}
+
+.product-role {
+  margin-top: 10px;
+  font-size: 15px;
+  opacity: .9;
+}
+
+.product-panel {
+  position: absolute;
+  z-index: 8;
+  border-radius: 34px;
+  padding: 22px;
+  background: rgba(255,255,255,.72);
+  border: 1px solid rgba(255,255,255,.58);
+  backdrop-filter: blur(22px);
+  box-shadow: 0 24px 70px rgba(32,31,29,.14);
+}
+
+.product-panel.dark {
+  background: rgba(32,31,29,.92);
+  color: white;
+}
+
+.product-panel-title {
+  font-size: 11px;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  font-weight: 850;
+  color: #9b334d;
+  margin-bottom: 12px;
+}
+
+.product-panel.dark .product-panel-title {
+  color: #ffd28a;
+}
+
+.product-panel-big {
+  font-family: var(--font-display), Georgia, serif;
+  font-size: 54px;
+  line-height: 1;
+  color: #201f1d;
+}
+
+.product-panel.dark .product-panel-big {
+  color: white;
+}
+
+.product-panel-text {
+  font-size: 15px;
+  line-height: 1.45;
+  color: #4f4a45;
+}
+
+.product-panel.dark .product-panel-text {
+  color: rgba(255,255,255,.78);
+}
+
+.product-node {
+  position: absolute;
+  z-index: 9;
+  width: 92px;
+  height: 92px;
+  border-radius: 999px;
+  background: rgba(255,255,255,.66);
+  border: 1px solid rgba(255,255,255,.52);
+  backdrop-filter: blur(18px);
+  box-shadow: 0 18px 50px rgba(32,31,29,.12);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  font-weight: 850;
+  text-transform: uppercase;
+  letter-spacing: .1em;
+  color: #7b4b56;
+}
+
+.product-line {
+  position: absolute;
+  z-index: 2;
+  height: 1px;
+  background: rgba(32,31,29,.13);
+  transform-origin: left center;
+}
+
+.product-cut-card {
+  position: absolute;
+  z-index: 7;
+  right: 40px;
+  bottom: 42px;
+  width: 270px;
+  min-height: 126px;
+  border-radius: 34px 34px 34px 90px;
+  background: rgba(32,31,29,.92);
+  color: white;
+  padding: 24px;
+  box-shadow: 0 24px 70px rgba(32,31,29,.18);
+}
