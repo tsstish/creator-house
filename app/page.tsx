@@ -1,155 +1,168 @@
 export default function Home() {
   return (
    <main className="hero-page">
-  {/* STUDIO HERO */}
+{/* STUDIO HERO */}
 
-  <section className="studio-hero">
-    <div className="studio-hero-shell">
-      <div className="studio-shape one" />
-      <div className="studio-shape two" />
-      <div className="studio-vertical-tag">
-        Creator House • Brand Ready • Creator Profile
+<section className="studio-hero">
+  <div className="studio-hero-shell">
+    <div className="studio-shape one" />
+    <div className="studio-shape two" />
+    <div className="studio-vertical-tag">
+      Creator House • Brand Ready • Creator Profile
+    </div>
+
+    <div className="studio-hero-grid">
+      <div className="studio-copy">
+        <div>
+          <div className="studio-kicker">Новый формат профиля</div>
+
+          <h1 className="studio-title">
+            Один <em>живой</em> профиль вместо PDF и хаоса
+          </h1>
+
+          <p className="studio-text">
+            Creator House собирает цифры, кейсы, цены и предложения в одну
+            красивую ссылку, которую бренд действительно захочет открыть.
+          </p>
+
+          <div className="studio-actions">
+            <button className="studio-primary">Создать Creator House</button>
+            <button className="studio-secondary">Посмотреть пример</button>
+          </div>
+        </div>
+
+        <div className="studio-footer-line">
+          <span>Без PDF</span>
+          <span>Без дизайнера</span>
+          <span>Без маркетолога</span>
+          <span>Одна ссылка для бренда</span>
+        </div>
       </div>
 
-      <div className="studio-hero-grid">
-        <div className="studio-copy">
-          <div>
-            <div className="studio-kicker">Новый формат профиля</div>
+      <div className="product-stage">
+        <div className="product-tabs">
+          <input id="product-audience" name="product-tabs" type="radio" defaultChecked />
+          <input id="product-cases" name="product-tabs" type="radio" />
+          <input id="product-price" name="product-tabs" type="radio" />
+          <input id="product-style" name="product-tabs" type="radio" />
 
-            <h1 className="studio-title">
-              Один <em>живой</em> профиль вместо PDF и хаоса
-            </h1>
-
-            <p className="studio-text">
-              Creator House собирает цифры, кейсы, цены и предложения в одну
-              красивую ссылку, которую бренд действительно захочет открыть.
-            </p>
-
-            <div className="studio-actions">
-              <button className="studio-primary">Создать Creator House</button>
-              <button className="studio-secondary">Посмотреть пример</button>
-            </div>
+          <div className="product-tab-row">
+            <label htmlFor="product-audience">Аудитория</label>
+            <label htmlFor="product-cases">Кейсы</label>
+            <label htmlFor="product-price">Цены</label>
+            <label htmlFor="product-style">Стиль</label>
           </div>
 
-          <div className="studio-footer-line">
-            <span>Без PDF</span>
-            <span>Без дизайнера</span>
-            <span>Без маркетолога</span>
-            <span>Одна ссылка для бренда</span>
-          </div>
-        </div>
+          <div className="product-scene">
+            {[
+              {
+                cls: "audience",
+                name: "Mira",
+                role: "Beauty creator • TikTok • Instagram",
+                main: ["184K", "аудитория"],
+                small: "82% женщины · 34% США · 25–34",
+                dark: [
+                  "Подтверждено",
+                  "Бренд видит не скриншоты, а аккуратно собранные данные.",
+                ],
+              },
+              {
+                cls: "cases",
+                name: "Daniel",
+                role: "Travel creator • Instagram • YouTube",
+                main: ["2.4M", "просмотров в кейсе"],
+                small: "hotel review · 14 интеграций · 680K охваты",
+                dark: [
+                  "Кейсы",
+                  "Результаты прошлых интеграций собраны прямо в профиле.",
+                ],
+              },
+              {
+                cls: "price",
+                name: "Emma",
+                role: "Family creator • Instagram • TikTok",
+                main: ["$1400", "Reels + Stories"],
+                small: "$950 Stories · $2200 пакет · условия в одном месте",
+                dark: [
+                  "Без неловкости",
+                  "Бренд заранее понимает форматы, цены и условия.",
+                ],
+              },
+              {
+                cls: "style",
+                name: "Alex",
+                role: "Business creator • LinkedIn • Telegram",
+                main: ["1", "ссылка для бренда"],
+                small: "dark profile · business style · brand-ready page",
+                dark: [
+                  "Не шаблон",
+                  "Профиль выглядит как твой личный формат, а не как PDF.",
+                ],
+              },
+            ].map((item) => (
+              <div key={item.cls} className={`product-state ${item.cls}`}>
+                <div
+                  className="product-line"
+                  style={{
+                    left: 130,
+                    top: 250,
+                    width: 260,
+                    transform: "rotate(-18deg)",
+                  }}
+                />
 
-        <div className="product-stage">
-  <div className="product-tabs">
-    <input id="product-audience" name="product-tabs" type="radio" defaultChecked />
-    <input id="product-cases" name="product-tabs" type="radio" />
-    <input id="product-price" name="product-tabs" type="radio" />
-    <input id="product-style" name="product-tabs" type="radio" />
+                <div
+                  className="product-line"
+                  style={{
+                    left: 170,
+                    top: 410,
+                    width: 300,
+                    transform: "rotate(14deg)",
+                  }}
+                />
 
-    <div className="product-tab-row">
-      <label htmlFor="product-audience">Аудитория</label>
-      <label htmlFor="product-cases">Кейсы</label>
-      <label htmlFor="product-price">Цены</label>
-      <label htmlFor="product-style">Стиль</label>
-    </div>
+                <div className="product-node" style={{ left: 64, top: 196 }}>
+                  выбор
+                </div>
 
-    <div className="product-scene">
-      {[
-        {
-          cls: "audience",
-          name: "Mira",
-          role: "Beauty creator • TikTok • Instagram",
-          main: ["184K", "аудитория"],
-          small: "82% женщины · 34% США · 25–34",
-          dark: ["Подтверждено", "Бренд видит не скриншоты, а аккуратно собранные данные."],
-        },
-        {
-          cls: "cases",
-          name: "Daniel",
-          role: "Travel creator • Instagram • YouTube",
-          main: ["2.4M", "просмотров в кейсе"],
-          small: "hotel review · 14 интеграций · 680K охваты",
-          dark: ["Кейсы", "Результаты прошлых интеграций собраны прямо в профиле."],
-        },
-        {
-          cls: "price",
-          name: "Emma",
-          role: "Family creator • Instagram • TikTok",
-          main: ["$1400", "Reels + Stories"],
-          small: "$950 Stories · $2200 пакет · условия в одном месте",
-          dark: ["Без неловкости", "Бренд заранее понимает форматы, цены и условия."],
-        },
-        {
-          cls: "style",
-          name: "Alex",
-          role: "Business creator • LinkedIn • Telegram",
-          main: ["1", "ссылка для бренда"],
-          small: "dark profile · business style · brand-ready page",
-          dark: ["Не шаблон", "Профиль выглядит как твой личный формат, а не как PDF."],
-        },
-      ].map((item) => (
-        <div key={item.cls} className={`product-state ${item.cls}`}>
-          <div
-            className="product-line"
-            style={{ left: 130, top: 250, width: 260, transform: "rotate(-18deg)" }}
-          />
-          <div
-            className="product-line"
-            style={{ left: 170, top: 410, width: 300, transform: "rotate(14deg)" }}
-          />
+                <div className="product-node" style={{ right: 86, top: 64 }}>
+                  бренд
+                </div>
 
-          <div className="product-node" style={{ left: 64, top: 196 }}>
-            выбор
-          </div>
-
-          <div className="product-node" style={{ right: 86, top: 64 }}>
-            бренд
-          </div>
-
-          <div className="product-panel" style={{ left: 128, top: 92, width: 230 }}>
-            <div className="product-panel-title">{item.main[1]}</div>
-            <div className="product-panel-big">{item.main[0]}</div>
-            <div className="product-panel-text" style={{ marginTop: 8 }}>
-              {item.small}
-            </div>
-          </div>
-
-          <div className="product-core">
-            <div className="product-core-content">
-              <div className="product-name">{item.name}</div>
-              <div className="product-role">{item.role}</div>
-            </div>
-          </div>
-
-          <div className="product-cut-card">
-            <div className="product-panel-title">{item.dark[0]}</div>
-            <div className="product-panel-text">{item.dark[1]}</div>
-          </div>
-        </div>
-      ))}
-    </div>
-  </div>
-</div>
-
-                  <div
-                    className="studio-float dark"
-                    style={{
-                      right: 48,
-                      bottom: 56,
-                      width: 240,
-                    }}
-                  >
-                    <div className="studio-float-title">{item.floatDark[0]}</div>
-                    <div className="studio-float-text">{item.floatDark[1]}</div>
+                <div
+                  className="product-panel"
+                  style={{
+                    left: 128,
+                    top: 92,
+                    width: 230,
+                  }}
+                >
+                  <div className="product-panel-title">{item.main[1]}</div>
+                  <div className="product-panel-big">{item.main[0]}</div>
+                  <div className="product-panel-text" style={{ marginTop: 8 }}>
+                    {item.small}
                   </div>
                 </div>
-              ))}
-            </div>
+
+                <div className="product-core">
+                  <div className="product-core-content">
+                    <div className="product-name">{item.name}</div>
+                    <div className="product-role">{item.role}</div>
+                  </div>
+                </div>
+
+                <div className="product-cut-card">
+                  <div className="product-panel-title">{item.dark[0]}</div>
+                  <div className="product-panel-text">{item.dark[1]}</div>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
         <section className="pain-section">
           <div className="pain-layout">
