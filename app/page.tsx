@@ -35,7 +35,6 @@ export default function Home() {
           <span>Без маркетолога</span>
           <span>Одна ссылка для бренда</span>
         </div>
-      </div>
 </section>
 
         <section className="pain-section">
