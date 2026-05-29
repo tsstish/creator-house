@@ -551,436 +551,149 @@ export default function Home() {
   </div>
 </section>
 
-        {/* BUILDER SECTION */}
+       {/* BUILDER SECTION */}
 
-<section style={{ padding: "34px 0 58px" }}>
-  <div
-    style={{
-      maxWidth: 1120,
-      margin: "0 auto",
-      position: "relative",
-      borderRadius: 42,
-      padding: "42px 44px",
-      background: "rgba(255,255,255,.46)",
-      border: "1px solid rgba(31,31,31,.06)",
-      boxShadow: "0 24px 70px rgba(31,31,31,.045)",
-      overflow: "hidden",
-    }}
-  >
-    <div
-      style={{
-        position: "absolute",
-        right: -120,
-        top: -120,
-        width: 360,
-        height: 360,
-        borderRadius: 999,
-        background: "rgba(123,75,86,.07)",
-        filter: "blur(50px)",
-      }}
-    />
-
-    <div
-      style={{
-        display: "grid",
-        gridTemplateColumns: "330px 1fr",
-        gap: 42,
-        alignItems: "center",
-        position: "relative",
-        zIndex: 2,
-      }}
-    >
-      {/* LEFT */}
-
-      <div>
-        <div
-          style={{
-            display: "inline-flex",
-            padding: "10px 18px",
-            borderRadius: 999,
-            border: "1px solid rgba(176,137,87,.2)",
-            background: "rgba(255,255,255,.5)",
-            color: "#8C6D3E",
-            fontSize: 14,
-            fontWeight: 600,
-            letterSpacing: ".04em",
-            marginBottom: 20,
-          }}
-        >
-          Собери свой Creator House
-        </div>
-
-        <h2
-          className="display"
-          style={{
-            fontSize: 44,
-            lineHeight: 1.06,
-            letterSpacing: "-0.018em",
-            margin: "0 0 18px",
-          }}
-        >
-          Покажи бренду только то, что усиливает тебя
-        </h2>
-
-        <p
-          style={{
-            fontSize: 15,
-            lineHeight: 1.55,
-            color: "#625E58",
-            margin: "0 0 24px",
-          }}
-        >
-          Выбирай, какие данные попадут в профиль: аудитория, кейсы,
-          цены, форматы рекламы и подтверждённая статистика.
-        </p>
-
-        <div style={{ display: "grid", gap: 10 }}>
-          {[
-            ["Аудитория", "возраст, география, площадки"],
-            ["Кейсы", "результаты интеграций"],
-            ["Цены", "форматы и условия рекламы"],
-            ["Подтверждение", "больше доверия к цифрам"],
-          ].map(([title, text], index) => (
-            <div
-              key={title}
-              style={{
-                display: "grid",
-                gridTemplateColumns: "32px 1fr",
-                gap: 12,
-                alignItems: "center",
-                padding: "12px 14px",
-                borderRadius: 20,
-                background:
-                  index === 0
-                    ? "#2F2D2A"
-                    : "rgba(255,255,255,.58)",
-                color: index === 0 ? "white" : "#1F1F1F",
-                border: "1px solid rgba(31,31,31,.06)",
-              }}
-            >
-              <div
-                style={{
-                  width: 26,
-                  height: 26,
-                  borderRadius: 999,
-                  background:
-                    index === 0
-                      ? "rgba(255,255,255,.16)"
-                      : "rgba(140,109,62,.12)",
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "center",
-                  fontSize: 11,
-                  fontWeight: 700,
-                  color: index === 0 ? "white" : "#8C6D3E",
-                }}
-              >
-                0{index + 1}
-              </div>
-
-              <div>
-                <div
-                  style={{
-                    fontSize: 12,
-                    letterSpacing: ".12em",
-                    textTransform: "uppercase",
-                    fontWeight: 700,
-                    color: index === 0 ? "#D7B47D" : "#7B4B56",
-                    marginBottom: 3,
-                  }}
-                >
-                  {title}
-                </div>
-                <div
-                  style={{
-                    fontSize: 13,
-                    color: index === 0 ? "rgba(255,255,255,.72)" : "#625E58",
-                  }}
-                >
-                  {text}
-                </div>
-              </div>
-            </div>
-          ))}
-        </div>
-      </div>
-
-      {/* RIGHT */}
-
+<section className="builder-showcase">
+  <div className="builder-shell">
+    <div className="builder-copy">
       <div
         style={{
-          position: "relative",
-          minHeight: 430,
+          display: "inline-flex",
+          padding: "10px 18px",
+          borderRadius: 999,
+          border: "1px solid rgba(176,137,87,.2)",
+          background: "rgba(255,255,255,.5)",
+          color: "#8C6D3E",
+          fontSize: 14,
+          fontWeight: 600,
+          letterSpacing: ".04em",
+          marginBottom: 20,
         }}
       >
-        {/* floating cards */}
+        Собери свой Creator House
+      </div>
 
-        <div
-          style={{
-            position: "absolute",
-            left: 8,
-            top: 22,
-            width: 180,
-            padding: 18,
-            borderRadius: 26,
-            background: "rgba(255,255,255,.72)",
-            border: "1px solid rgba(31,31,31,.06)",
-            boxShadow: "0 16px 44px rgba(31,31,31,.055)",
-            zIndex: 4,
-          }}
-        >
-          <div
-            style={{
-              fontSize: 11,
-              letterSpacing: ".13em",
-              textTransform: "uppercase",
-              color: "#7B4B56",
-              fontWeight: 700,
-              marginBottom: 10,
-            }}
-          >
-            выбрано
-          </div>
-          <div className="display" style={{ fontSize: 34, lineHeight: 1 }}>
-            6 блоков
-          </div>
-          <div style={{ fontSize: 12, color: "#625E58", marginTop: 5 }}>
-            для бренда
-          </div>
-        </div>
+      <h2 className="display builder-title">
+        Один продукт — разные профили под разные ниши
+      </h2>
 
-        <div
-          style={{
-            position: "absolute",
-            right: 0,
-            bottom: 28,
-            width: 190,
-            padding: 18,
-            borderRadius: 26,
-            background: "#2F2D2A",
-            color: "white",
-            boxShadow: "0 18px 52px rgba(31,31,31,.13)",
-            zIndex: 4,
-          }}
-        >
-          <div
-            style={{
-              fontSize: 11,
-              letterSpacing: ".13em",
-              textTransform: "uppercase",
-              color: "#D7B47D",
-              marginBottom: 10,
-            }}
-          >
-            brand ready
-          </div>
-          <div style={{ fontSize: 13, lineHeight: 1.45, opacity: .8 }}>
-            ссылка готова для отправки бренду
-          </div>
-        </div>
+      <p className="builder-text">
+        Beauty, travel, family или business — Creator House помогает показать
+        именно те данные, которые важны бренду в твоей нише.
+      </p>
 
-        {/* main mockup */}
-
-        <div
-          style={{
-            width: 470,
-            margin: "0 auto",
-            borderRadius: 34,
-            background: "rgba(255,255,255,.9)",
-            border: "1px solid rgba(31,31,31,.06)",
-            boxShadow: "0 28px 80px rgba(31,31,31,.09)",
-            padding: 18,
-            position: "relative",
-            zIndex: 3,
-          }}
-        >
-          <div
-            style={{
-              display: "flex",
-              justifyContent: "space-between",
-              alignItems: "center",
-              marginBottom: 16,
-            }}
-          >
+      <div className="builder-note">
+        {[
+          ["Не один шаблон", "Профиль меняется под стиль и формат creator-а."],
+          ["Больше доверия", "Цифры, кейсы и цены собраны в понятную структуру."],
+          ["Одна ссылка", "Больше не нужно отправлять PDF, скрины и длинные сообщения."],
+        ].map(([title, text]) => (
+          <div key={title} className="builder-note-item">
+            <span className="builder-dot" />
             <div>
-              <div
-                style={{
-                  fontSize: 11,
-                  letterSpacing: ".14em",
-                  textTransform: "uppercase",
-                  color: "#7B4B56",
-                  fontWeight: 700,
-                  marginBottom: 5,
-                }}
-              >
-                Creator House Builder
-              </div>
-              <div style={{ fontSize: 14, color: "#625E58" }}>
-                публичный профиль для бренда
-              </div>
-            </div>
-
-            <div
-              style={{
-                width: 42,
-                height: 42,
-                borderRadius: 16,
-                background:
-                  "linear-gradient(135deg,#e8d5cf,#7B4B56)",
-              }}
-            />
-          </div>
-
-          <div
-            style={{
-              display: "grid",
-              gridTemplateColumns: "1.1fr .9fr",
-              gap: 10,
-              marginBottom: 10,
-            }}
-          >
-            <div
-              style={{
-                minHeight: 150,
-                borderRadius: 22,
-                background:
-                  "linear-gradient(180deg,#e8d5cf 0%, #b9897f 48%, #332326 100%)",
-                padding: 20,
-                color: "white",
-                display: "flex",
-                flexDirection: "column",
-                justifyContent: "flex-end",
-              }}
-            >
-              <div className="display" style={{ fontSize: 34, lineHeight: 1 }}>
-                Mira
-              </div>
-              <div style={{ fontSize: 12, opacity: .88, marginTop: 5 }}>
-                Beauty • TikTok • Instagram
-              </div>
-            </div>
-
-            <div
-              style={{
-                display: "grid",
-                gap: 10,
-              }}
-            >
-              <div
-                style={{
-                  background: "#f7f2ea",
-                  borderRadius: 20,
-                  padding: 14,
-                }}
-              >
-                <div
-                  style={{
-                    fontSize: 10,
-                    letterSpacing: ".12em",
-                    textTransform: "uppercase",
-                    color: "#7B4B56",
-                    fontWeight: 700,
-                    marginBottom: 8,
-                  }}
-                >
-                  аудитория
-                </div>
-                <div className="display" style={{ fontSize: 28, lineHeight: 1 }}>
-                  184K
-                </div>
-              </div>
-
-              <div
-                style={{
-                  background: "#f7f2ea",
-                  borderRadius: 20,
-                  padding: 14,
-                }}
-              >
-                <div
-                  style={{
-                    fontSize: 10,
-                    letterSpacing: ".12em",
-                    textTransform: "uppercase",
-                    color: "#7B4B56",
-                    fontWeight: 700,
-                    marginBottom: 8,
-                  }}
-                >
-                  охваты
-                </div>
-                <div className="display" style={{ fontSize: 28, lineHeight: 1 }}>
-                  1.2M
-                </div>
-              </div>
+              <div className="builder-note-title">{title}</div>
+              <div className="builder-note-text">{text}</div>
             </div>
           </div>
+        ))}
+      </div>
+    </div>
 
-          <div
-            style={{
-              display: "grid",
-              gridTemplateColumns: "1fr 1fr 1fr",
-              gap: 10,
-              marginBottom: 10,
-            }}
-          >
-            {[
-              ["Кейс", "2.4M views"],
-              ["ER", "7.2%"],
-              ["Цена", "от $1400"],
-            ].map(([title, value]) => (
-              <div
-                key={title}
-                style={{
-                  background: "#f7f2ea",
-                  borderRadius: 18,
-                  padding: 13,
-                }}
-              >
-                <div
-                  style={{
-                    fontSize: 10,
-                    letterSpacing: ".12em",
-                    textTransform: "uppercase",
-                    color: "#7B4B56",
-                    fontWeight: 700,
-                    marginBottom: 7,
-                  }}
-                >
-                  {title}
+    <div className="builder-stage">
+      <div className="builder-tabs">
+        <input id="tab-beauty" name="creator-tab" type="radio" defaultChecked />
+        <input id="tab-travel" name="creator-tab" type="radio" />
+        <input id="tab-family" name="creator-tab" type="radio" />
+        <input id="tab-business" name="creator-tab" type="radio" />
+
+        <div className="builder-tab-row">
+          <label htmlFor="tab-beauty">Beauty</label>
+          <label htmlFor="tab-travel">Travel</label>
+          <label htmlFor="tab-family">Family</label>
+          <label htmlFor="tab-business">Business</label>
+        </div>
+
+        <div className="builder-mockups">
+          {[
+            {
+              cls: "beauty",
+              name: "Mira",
+              role: "Beauty creator • TikTok • Instagram",
+              metrics: [
+                ["184K", "аудитория"],
+                ["7.2%", "ER"],
+                ["1.2M", "охваты"],
+              ],
+              caseText: "2.4M views • beauty launch",
+              price: "от $1400",
+            },
+            {
+              cls: "travel",
+              name: "Daniel",
+              role: "Travel creator • Instagram • YouTube",
+              metrics: [
+                ["96K", "аудитория"],
+                ["42%", "США"],
+                ["680K", "охваты"],
+              ],
+              caseText: "hotel review • 312K views",
+              price: "от $900",
+            },
+            {
+              cls: "family",
+              name: "Emma",
+              role: "Family creator • Instagram • TikTok",
+              metrics: [
+                ["138K", "аудитория"],
+                ["74%", "женщины"],
+                ["9.1%", "ER"],
+              ],
+              caseText: "kids brand • 18K saves",
+              price: "от $1100",
+            },
+            {
+              cls: "business",
+              name: "Alex",
+              role: "Business creator • LinkedIn • Telegram",
+              metrics: [
+                ["52K", "аудитория"],
+                ["31%", "founders"],
+                ["4.8%", "ER"],
+              ],
+              caseText: "SaaS launch • 240 leads",
+              price: "от $1800",
+            },
+          ].map((profile) => (
+            <article key={profile.cls} className={`builder-profile ${profile.cls}`}>
+              <div className="profile-card">
+                <div className="profile-cover">
+                  <div className="profile-name">{profile.name}</div>
+                  <div className="profile-role">{profile.role}</div>
                 </div>
-                <div style={{ fontSize: 13, color: "#3F3A35" }}>
-                  {value}
+
+                <div className="profile-grid">
+                  {profile.metrics.map(([value, label]) => (
+                    <div key={label} className="profile-metric">
+                      <div className="profile-value">{value}</div>
+                      <div className="profile-small">{label}</div>
+                    </div>
+                  ))}
+                </div>
+
+                <div className="profile-bottom">
+                  <div className="profile-wide">
+                    <div className="profile-label">Кейс</div>
+                    <div className="profile-small">{profile.caseText}</div>
+                  </div>
+
+                  <div className="profile-dark">
+                    <div className="profile-label">Предложение</div>
+                    <div className="profile-value">{profile.price}</div>
+                  </div>
                 </div>
               </div>
-            ))}
-          </div>
-
-          <div
-            style={{
-              display: "flex",
-              flexWrap: "wrap",
-              gap: 8,
-              padding: 14,
-              borderRadius: 20,
-              background: "#f7f2ea",
-            }}
-          >
-            {["статистика", "кейсы", "цены", "форматы", "контакты"].map((item) => (
-              <span
-                key={item}
-                style={{
-                  padding: "8px 11px",
-                  borderRadius: 999,
-                  background: "rgba(255,255,255,.72)",
-                  fontSize: 12,
-                  color: "#4B4741",
-                }}
-              >
-                {item}
-              </span>
-            ))}
-          </div>
+            </article>
+          ))}
         </div>
       </div>
     </div>
