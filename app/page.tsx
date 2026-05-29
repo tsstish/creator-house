@@ -218,11 +218,11 @@ export default function Home() {
         
 {/* SHOWCASE SECTION */}
 
-<section style={{ padding: "44px 0 72px" }}>
+<section style={{ padding: "42px 0 70px" }}>
   <div
     style={{
       display: "grid",
-      gridTemplateColumns: "minmax(430px, 0.95fr) minmax(390px, 0.75fr)",
+      gridTemplateColumns: "minmax(420px, 0.9fr) minmax(500px, 1fr)",
       gap: 56,
       alignItems: "center",
     }}
@@ -248,14 +248,14 @@ export default function Home() {
       <h2
         className="display"
         style={{
-          fontSize: 50,
+          fontSize: 48,
           lineHeight: 1.08,
           letterSpacing: "-0.018em",
-          maxWidth: 610,
+          maxWidth: 600,
           margin: "0 0 22px",
         }}
       >
-        Один профиль вместо скринов, PDF и хаоса в переписке
+        Не собирай презентацию вручную. Собери профиль для бренда.
       </h2>
 
       <p
@@ -263,44 +263,35 @@ export default function Home() {
           fontSize: 16,
           lineHeight: 1.55,
           color: "#5F5B55",
-          maxWidth: 560,
+          maxWidth: 520,
           margin: "0 0 26px",
         }}
       >
-        Без дизайнера, без маркетолога и без ручной сборки презентаций.
-        Creator House помогает блогеру выглядеть профессионально перед брендом.
+        Creator House превращает цифры, кейсы, форматы рекламы и цены в аккуратную
+        страницу, которую можно отправить бренду одной ссылкой.
       </p>
 
       <div
         style={{
           display: "grid",
-          gridTemplateColumns: "1fr",
           gap: 12,
-          maxWidth: 560,
+          maxWidth: 520,
         }}
       >
         {[
-          [
-            "Бренд быстрее понимает ценность",
-            "В одном профиле видны цифры, кейсы, форматы рекламы и условия сотрудничества.",
-          ],
-          [
-            "Не нужно собирать всё вручную",
-            "Больше не надо каждый раз отправлять скрины, ссылки, PDF и длинные объяснения.",
-          ],
-          [
-            "Профиль выглядит дороже",
-            "Даже без дизайнера и маркетолога блогер выглядит как готовый партнёр для бренда.",
-          ],
+          ["Без дизайнера", "Профиль уже выглядит аккуратно и профессионально."],
+          ["Без маркетолога", "Сильные стороны блогера собраны в понятную структуру."],
+          ["Без PDF", "Не нужно каждый раз пересобирать файлы, скрины и ссылки."],
         ].map(([title, text]) => (
           <div
             key={title}
             style={{
-              padding: "18px 20px",
-              borderRadius: 24,
-              background: "rgba(255,255,255,.58)",
-              border: "1px solid rgba(31,31,31,.06)",
-              boxShadow: "0 14px 36px rgba(31,31,31,.035)",
+              display: "grid",
+              gridTemplateColumns: "120px 1fr",
+              gap: 18,
+              alignItems: "start",
+              padding: "16px 0",
+              borderBottom: "1px solid rgba(31,31,31,.08)",
             }}
           >
             <div
@@ -310,7 +301,6 @@ export default function Home() {
                 textTransform: "uppercase",
                 color: "#7B4B56",
                 fontWeight: 700,
-                marginBottom: 8,
               }}
             >
               {title}
@@ -330,132 +320,199 @@ export default function Home() {
       </div>
     </div>
 
-    <div
-      style={{
-        display: "flex",
-        justifyContent: "center",
-      }}
-    >
+    <div style={{ display: "flex", justifyContent: "center" }}>
       <div
         style={{
-          width: 390,
+          width: 500,
           borderRadius: 32,
-          overflow: "hidden",
-          background: "rgba(255,255,255,.9)",
+          background: "rgba(255,255,255,.88)",
           border: "1px solid rgba(31,31,31,.06)",
           boxShadow: "0 26px 72px rgba(31,31,31,.09)",
+          padding: 20,
         }}
       >
         <div
           style={{
-            height: 138,
-            position: "relative",
-            background:
-              "linear-gradient(180deg,#e8d5cf 0%, #b9897f 48%, #332326 100%)",
+            display: "flex",
+            justifyContent: "space-between",
+            alignItems: "center",
+            marginBottom: 18,
+          }}
+        >
+          <div>
+            <div
+              style={{
+                fontSize: 12,
+                letterSpacing: ".14em",
+                textTransform: "uppercase",
+                color: "#7B4B56",
+                fontWeight: 700,
+                marginBottom: 6,
+              }}
+            >
+              Панель Creator House
+            </div>
+            <div style={{ fontSize: 15, color: "#625E58" }}>
+              выбери, что увидит бренд
+            </div>
+          </div>
+
+          <div
+            style={{
+              padding: "8px 12px",
+              borderRadius: 999,
+              background: "rgba(115,191,120,.14)",
+              color: "#4C8A55",
+              fontSize: 12,
+              fontWeight: 700,
+            }}
+          >
+            готово
+          </div>
+        </div>
+
+        <div
+          style={{
+            display: "grid",
+            gridTemplateColumns: "1fr 1fr",
+            gap: 10,
+            marginBottom: 10,
+          }}
+        >
+          {[
+            ["Аудитория", "184K", "Instagram + TikTok"],
+            ["Вовлечённость", "7.2%", "средний ER"],
+            ["Охваты", "1.2M", "за 30 дней"],
+            ["Кейсы", "14", "интеграций"],
+          ].map(([label, value, note]) => (
+            <div
+              key={label}
+              style={{
+                background: "#f7f2ea",
+                borderRadius: 18,
+                padding: 16,
+              }}
+            >
+              <div
+                style={{
+                  fontSize: 11,
+                  letterSpacing: ".12em",
+                  textTransform: "uppercase",
+                  color: "#7B4B56",
+                  fontWeight: 700,
+                  marginBottom: 10,
+                }}
+              >
+                {label}
+              </div>
+
+              <div className="display" style={{ fontSize: 30, lineHeight: 1, marginBottom: 6 }}>
+                {value}
+              </div>
+
+              <div style={{ fontSize: 12, color: "#625E58" }}>{note}</div>
+            </div>
+          ))}
+        </div>
+
+        <div
+          style={{
+            background: "#f7f2ea",
+            borderRadius: 20,
+            padding: 16,
+            marginBottom: 10,
           }}
         >
           <div
             style={{
-              position: "absolute",
-              inset: 0,
-              background:
-                "radial-gradient(circle at 78% 24%, rgba(255,255,255,.36), transparent 23%), linear-gradient(180deg, transparent 42%, rgba(0,0,0,.72))",
+              fontSize: 11,
+              letterSpacing: ".12em",
+              textTransform: "uppercase",
+              color: "#7B4B56",
+              fontWeight: 700,
+              marginBottom: 12,
             }}
-          />
+          >
+            Что включить в профиль
+          </div>
 
-          <div style={{ position: "absolute", left: 20, bottom: 16, color: "white" }}>
-            <div className="display" style={{ fontSize: 36, lineHeight: 1, marginBottom: 5 }}>
-              Mira
-            </div>
-            <div style={{ fontSize: 12, opacity: 0.92 }}>
-              Beauty creator • TikTok • Instagram
-            </div>
+          <div style={{ display: "flex", flexWrap: "wrap", gap: 8 }}>
+            {["статистика", "кейсы", "цены", "форматы рекламы", "контакты"].map((item) => (
+              <span
+                key={item}
+                style={{
+                  padding: "8px 11px",
+                  borderRadius: 999,
+                  background: "rgba(255,255,255,.68)",
+                  border: "1px solid rgba(31,31,31,.05)",
+                  fontSize: 12,
+                  color: "#4B4741",
+                }}
+              >
+                {item}
+              </span>
+            ))}
           </div>
         </div>
 
-        <div style={{ padding: 15 }}>
+        <div
+          style={{
+            display: "grid",
+            gridTemplateColumns: "1fr 1fr",
+            gap: 10,
+          }}
+        >
           <div
             style={{
-              display: "flex",
-              alignItems: "center",
-              gap: 8,
-              marginBottom: 9,
-              padding: "9px 10px",
-              borderRadius: 14,
-              background: "rgba(246,241,232,.72)",
+              background: "#f7f2ea",
+              borderRadius: 18,
+              padding: 16,
             }}
           >
-            <span
+            <div
               style={{
-                width: 8,
-                height: 8,
-                borderRadius: 99,
-                background: "#73bf78",
-                boxShadow: "0 0 0 6px rgba(115,191,120,.14)",
+                fontSize: 11,
+                letterSpacing: ".12em",
+                textTransform: "uppercase",
+                color: "#7B4B56",
+                fontWeight: 700,
+                marginBottom: 10,
               }}
-            />
-            <span style={{ fontSize: 11, color: "#4B4741" }}>
-              Статистика подтверждена Creator House
-            </span>
-          </div>
+            >
+              Форматы
+            </div>
 
-          <div
-            style={{
-              display: "grid",
-              gridTemplateColumns: "repeat(3, 1fr)",
-              gap: 8,
-              marginBottom: 8,
-            }}
-          >
-            {[
-              ["184K", "аудитория"],
-              ["7.2%", "ER"],
-              ["1.2M", "охваты"],
-            ].map(([value, label]) => (
-              <div
-                key={value}
-                style={{
-                  background: "#f7f2ea",
-                  borderRadius: 14,
-                  padding: "11px 9px",
-                }}
-              >
-                <div className="display" style={{ fontSize: 21, lineHeight: 1, marginBottom: 4 }}>
-                  {value}
-                </div>
-                <div style={{ fontSize: 10, color: "#625E58" }}>{label}</div>
-              </div>
-            ))}
+            <div style={{ fontSize: 13, lineHeight: 1.55, color: "#3F3A35" }}>
+              Reels
+              <br />
+              Stories
+              <br />
+              UGC video
+            </div>
           </div>
 
           <div
             style={{
               background: "#2F2D2A",
-              borderRadius: 17,
-              padding: 14,
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "space-between",
-              gap: 12,
+              borderRadius: 18,
+              padding: 16,
               color: "white",
             }}
           >
-            <div>
-              <div
-                style={{
-                  fontSize: 10,
-                  letterSpacing: ".1em",
-                  textTransform: "uppercase",
-                  color: "#D7B47D",
-                  marginBottom: 6,
-                }}
-              >
-                предложение
-              </div>
+            <div
+              style={{
+                fontSize: 11,
+                letterSpacing: ".12em",
+                textTransform: "uppercase",
+                color: "#D7B47D",
+                marginBottom: 10,
+              }}
+            >
+              предложение
+            </div>
 
-              <div className="display" style={{ fontSize: 27, lineHeight: 1 }}>
-                от $1400
-              </div>
+            <div className="display" style={{ fontSize: 30, lineHeight: 1, marginBottom: 12 }}>
+              от $1400
             </div>
 
             <button
@@ -467,9 +524,10 @@ export default function Home() {
                 padding: "10px 13px",
                 fontSize: 12,
                 fontWeight: 650,
+                width: "100%",
               }}
             >
-              Связаться
+              Сформировать профиль
             </button>
           </div>
         </div>
