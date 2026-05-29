@@ -550,6 +550,156 @@ export default function Home() {
     </div>
   </div>
 </section>
+
+        <section
+  style={{
+    padding: "70px 0",
+  }}
+>
+  <div
+    style={{
+      maxWidth: 1120,
+      margin: "0 auto",
+      textAlign: "center",
+    }}
+  >
+    <div
+      className="section-kicker"
+      style={{
+        margin: "0 auto 20px",
+      }}
+    >
+      Живой пример Creator House
+    </div>
+
+    <h2
+      className="display"
+      style={{
+        fontSize: 56,
+        lineHeight: 1.05,
+        maxWidth: 760,
+        margin: "0 auto 20px",
+      }}
+    >
+      Один профиль.
+      <br />
+      Разные сценарии.
+    </h2>
+
+    <p
+      style={{
+        maxWidth: 620,
+        margin: "0 auto 48px",
+        fontSize: 20,
+        lineHeight: 1.7,
+        color: "#625E58",
+      }}
+    >
+      Creator House собирает профиль под твою нишу —
+      от beauty и travel до семейного или бизнес-контента.
+    </p>
+
+    <div
+      style={{
+        display: "flex",
+        justifyContent: "center",
+        gap: 12,
+        flexWrap: "wrap",
+        marginBottom: 40,
+      }}
+    >
+      {[
+        "Beauty",
+        "Travel",
+        "Family",
+        "Business",
+      ].map((item) => (
+        <div
+          key={item}
+          style={{
+            padding: "12px 22px",
+            borderRadius: 999,
+            background: "rgba(255,255,255,.65)",
+            border: "1px solid rgba(31,31,31,.06)",
+            fontSize: 14,
+            fontWeight: 600,
+          }}
+        >
+          {item}
+        </div>
+      ))}
+    </div>
+
+    <div
+      style={{
+        maxWidth: 760,
+        margin: "0 auto",
+        padding: 24,
+        borderRadius: 38,
+        background: "rgba(255,255,255,.72)",
+        border: "1px solid rgba(31,31,31,.06)",
+        boxShadow: "0 30px 80px rgba(31,31,31,.05)",
+      }}
+    >
+      <div
+        style={{
+          height: 420,
+          borderRadius: 28,
+          background:
+            "linear-gradient(180deg,#E3C5C2 0%, #221A1C 100%)",
+          position: "relative",
+          overflow: "hidden",
+        }}
+      >
+        <div
+          style={{
+            position: "absolute",
+            left: 40,
+            bottom: 40,
+            color: "white",
+            textAlign: "left",
+          }}
+        >
+          <div
+            className="display"
+            style={{
+              fontSize: 54,
+              marginBottom: 10,
+            }}
+          >
+            Mira
+          </div>
+
+          <div
+            style={{
+              fontSize: 20,
+              opacity: 0.9,
+            }}
+          >
+            Beauty creator • TikTok • Instagram
+          </div>
+        </div>
+
+        <div
+          style={{
+            position: "absolute",
+            top: 30,
+            right: 30,
+            padding: "10px 18px",
+            borderRadius: 999,
+            background: "rgba(255,255,255,.85)",
+            fontSize: 12,
+            fontWeight: 700,
+            letterSpacing: ".12em",
+            color: "#7B4B56",
+          }}
+        >
+          VERIFIED
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
       </section>
     </main>
   );
