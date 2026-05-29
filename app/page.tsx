@@ -551,150 +551,436 @@ export default function Home() {
   </div>
 </section>
 
-        <section
-  style={{
-    padding: "70px 0",
-  }}
->
+        {/* BUILDER SECTION */}
+
+<section style={{ padding: "34px 0 58px" }}>
   <div
     style={{
       maxWidth: 1120,
       margin: "0 auto",
-      textAlign: "center",
+      position: "relative",
+      borderRadius: 42,
+      padding: "42px 44px",
+      background: "rgba(255,255,255,.46)",
+      border: "1px solid rgba(31,31,31,.06)",
+      boxShadow: "0 24px 70px rgba(31,31,31,.045)",
+      overflow: "hidden",
     }}
   >
     <div
-      className="section-kicker"
       style={{
-        margin: "0 auto 20px",
+        position: "absolute",
+        right: -120,
+        top: -120,
+        width: 360,
+        height: 360,
+        borderRadius: 999,
+        background: "rgba(123,75,86,.07)",
+        filter: "blur(50px)",
       }}
-    >
-      Живой пример Creator House
-    </div>
-
-    <h2
-      className="display"
-      style={{
-        fontSize: 56,
-        lineHeight: 1.05,
-        maxWidth: 760,
-        margin: "0 auto 20px",
-      }}
-    >
-      Один профиль.
-      <br />
-      Разные сценарии.
-    </h2>
-
-    <p
-      style={{
-        maxWidth: 620,
-        margin: "0 auto 48px",
-        fontSize: 20,
-        lineHeight: 1.7,
-        color: "#625E58",
-      }}
-    >
-      Creator House собирает профиль под твою нишу —
-      от beauty и travel до семейного или бизнес-контента.
-    </p>
+    />
 
     <div
       style={{
-        display: "flex",
-        justifyContent: "center",
-        gap: 12,
-        flexWrap: "wrap",
-        marginBottom: 40,
+        display: "grid",
+        gridTemplateColumns: "330px 1fr",
+        gap: 42,
+        alignItems: "center",
+        position: "relative",
+        zIndex: 2,
       }}
     >
-      {[
-        "Beauty",
-        "Travel",
-        "Family",
-        "Business",
-      ].map((item) => (
+      {/* LEFT */}
+
+      <div>
         <div
-          key={item}
           style={{
-            padding: "12px 22px",
+            display: "inline-flex",
+            padding: "10px 18px",
             borderRadius: 999,
-            background: "rgba(255,255,255,.65)",
-            border: "1px solid rgba(31,31,31,.06)",
+            border: "1px solid rgba(176,137,87,.2)",
+            background: "rgba(255,255,255,.5)",
+            color: "#8C6D3E",
             fontSize: 14,
             fontWeight: 600,
+            letterSpacing: ".04em",
+            marginBottom: 20,
           }}
         >
-          {item}
+          Собери свой Creator House
         </div>
-      ))}
-    </div>
 
-    <div
-      style={{
-        maxWidth: 760,
-        margin: "0 auto",
-        padding: 24,
-        borderRadius: 38,
-        background: "rgba(255,255,255,.72)",
-        border: "1px solid rgba(31,31,31,.06)",
-        boxShadow: "0 30px 80px rgba(31,31,31,.05)",
-      }}
-    >
+        <h2
+          className="display"
+          style={{
+            fontSize: 44,
+            lineHeight: 1.06,
+            letterSpacing: "-0.018em",
+            margin: "0 0 18px",
+          }}
+        >
+          Покажи бренду только то, что усиливает тебя
+        </h2>
+
+        <p
+          style={{
+            fontSize: 15,
+            lineHeight: 1.55,
+            color: "#625E58",
+            margin: "0 0 24px",
+          }}
+        >
+          Выбирай, какие данные попадут в профиль: аудитория, кейсы,
+          цены, форматы рекламы и подтверждённая статистика.
+        </p>
+
+        <div style={{ display: "grid", gap: 10 }}>
+          {[
+            ["Аудитория", "возраст, география, площадки"],
+            ["Кейсы", "результаты интеграций"],
+            ["Цены", "форматы и условия рекламы"],
+            ["Подтверждение", "больше доверия к цифрам"],
+          ].map(([title, text], index) => (
+            <div
+              key={title}
+              style={{
+                display: "grid",
+                gridTemplateColumns: "32px 1fr",
+                gap: 12,
+                alignItems: "center",
+                padding: "12px 14px",
+                borderRadius: 20,
+                background:
+                  index === 0
+                    ? "#2F2D2A"
+                    : "rgba(255,255,255,.58)",
+                color: index === 0 ? "white" : "#1F1F1F",
+                border: "1px solid rgba(31,31,31,.06)",
+              }}
+            >
+              <div
+                style={{
+                  width: 26,
+                  height: 26,
+                  borderRadius: 999,
+                  background:
+                    index === 0
+                      ? "rgba(255,255,255,.16)"
+                      : "rgba(140,109,62,.12)",
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "center",
+                  fontSize: 11,
+                  fontWeight: 700,
+                  color: index === 0 ? "white" : "#8C6D3E",
+                }}
+              >
+                0{index + 1}
+              </div>
+
+              <div>
+                <div
+                  style={{
+                    fontSize: 12,
+                    letterSpacing: ".12em",
+                    textTransform: "uppercase",
+                    fontWeight: 700,
+                    color: index === 0 ? "#D7B47D" : "#7B4B56",
+                    marginBottom: 3,
+                  }}
+                >
+                  {title}
+                </div>
+                <div
+                  style={{
+                    fontSize: 13,
+                    color: index === 0 ? "rgba(255,255,255,.72)" : "#625E58",
+                  }}
+                >
+                  {text}
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      {/* RIGHT */}
+
       <div
         style={{
-          height: 420,
-          borderRadius: 28,
-          background:
-            "linear-gradient(180deg,#E3C5C2 0%, #221A1C 100%)",
           position: "relative",
-          overflow: "hidden",
+          minHeight: 430,
         }}
       >
+        {/* floating cards */}
+
         <div
           style={{
             position: "absolute",
-            left: 40,
-            bottom: 40,
-            color: "white",
-            textAlign: "left",
+            left: 8,
+            top: 22,
+            width: 180,
+            padding: 18,
+            borderRadius: 26,
+            background: "rgba(255,255,255,.72)",
+            border: "1px solid rgba(31,31,31,.06)",
+            boxShadow: "0 16px 44px rgba(31,31,31,.055)",
+            zIndex: 4,
           }}
         >
           <div
-            className="display"
             style={{
-              fontSize: 54,
+              fontSize: 11,
+              letterSpacing: ".13em",
+              textTransform: "uppercase",
+              color: "#7B4B56",
+              fontWeight: 700,
               marginBottom: 10,
             }}
           >
-            Mira
+            выбрано
           </div>
-
-          <div
-            style={{
-              fontSize: 20,
-              opacity: 0.9,
-            }}
-          >
-            Beauty creator • TikTok • Instagram
+          <div className="display" style={{ fontSize: 34, lineHeight: 1 }}>
+            6 блоков
+          </div>
+          <div style={{ fontSize: 12, color: "#625E58", marginTop: 5 }}>
+            для бренда
           </div>
         </div>
 
         <div
           style={{
             position: "absolute",
-            top: 30,
-            right: 30,
-            padding: "10px 18px",
-            borderRadius: 999,
-            background: "rgba(255,255,255,.85)",
-            fontSize: 12,
-            fontWeight: 700,
-            letterSpacing: ".12em",
-            color: "#7B4B56",
+            right: 0,
+            bottom: 28,
+            width: 190,
+            padding: 18,
+            borderRadius: 26,
+            background: "#2F2D2A",
+            color: "white",
+            boxShadow: "0 18px 52px rgba(31,31,31,.13)",
+            zIndex: 4,
           }}
         >
-          VERIFIED
+          <div
+            style={{
+              fontSize: 11,
+              letterSpacing: ".13em",
+              textTransform: "uppercase",
+              color: "#D7B47D",
+              marginBottom: 10,
+            }}
+          >
+            brand ready
+          </div>
+          <div style={{ fontSize: 13, lineHeight: 1.45, opacity: .8 }}>
+            ссылка готова для отправки бренду
+          </div>
+        </div>
+
+        {/* main mockup */}
+
+        <div
+          style={{
+            width: 470,
+            margin: "0 auto",
+            borderRadius: 34,
+            background: "rgba(255,255,255,.9)",
+            border: "1px solid rgba(31,31,31,.06)",
+            boxShadow: "0 28px 80px rgba(31,31,31,.09)",
+            padding: 18,
+            position: "relative",
+            zIndex: 3,
+          }}
+        >
+          <div
+            style={{
+              display: "flex",
+              justifyContent: "space-between",
+              alignItems: "center",
+              marginBottom: 16,
+            }}
+          >
+            <div>
+              <div
+                style={{
+                  fontSize: 11,
+                  letterSpacing: ".14em",
+                  textTransform: "uppercase",
+                  color: "#7B4B56",
+                  fontWeight: 700,
+                  marginBottom: 5,
+                }}
+              >
+                Creator House Builder
+              </div>
+              <div style={{ fontSize: 14, color: "#625E58" }}>
+                публичный профиль для бренда
+              </div>
+            </div>
+
+            <div
+              style={{
+                width: 42,
+                height: 42,
+                borderRadius: 16,
+                background:
+                  "linear-gradient(135deg,#e8d5cf,#7B4B56)",
+              }}
+            />
+          </div>
+
+          <div
+            style={{
+              display: "grid",
+              gridTemplateColumns: "1.1fr .9fr",
+              gap: 10,
+              marginBottom: 10,
+            }}
+          >
+            <div
+              style={{
+                minHeight: 150,
+                borderRadius: 22,
+                background:
+                  "linear-gradient(180deg,#e8d5cf 0%, #b9897f 48%, #332326 100%)",
+                padding: 20,
+                color: "white",
+                display: "flex",
+                flexDirection: "column",
+                justifyContent: "flex-end",
+              }}
+            >
+              <div className="display" style={{ fontSize: 34, lineHeight: 1 }}>
+                Mira
+              </div>
+              <div style={{ fontSize: 12, opacity: .88, marginTop: 5 }}>
+                Beauty • TikTok • Instagram
+              </div>
+            </div>
+
+            <div
+              style={{
+                display: "grid",
+                gap: 10,
+              }}
+            >
+              <div
+                style={{
+                  background: "#f7f2ea",
+                  borderRadius: 20,
+                  padding: 14,
+                }}
+              >
+                <div
+                  style={{
+                    fontSize: 10,
+                    letterSpacing: ".12em",
+                    textTransform: "uppercase",
+                    color: "#7B4B56",
+                    fontWeight: 700,
+                    marginBottom: 8,
+                  }}
+                >
+                  аудитория
+                </div>
+                <div className="display" style={{ fontSize: 28, lineHeight: 1 }}>
+                  184K
+                </div>
+              </div>
+
+              <div
+                style={{
+                  background: "#f7f2ea",
+                  borderRadius: 20,
+                  padding: 14,
+                }}
+              >
+                <div
+                  style={{
+                    fontSize: 10,
+                    letterSpacing: ".12em",
+                    textTransform: "uppercase",
+                    color: "#7B4B56",
+                    fontWeight: 700,
+                    marginBottom: 8,
+                  }}
+                >
+                  охваты
+                </div>
+                <div className="display" style={{ fontSize: 28, lineHeight: 1 }}>
+                  1.2M
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div
+            style={{
+              display: "grid",
+              gridTemplateColumns: "1fr 1fr 1fr",
+              gap: 10,
+              marginBottom: 10,
+            }}
+          >
+            {[
+              ["Кейс", "2.4M views"],
+              ["ER", "7.2%"],
+              ["Цена", "от $1400"],
+            ].map(([title, value]) => (
+              <div
+                key={title}
+                style={{
+                  background: "#f7f2ea",
+                  borderRadius: 18,
+                  padding: 13,
+                }}
+              >
+                <div
+                  style={{
+                    fontSize: 10,
+                    letterSpacing: ".12em",
+                    textTransform: "uppercase",
+                    color: "#7B4B56",
+                    fontWeight: 700,
+                    marginBottom: 7,
+                  }}
+                >
+                  {title}
+                </div>
+                <div style={{ fontSize: 13, color: "#3F3A35" }}>
+                  {value}
+                </div>
+              </div>
+            ))}
+          </div>
+
+          <div
+            style={{
+              display: "flex",
+              flexWrap: "wrap",
+              gap: 8,
+              padding: 14,
+              borderRadius: 20,
+              background: "#f7f2ea",
+            }}
+          >
+            {["статистика", "кейсы", "цены", "форматы", "контакты"].map((item) => (
+              <span
+                key={item}
+                style={{
+                  padding: "8px 11px",
+                  borderRadius: 999,
+                  background: "rgba(255,255,255,.72)",
+                  fontSize: 12,
+                  color: "#4B4741",
+                }}
+              >
+                {item}
+              </span>
+            ))}
+          </div>
         </div>
       </div>
     </div>
