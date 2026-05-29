@@ -491,15 +491,18 @@ export default function Home() {
             </div>
 
             <div
-              style={{
-                fontSize: 16,
-                fontWeight: 650,
-                marginBottom: 8,
-                color: "#1F1F1F",
-              }}
-            >
-              {title}
-            </div>
+  style={{
+    fontSize: 14,
+    fontWeight: 700,
+    letterSpacing: ".08em",
+    textTransform: "uppercase",
+    marginBottom: 8,
+    color: "#7B4B56",
+    lineHeight: 1.25,
+  }}
+>
+  {title}
+</div>
 
             <div
               style={{
