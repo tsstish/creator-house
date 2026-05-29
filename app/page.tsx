@@ -417,27 +417,42 @@ export default function Home() {
         
 {/* HOW IT WORKS SECTION */}
 
-<section style={{ padding: "24px 0 54px" }}>
+<section style={{ padding: "22px 0 54px" }}>
   <div
     style={{
       maxWidth: 1120,
       margin: "0 auto",
-      padding: "30px 34px",
-      borderRadius: 34,
-      background: "rgba(255,255,255,.42)",
+      position: "relative",
+      padding: "34px 38px",
+      borderRadius: 36,
+      background: "rgba(255,255,255,.44)",
       border: "1px solid rgba(31,31,31,.06)",
       boxShadow: "0 18px 48px rgba(31,31,31,.035)",
+      overflow: "hidden",
     }}
   >
     <div
       style={{
-        display: "flex",
-        justifyContent: "space-between",
-        gap: 34,
-        alignItems: "flex-start",
+        position: "absolute",
+        left: 38,
+        right: 38,
+        top: "50%",
+        height: 1,
+        background: "linear-gradient(90deg, transparent, rgba(140,109,62,.28), transparent)",
+      }}
+    />
+
+    <div
+      style={{
+        display: "grid",
+        gridTemplateColumns: "260px 1fr",
+        gap: 44,
+        alignItems: "center",
+        position: "relative",
+        zIndex: 2,
       }}
     >
-      <div style={{ maxWidth: 310 }}>
+      <div>
         <div
           style={{
             color: "#8C6D3E",
@@ -454,7 +469,7 @@ export default function Home() {
         <h2
           className="display"
           style={{
-            fontSize: 36,
+            fontSize: 34,
             lineHeight: 1.08,
             margin: 0,
           }}
@@ -466,47 +481,63 @@ export default function Home() {
       <div
         style={{
           display: "grid",
-          gridTemplateColumns: "repeat(4, minmax(130px, 1fr))",
+          gridTemplateColumns: "repeat(4, 1fr)",
           gap: 18,
-          flex: 1,
         }}
       >
         {[
-          ["01", "Создай профиль", "Добавь имя, нишу и площадки."],
+          ["01", "Расскажи о себе", "Добавь соцсети, нишу и описание."],
           ["02", "Добавь цифры", "Покажи охваты, ER и аудиторию."],
           ["03", "Выбери данные", "Оставь только то, что важно бренду."],
           ["04", "Отправь ссылку", "Бренд видит готовое предложение."],
-        ].map(([num, title, text]) => (
-          <div key={num}>
+        ].map(([num, title, text], index) => (
+          <div
+            key={num}
+            style={{
+              position: "relative",
+              padding: "18px 16px",
+              borderRadius: 24,
+              background: index % 2 === 0 ? "rgba(255,255,255,.68)" : "rgba(246,241,232,.72)",
+              border: "1px solid rgba(31,31,31,.055)",
+              transform: index % 2 === 0 ? "translateY(-8px)" : "translateY(12px)",
+              boxShadow: "0 14px 34px rgba(31,31,31,.035)",
+            }}
+          >
             <div
               style={{
-                fontSize: 12,
-                color: "#7B4B56",
+                width: 28,
+                height: 28,
+                borderRadius: 999,
+                background: "#2F2D2A",
+                color: "white",
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+                fontSize: 11,
                 fontWeight: 700,
-                letterSpacing: ".12em",
-                marginBottom: 10,
+                marginBottom: 14,
               }}
             >
               {num}
             </div>
 
             <div
-  style={{
-    fontSize: 14,
-    fontWeight: 700,
-    letterSpacing: ".08em",
-    textTransform: "uppercase",
-    marginBottom: 8,
-    color: "#7B4B56",
-    lineHeight: 1.25,
-  }}
->
-  {title}
-</div>
+              style={{
+                fontSize: 13,
+                fontWeight: 700,
+                letterSpacing: ".1em",
+                textTransform: "uppercase",
+                marginBottom: 8,
+                color: "#7B4B56",
+                lineHeight: 1.25,
+              }}
+            >
+              {title}
+            </div>
 
             <div
               style={{
-                fontSize: 14,
+                fontSize: 13,
                 lineHeight: 1.45,
                 color: "#625E58",
               }}
