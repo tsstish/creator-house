@@ -39,117 +39,97 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="studio-stage">
-          <div className="studio-tabs">
-            <input id="studio-audience" name="studio-tabs" type="radio" defaultChecked />
-            <input id="studio-cases" name="studio-tabs" type="radio" />
-            <input id="studio-price" name="studio-tabs" type="radio" />
-            <input id="studio-style" name="studio-tabs" type="radio" />
+        <div className="product-stage">
+  <div className="product-tabs">
+    <input id="product-audience" name="product-tabs" type="radio" defaultChecked />
+    <input id="product-cases" name="product-tabs" type="radio" />
+    <input id="product-price" name="product-tabs" type="radio" />
+    <input id="product-style" name="product-tabs" type="radio" />
 
-            <div className="studio-tab-row">
-              <label htmlFor="studio-audience">Аудитория</label>
-              <label htmlFor="studio-cases">Кейсы</label>
-              <label htmlFor="studio-price">Цены</label>
-              <label htmlFor="studio-style">Стиль</label>
+    <div className="product-tab-row">
+      <label htmlFor="product-audience">Аудитория</label>
+      <label htmlFor="product-cases">Кейсы</label>
+      <label htmlFor="product-price">Цены</label>
+      <label htmlFor="product-style">Стиль</label>
+    </div>
+
+    <div className="product-scene">
+      {[
+        {
+          cls: "audience",
+          name: "Mira",
+          role: "Beauty creator • TikTok • Instagram",
+          main: ["184K", "аудитория"],
+          small: "82% женщины · 34% США · 25–34",
+          dark: ["Подтверждено", "Бренд видит не скриншоты, а аккуратно собранные данные."],
+        },
+        {
+          cls: "cases",
+          name: "Daniel",
+          role: "Travel creator • Instagram • YouTube",
+          main: ["2.4M", "просмотров в кейсе"],
+          small: "hotel review · 14 интеграций · 680K охваты",
+          dark: ["Кейсы", "Результаты прошлых интеграций собраны прямо в профиле."],
+        },
+        {
+          cls: "price",
+          name: "Emma",
+          role: "Family creator • Instagram • TikTok",
+          main: ["$1400", "Reels + Stories"],
+          small: "$950 Stories · $2200 пакет · условия в одном месте",
+          dark: ["Без неловкости", "Бренд заранее понимает форматы, цены и условия."],
+        },
+        {
+          cls: "style",
+          name: "Alex",
+          role: "Business creator • LinkedIn • Telegram",
+          main: ["1", "ссылка для бренда"],
+          small: "dark profile · business style · brand-ready page",
+          dark: ["Не шаблон", "Профиль выглядит как твой личный формат, а не как PDF."],
+        },
+      ].map((item) => (
+        <div key={item.cls} className={`product-state ${item.cls}`}>
+          <div
+            className="product-line"
+            style={{ left: 130, top: 250, width: 260, transform: "rotate(-18deg)" }}
+          />
+          <div
+            className="product-line"
+            style={{ left: 170, top: 410, width: 300, transform: "rotate(14deg)" }}
+          />
+
+          <div className="product-node" style={{ left: 64, top: 196 }}>
+            выбор
+          </div>
+
+          <div className="product-node" style={{ right: 86, top: 64 }}>
+            бренд
+          </div>
+
+          <div className="product-panel" style={{ left: 128, top: 92, width: 230 }}>
+            <div className="product-panel-title">{item.main[1]}</div>
+            <div className="product-panel-big">{item.main[0]}</div>
+            <div className="product-panel-text" style={{ marginTop: 8 }}>
+              {item.small}
             </div>
+          </div>
 
-            <div className="studio-scene">
-              {[
-                {
-                  cls: "audience",
-                  name: "Mira",
-                  role: "Beauty creator • TikTok • Instagram",
-                  metrics: [
-                    ["184K", "аудитория"],
-                    ["82%", "женщины"],
-                    ["34%", "США"],
-                  ],
-                  floatTop: ["Аудитория", "Бренд сразу понимает, кто тебя смотрит."],
-                  floatNumber: ["7.2%", "средний ER"],
-                  floatDark: ["Подтверждено", "Цифры можно отметить как проверенные."],
-                },
-                {
-                  cls: "cases",
-                  name: "Daniel",
-                  role: "Travel creator • Instagram • YouTube",
-                  metrics: [
-                    ["2.4M", "просмотров"],
-                    ["14", "кейсов"],
-                    ["312K", "hotel review"],
-                  ],
-                  floatTop: ["Кейсы", "Покажи результаты прошлых интеграций."],
-                  floatNumber: ["680K", "охваты за 30 дней"],
-                  floatDark: ["Не обещания", "Бренд видит реальные результаты."],
-                },
-                {
-                  cls: "price",
-                  name: "Emma",
-                  role: "Family creator • Instagram • TikTok",
-                  metrics: [
-                    ["$950", "Stories"],
-                    ["$1400", "Reels"],
-                    ["$2200", "пакет"],
-                  ],
-                  floatTop: ["Цены", "Форматы и условия уже собраны."],
-                  floatNumber: ["3", "готовых пакета"],
-                  floatDark: ["Без неловкости", "Бренд понимает бюджет заранее."],
-                },
-                {
-                  cls: "style",
-                  name: "Alex",
-                  role: "Business creator • LinkedIn • Telegram",
-                  metrics: [
-                    ["Dark", "режим"],
-                    ["Brand", "версия"],
-                    ["Link", "одна ссылка"],
-                  ],
-                  floatTop: ["Стиль", "Профиль меняется под твою нишу."],
-                  floatNumber: ["1", "ссылка для бренда"],
-                  floatDark: ["Не шаблон", "Creator House выглядит как твой формат."],
-                },
-              ].map((item) => (
-                <div key={item.cls} className={`studio-state ${item.cls}`}>
-                  <div
-                    className="studio-float"
-                    style={{
-                      left: 6,
-                      top: 150,
-                      width: 225,
-                    }}
-                  >
-                    <div className="studio-float-title">{item.floatTop[0]}</div>
-                    <div className="studio-float-text">{item.floatTop[1]}</div>
-                  </div>
+          <div className="product-core">
+            <div className="product-core-content">
+              <div className="product-name">{item.name}</div>
+              <div className="product-role">{item.role}</div>
+            </div>
+          </div>
 
-                  <div
-                    className="studio-float"
-                    style={{
-                      left: 82,
-                      top: 368,
-                      width: 180,
-                    }}
-                  >
-                    <div className="studio-big-number">{item.floatNumber[0]}</div>
-                    <div className="studio-float-text" style={{ marginTop: 8 }}>
-                      {item.floatNumber[1]}
-                    </div>
-                  </div>
-
-                  <div className="studio-main-profile">
-                    <div className="studio-cover">
-                      <div className="studio-name">{item.name}</div>
-                      <div className="studio-role">{item.role}</div>
-                    </div>
-
-                    <div className="studio-metrics">
-                      {item.metrics.map(([value, label]) => (
-                        <div key={label} className="studio-metric">
-                          <div className="studio-value">{value}</div>
-                          <div className="studio-label">{label}</div>
-                        </div>
-                      ))}
-                    </div>
-                  </div>
+          <div className="product-cut-card">
+            <div className="product-panel-title">{item.dark[0]}</div>
+            <div className="product-panel-text">{item.dark[1]}</div>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</div>
 
                   <div
                     className="studio-float dark"
