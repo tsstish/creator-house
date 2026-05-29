@@ -773,25 +773,28 @@ body::before {
 /* COSMIC CREATOR HERO */
 
 .cosmic-hero {
-  min-height: calc(100vh - 86px);
-  padding: 22px 0 42px;
+  min-height: calc(100vh - 20px);
+  height: calc(100vh - 20px);
+  padding: 10px 0;
+  box-sizing: border-box;
 }
 
 .cosmic-shell {
-  max-width: 1320px;
-  min-height: 720px;
+  max-width: 1480px;
+  height: 100%;
+  min-height: 0;
   margin: 0 auto;
   position: relative;
   overflow: hidden;
-  border-radius: 54px;
-  padding: 34px;
+  border-radius: 46px;
+  padding: 28px 34px;
   border: 1px solid rgba(255,255,255,.48);
   background:
     radial-gradient(circle at 74% 18%, rgba(80, 210, 196, .42), transparent 28%),
     radial-gradient(circle at 22% 82%, rgba(255, 139, 103, .38), transparent 30%),
     radial-gradient(circle at 48% 42%, rgba(255, 215, 141, .32), transparent 34%),
     linear-gradient(135deg, #fff7ea 0%, #f7ebd8 38%, #ead8c7 100%);
-  box-shadow: 0 38px 120px rgba(43, 36, 29, .16);
+  box-shadow: 0 28px 90px rgba(43, 36, 29, .14);
 }
 
 .cosmic-shell::before {
@@ -830,9 +833,10 @@ body::before {
   position: relative;
   z-index: 2;
   display: grid;
-  grid-template-columns: .88fr 1.12fr;
+  grid-template-columns: .86fr 1.14fr;
   gap: 28px;
-  min-height: 650px;
+  height: 100%;
+  min-height: 0;
 }
 
 .cosmic-left {
@@ -858,10 +862,10 @@ body::before {
 
 .cosmic-title {
   max-width: 620px;
-  margin: 34px 0 22px;
+  margin: 26px 0 20px;
   font-family: var(--font-display), Georgia, serif;
-  font-size: clamp(64px, 6.6vw, 106px);
-  line-height: .9;
+  font-size: clamp(58px, 5.8vw, 92px);
+  line-height: .92;
   letter-spacing: -.05em;
   color: #201f1d;
 }
@@ -918,7 +922,8 @@ body::before {
 
 .cosmic-right {
   position: relative;
-  min-height: 650px;
+  height: 100%;
+  min-height: 0;
 }
 
 .cosmic-tabs input {
@@ -958,7 +963,8 @@ body::before {
 
 .cosmic-scene {
   position: relative;
-  height: 650px;
+  height: 100%;
+  min-height: 560px;
 }
 
 .cosmic-state {
@@ -981,9 +987,9 @@ body::before {
 
 .cosmic-main-card {
   position: absolute;
-  right: 26px;
-  top: 92px;
-  width: 560px;
+  right: 30px;
+  top: 96px;
+  width: 540px;
   border-radius: 42px;
   padding: 18px;
   background: rgba(255,255,255,.58);
@@ -993,7 +999,7 @@ body::before {
 }
 
 .cosmic-cover {
-  height: 250px;
+  height: 220px;
   border-radius: 30px;
   padding: 28px;
   color: white;
