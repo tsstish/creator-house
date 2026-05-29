@@ -192,9 +192,10 @@ body::before {
   pointer-events: none;
   z-index: -1;
   background:
-    radial-gradient(circle at 14% 18%, rgba(140, 109, 62, 0.075), transparent 34%),
-    radial-gradient(circle at 88% 34%, rgba(123, 75, 86, 0.055), transparent 38%),
-    radial-gradient(circle at 52% 82%, rgba(140, 109, 62, 0.05), transparent 42%);
+    radial-gradient(circle at 12% 14%, rgba(140, 109, 62, 0.11), transparent 30%),
+    radial-gradient(circle at 88% 22%, rgba(123, 75, 86, 0.08), transparent 34%),
+    radial-gradient(circle at 18% 76%, rgba(216, 180, 132, 0.09), transparent 32%),
+    radial-gradient(circle at 82% 78%, rgba(140, 109, 62, 0.075), transparent 35%);
 }
 
 .hero-page {
