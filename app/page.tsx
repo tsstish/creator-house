@@ -114,10 +114,10 @@ export default function Home() {
                 <div
                   className="cosmic-float"
                   style={{
-                    left: 18,
-                    top: 120,
-                    width: 210,
-                  }}
+  left: 8,
+  top: 150,
+  width: 210,
+}}
                 >
                   <div className="cosmic-float-title">{item.top[0]}</div>
                   <div className="cosmic-float-text">{item.top[1]}</div>
@@ -126,10 +126,10 @@ export default function Home() {
                 <div
                   className="cosmic-float"
                   style={{
-                    left: 78,
-                    top: 320,
-                    width: 180,
-                  }}
+  left: 42,
+  top: 360,
+  width: 170,
+}}
                 >
                   <div className="cosmic-big-number">{item.number}</div>
                   <div className="cosmic-float-text" style={{ marginTop: 8 }}>
@@ -156,19 +156,13 @@ export default function Home() {
                 <div
                   className="cosmic-float dark"
                   style={{
-                    right: 12,
-                    bottom: 42,
-                    width: 235,
-                  }}
+  right: 26,
+  bottom: 34,
+  width: 230,
+}}
                 >
                   <div className="cosmic-float-title">{item.dark[0]}</div>
                   <div className="cosmic-float-text">{item.dark[1]}</div>
-                </div>
-
-                <div className="cosmic-mini-strip">
-                  <div className="cosmic-mini">◎</div>
-                  <div className="cosmic-mini">↗</div>
-                  <div className="cosmic-mini">●</div>
                 </div>
               </div>
             ))}
