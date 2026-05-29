@@ -1,57 +1,57 @@
 export default function Home() {
   return (
     <main className="hero-page">
-{/* COSMIC HERO */}
+{/* STUDIO HERO */}
 
-<section className="cosmic-hero">
-  <div className="cosmic-shell">
-    <div className="cosmic-orb one" />
-    <div className="cosmic-orb two" />
+<section className="studio-hero">
+  <div className="studio-hero-shell">
+    <div className="studio-shape one" />
+    <div className="studio-shape two" />
+    <div className="studio-vertical-tag">Creator House • Brand Ready • Creator Profile</div>
 
-    <div className="cosmic-grid">
-      <div className="cosmic-left">
+    <div className="studio-hero-grid">
+      <div className="studio-copy">
         <div>
-          <div className="cosmic-kicker">
-            professional creator profile
-          </div>
+          <div className="studio-kicker">Новый формат профиля</div>
 
-          <h1 className="cosmic-title">
+          <h1 className="studio-title">
             Один <em>живой</em> профиль вместо PDF и хаоса
           </h1>
 
-          <p className="cosmic-text">
-            Собери Creator House, который бренд захочет открыть: цифры,
-            кейсы, цены и предложения — в одной красивой ссылке.
+          <p className="studio-text">
+            Creator House собирает цифры, кейсы, цены и предложения в одну
+            красивую ссылку, которую бренд действительно захочет открыть.
           </p>
 
-          <div className="cosmic-actions">
-            <button className="cosmic-primary">Создать Creator House</button>
-            <button className="cosmic-secondary">Посмотреть пример</button>
+          <div className="studio-actions">
+            <button className="studio-primary">Создать Creator House</button>
+            <button className="studio-secondary">Посмотреть пример</button>
           </div>
+        </div>
 
-          <div className="cosmic-proof">
-            <span>Без PDF</span>
-            <span>Актуальные данные</span>
-            <span>Работает на телефоне</span>
-          </div>
+        <div className="studio-footer-line">
+          <span>Без PDF</span>
+          <span>Без дизайнера</span>
+          <span>Без маркетолога</span>
+          <span>Одна ссылка для бренда</span>
         </div>
       </div>
 
-      <div className="cosmic-right">
-        <div className="cosmic-tabs">
-          <input id="cosmic-audience" name="cosmic-tabs" type="radio" defaultChecked />
-          <input id="cosmic-cases" name="cosmic-tabs" type="radio" />
-          <input id="cosmic-price" name="cosmic-tabs" type="radio" />
-          <input id="cosmic-style" name="cosmic-tabs" type="radio" />
+      <div className="studio-stage">
+        <div className="studio-tabs">
+          <input id="studio-audience" name="studio-tabs" type="radio" defaultChecked />
+          <input id="studio-cases" name="studio-tabs" type="radio" />
+          <input id="studio-price" name="studio-tabs" type="radio" />
+          <input id="studio-style" name="studio-tabs" type="radio" />
 
-          <div className="cosmic-tab-row">
-            <label htmlFor="cosmic-audience">Аудитория</label>
-            <label htmlFor="cosmic-cases">Кейсы</label>
-            <label htmlFor="cosmic-price">Цены</label>
-            <label htmlFor="cosmic-style">Стиль</label>
+          <div className="studio-tab-row">
+            <label htmlFor="studio-audience">Аудитория</label>
+            <label htmlFor="studio-cases">Кейсы</label>
+            <label htmlFor="studio-price">Цены</label>
+            <label htmlFor="studio-style">Стиль</label>
           </div>
 
-          <div className="cosmic-scene">
+          <div className="studio-scene">
             {[
               {
                 cls: "audience",
@@ -62,24 +62,22 @@ export default function Home() {
                   ["82%", "женщины"],
                   ["34%", "США"],
                 ],
-                top: ["Аудитория", "Бренд сразу видит, кто тебя смотрит."],
-                dark: ["Подтверждено", "Цифры можно отметить как проверенные."],
-                number: "7.2%",
-                numberLabel: "средний ER",
+                floatTop: ["Аудитория", "Бренд сразу понимает, кто тебя смотрит."],
+                floatNumber: ["7.2%", "средний ER"],
+                floatDark: ["Подтверждено", "Цифры можно отметить как проверенные."],
               },
               {
                 cls: "cases",
                 name: "Daniel",
                 role: "Travel creator • Instagram • YouTube",
                 metrics: [
-                  ["2.4M", "views"],
+                  ["2.4M", "просмотров"],
                   ["14", "кейсов"],
                   ["312K", "hotel review"],
                 ],
-                top: ["Кейсы", "Покажи результаты прошлых интеграций."],
-                dark: ["Больше доверия", "Не обещания, а реальные результаты."],
-                number: "680K",
-                numberLabel: "охваты за 30 дней",
+                floatTop: ["Кейсы", "Покажи результаты прошлых интеграций."],
+                floatNumber: ["680K", "охваты за 30 дней"],
+                floatDark: ["Не обещания", "Бренд видит реальные результаты."],
               },
               {
                 cls: "price",
@@ -88,12 +86,11 @@ export default function Home() {
                 metrics: [
                   ["$950", "Stories"],
                   ["$1400", "Reels"],
-                  ["$2200", "package"],
+                  ["$2200", "пакет"],
                 ],
-                top: ["Цены", "Форматы и условия уже собраны."],
-                dark: ["Без неловкости", "Бренд понимает бюджет заранее."],
-                number: "3",
-                numberLabel: "готовых пакета",
+                floatTop: ["Цены", "Форматы и условия уже собраны."],
+                floatNumber: ["3", "готовых пакета"],
+                floatDark: ["Без неловкости", "Бренд понимает бюджет заранее."],
               },
               {
                 cls: "style",
@@ -104,65 +101,64 @@ export default function Home() {
                   ["Brand", "версия"],
                   ["Link", "одна ссылка"],
                 ],
-                top: ["Стиль", "Профиль меняется под твою нишу."],
-                dark: ["Не шаблон", "Creator House выглядит как твой формат."],
-                number: "1",
-                numberLabel: "ссылка для бренда",
+                floatTop: ["Стиль", "Профиль меняется под твою нишу."],
+                floatNumber: ["1", "ссылка для бренда"],
+                floatDark: ["Не шаблон", "Creator House выглядит как твой формат."],
               },
             ].map((item) => (
-              <div key={item.cls} className={`cosmic-state ${item.cls}`}>
+              <div key={item.cls} className={`studio-state ${item.cls}`}>
                 <div
-                  className="cosmic-float"
+                  className="studio-float"
                   style={{
-  left: 8,
-  top: 150,
-  width: 210,
-}}
+                    left: 6,
+                    top: 150,
+                    width: 225,
+                  }}
                 >
-                  <div className="cosmic-float-title">{item.top[0]}</div>
-                  <div className="cosmic-float-text">{item.top[1]}</div>
+                  <div className="studio-float-title">{item.floatTop[0]}</div>
+                  <div className="studio-float-text">{item.floatTop[1]}</div>
                 </div>
 
                 <div
-                  className="cosmic-float"
+                  className="studio-float"
                   style={{
-  left: 42,
-  top: 360,
-  width: 170,
-}}
+                    left: 82,
+                    top: 368,
+                    width: 180,
+                  }}
                 >
-                  <div className="cosmic-big-number">{item.number}</div>
-                  <div className="cosmic-float-text" style={{ marginTop: 8 }}>
-                    {item.numberLabel}
+                  <div className="studio-big-number">{item.floatNumber[0]}</div>
+                  <div className="studio-float-text" style={{ marginTop: 8 }}>
+                    {item.floatNumber[1]}
                   </div>
                 </div>
 
-                <div className="cosmic-main-card">
-                  <div className="cosmic-cover">
-                    <div className="cosmic-name">{item.name}</div>
-                    <div className="cosmic-role">{item.role}</div>
+                <div className="studio-main-profile">
+                  <div className="studio-cover">
+                    <div className="studio-name">{item.name}</div>
+                    <div className="studio-role">{item.role}</div>
                   </div>
 
-                  <div className="cosmic-metrics">
+                  <div className="studio-metrics">
                     {item.metrics.map(([value, label]) => (
-                      <div key={label} className="cosmic-metric">
-                        <div className="cosmic-value">{value}</div>
-                        <div className="cosmic-label">{label}</div>
+                      <div key={label} className="studio-metric">
+                        <div className="studio-value">{value}</div>
+                        <div className="studio-label">{label}</div>
                       </div>
                     ))}
                   </div>
                 </div>
 
                 <div
-                  className="cosmic-float dark"
+                  className="studio-float dark"
                   style={{
-  right: 26,
-  bottom: 34,
-  width: 230,
-}}
+                    right: 48,
+                    bottom: 56,
+                    width: 240,
+                  }}
                 >
-                  <div className="cosmic-float-title">{item.dark[0]}</div>
-                  <div className="cosmic-float-text">{item.dark[1]}</div>
+                  <div className="studio-float-title">{item.floatDark[0]}</div>
+                  <div className="studio-float-text">{item.floatDark[1]}</div>
                 </div>
               </div>
             ))}
