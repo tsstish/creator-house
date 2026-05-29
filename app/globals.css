@@ -2010,3 +2010,358 @@ body::before {
   font-weight: 750;
   color: #201f1d;
 }
+
+/* POSTER HERO */
+
+.poster-hero {
+  height: 100vh;
+  min-height: 720px;
+  padding: 8px 14px 14px;
+  box-sizing: border-box;
+}
+
+.poster-shell {
+  height: 100%;
+  max-width: 1560px;
+  margin: 0 auto;
+  position: relative;
+  overflow: hidden;
+  border-radius: 42px;
+  background:
+    radial-gradient(circle at 18% 24%, rgba(255, 94, 82, .42), transparent 18%),
+    radial-gradient(circle at 78% 20%, rgba(95, 229, 210, .42), transparent 25%),
+    radial-gradient(circle at 62% 82%, rgba(255, 205, 110, .38), transparent 28%),
+    linear-gradient(135deg, #fff5e8 0%, #efd7c2 48%, #d5c0b2 100%);
+  border: 1px solid rgba(255,255,255,.58);
+  box-shadow: 0 34px 100px rgba(43,36,29,.18);
+}
+
+.poster-shell::before {
+  content: "";
+  position: absolute;
+  inset: 22px;
+  border-radius: 34px;
+  border: 1px solid rgba(255,255,255,.48);
+  pointer-events: none;
+}
+
+.poster-top {
+  position: absolute;
+  left: 48px;
+  right: 48px;
+  top: 34px;
+  z-index: 20;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.poster-logo {
+  font-size: 13px;
+  font-weight: 850;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+  color: #201f1d;
+}
+
+.poster-nav {
+  display: flex;
+  gap: 12px;
+}
+
+.poster-nav button {
+  border: 0;
+  border-radius: 999px;
+  padding: 11px 16px;
+  background: rgba(255,255,255,.72);
+  font-weight: 800;
+}
+
+.poster-nav .dark {
+  background: #201f1d;
+  color: white;
+}
+
+.poster-title {
+  position: absolute;
+  left: 52px;
+  top: 130px;
+  z-index: 10;
+  max-width: 690px;
+  margin: 0;
+  font-family: var(--font-display), Georgia, serif;
+  font-size: clamp(70px, 7.2vw, 118px);
+  line-height: .88;
+  letter-spacing: -.055em;
+  color: #201f1d;
+}
+
+.poster-title em {
+  color: #9b334d;
+  font-style: italic;
+}
+
+.poster-text {
+  position: absolute;
+  left: 56px;
+  bottom: 150px;
+  z-index: 10;
+  max-width: 500px;
+  font-size: 17px;
+  line-height: 1.55;
+  color: #4f4a45;
+}
+
+.poster-actions {
+  position: absolute;
+  left: 56px;
+  bottom: 84px;
+  z-index: 10;
+  display: flex;
+  gap: 14px;
+}
+
+.poster-actions button {
+  border-radius: 999px;
+  padding: 14px 22px;
+  font-size: 14px;
+  font-weight: 850;
+  cursor: pointer;
+}
+
+.poster-primary {
+  border: 0;
+  background: #201f1d;
+  color: white;
+}
+
+.poster-secondary {
+  border: 1px solid rgba(32,31,29,.16);
+  background: rgba(255,255,255,.68);
+  color: #201f1d;
+}
+
+.poster-tags {
+  position: absolute;
+  left: 56px;
+  bottom: 38px;
+  z-index: 10;
+  display: flex;
+  gap: 22px;
+  font-size: 14px;
+  color: #4f4a45;
+}
+
+.poster-stage {
+  position: absolute;
+  right: 50px;
+  top: 92px;
+  bottom: 48px;
+  width: 58%;
+  z-index: 8;
+}
+
+.poster-stage input {
+  display: none;
+}
+
+.poster-tabs {
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: 30;
+  display: flex;
+  gap: 10px;
+}
+
+.poster-tabs label {
+  padding: 11px 16px;
+  border-radius: 999px;
+  background: rgba(255,255,255,.76);
+  border: 1px solid rgba(255,255,255,.52);
+  backdrop-filter: blur(18px);
+  font-size: 13px;
+  font-weight: 850;
+  cursor: pointer;
+}
+
+#poster-audience:checked ~ .poster-tabs label[for="poster-audience"],
+#poster-cases:checked ~ .poster-tabs label[for="poster-cases"],
+#poster-price:checked ~ .poster-tabs label[for="poster-price"],
+#poster-style:checked ~ .poster-tabs label[for="poster-style"] {
+  background: #201f1d;
+  color: white;
+}
+
+.poster-scenes {
+  position: absolute;
+  inset: 58px 0 0 0;
+}
+
+.poster-state {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transform: translateY(18px) scale(.985);
+  pointer-events: none;
+  transition: .35s ease;
+}
+
+#poster-audience:checked ~ .poster-scenes .audience,
+#poster-cases:checked ~ .poster-scenes .cases,
+#poster-price:checked ~ .poster-scenes .price,
+#poster-style:checked ~ .poster-scenes .style {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+  pointer-events: auto;
+}
+
+.poster-object {
+  position: absolute;
+  right: 24px;
+  top: 42px;
+  width: 610px;
+  height: 430px;
+  border-radius: 54px 54px 170px 54px;
+  overflow: hidden;
+  border: 14px solid rgba(255,255,255,.58);
+  box-shadow: 0 36px 110px rgba(32,31,29,.22);
+  background: linear-gradient(180deg, #efb7a8 0%, #a96561 48%, #211719 100%);
+}
+
+.cases .poster-object {
+  background: linear-gradient(180deg, #89ded4 0%, #407e78 48%, #101c1d 100%);
+}
+
+.price .poster-object {
+  background: linear-gradient(180deg, #f3c875 0%, #a16531 48%, #211916 100%);
+}
+
+.style .poster-object {
+  background: linear-gradient(180deg, #c9ccd6 0%, #6c7280 48%, #151515 100%);
+}
+
+.poster-object::before {
+  content: "";
+  position: absolute;
+  right: 40px;
+  top: 34px;
+  width: 160px;
+  height: 160px;
+  border-radius: 999px;
+  background: rgba(255,255,255,.28);
+  filter: blur(8px);
+}
+
+.poster-person {
+  position: absolute;
+  left: 34px;
+  bottom: 36px;
+  color: white;
+}
+
+.poster-name {
+  font-family: var(--font-display), Georgia, serif;
+  font-size: 74px;
+  line-height: .9;
+}
+
+.poster-role {
+  margin-top: 10px;
+  font-size: 15px;
+  opacity: .92;
+}
+
+.poster-card {
+  position: absolute;
+  z-index: 12;
+  padding: 22px;
+  border-radius: 34px;
+  background: rgba(255,255,255,.75);
+  border: 1px solid rgba(255,255,255,.58);
+  backdrop-filter: blur(22px);
+  box-shadow: 0 24px 70px rgba(32,31,29,.14);
+}
+
+.poster-card.dark {
+  background: rgba(32,31,29,.93);
+  color: white;
+}
+
+.poster-label {
+  font-size: 11px;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  font-weight: 850;
+  color: #9b334d;
+  margin-bottom: 12px;
+}
+
+.poster-card.dark .poster-label {
+  color: #ffd28a;
+}
+
+.poster-big {
+  font-family: var(--font-display), Georgia, serif;
+  font-size: 58px;
+  line-height: 1;
+  color: #201f1d;
+}
+
+.poster-card.dark .poster-big {
+  color: white;
+}
+
+.poster-small {
+  font-size: 15px;
+  line-height: 1.45;
+  color: #4f4a45;
+}
+
+.poster-card.dark .poster-small {
+  color: rgba(255,255,255,.78);
+}
+
+.poster-arch {
+  position: absolute;
+  z-index: 6;
+  left: 80px;
+  bottom: 40px;
+  width: 190px;
+  height: 250px;
+  border-radius: 100px 100px 34px 34px;
+  background: rgba(255,255,255,.35);
+  border: 1px solid rgba(255,255,255,.45);
+  backdrop-filter: blur(18px);
+}
+
+.poster-pill-row {
+  position: absolute;
+  z-index: 14;
+  right: 80px;
+  bottom: 34px;
+  display: flex;
+  gap: 10px;
+}
+
+.poster-pill {
+  padding: 12px 16px;
+  border-radius: 999px;
+  background: rgba(255,255,255,.74);
+  backdrop-filter: blur(18px);
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.poster-side-note {
+  position: absolute;
+  z-index: 14;
+  left: 34px;
+  top: 60px;
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+  font-size: 11px;
+  letter-spacing: .16em;
+  text-transform: uppercase;
+  color: rgba(32,31,29,.52);
+}
