@@ -1,137 +1,142 @@
 export default function Home() {
   return (
    <main className="hero-page">
-{/* ATELIER HERO */}
+{/* POSTER HERO */}
 
-<section className="atelier-hero">
-  <div className="atelier-shell">
-    <div className="atelier-grid">
-      <div className="atelier-copy">
-        <div>
-          <div className="atelier-kicker">Новый формат профиля</div>
+<section className="poster-hero">
+  <div className="poster-shell">
+    <div className="poster-top">
+      <div className="poster-logo">Creator House</div>
 
-          <h1 className="atelier-title">
-            Один <em>живой</em> профиль вместо PDF и хаоса
-          </h1>
+      <div className="poster-nav">
+        <button>Войти</button>
+        <button className="dark">Создать профиль</button>
+      </div>
+    </div>
 
-          <p className="atelier-text">
-            Creator House собирает цифры, кейсы, цены и предложения в одну
-            красивую ссылку, которую бренд действительно захочет открыть.
-          </p>
+    <h1 className="poster-title">
+      Один <em>живой</em> профиль вместо PDF и хаоса
+    </h1>
 
-          <div className="atelier-actions">
-            <button className="atelier-primary">Создать Creator House</button>
-            <button className="atelier-secondary">Посмотреть пример</button>
-          </div>
-        </div>
+    <p className="poster-text">
+      Creator House собирает цифры, кейсы, цены и предложения в одну красивую
+      ссылку, которую бренд действительно захочет открыть.
+    </p>
 
-        <div className="atelier-bottom">
-          <span>Без PDF</span>
-          <span>Без дизайнера</span>
-          <span>Без маркетолога</span>
-          <span>Одна ссылка для бренда</span>
-        </div>
+    <div className="poster-actions">
+      <button className="poster-primary">Создать Creator House</button>
+      <button className="poster-secondary">Посмотреть пример</button>
+    </div>
+
+    <div className="poster-tags">
+      <span>Без PDF</span>
+      <span>Без дизайнера</span>
+      <span>Без маркетолога</span>
+      <span>Одна ссылка для бренда</span>
+    </div>
+
+    <div className="poster-stage">
+      <input id="poster-audience" name="poster-tabs" type="radio" defaultChecked />
+      <input id="poster-cases" name="poster-tabs" type="radio" />
+      <input id="poster-price" name="poster-tabs" type="radio" />
+      <input id="poster-style" name="poster-tabs" type="radio" />
+
+      <div className="poster-tabs">
+        <label htmlFor="poster-audience">Аудитория</label>
+        <label htmlFor="poster-cases">Кейсы</label>
+        <label htmlFor="poster-price">Цены</label>
+        <label htmlFor="poster-style">Стиль</label>
       </div>
 
-      <div className="atelier-stage">
-        <input id="atelier-audience" name="atelier-tabs" type="radio" defaultChecked />
-        <input id="atelier-cases" name="atelier-tabs" type="radio" />
-        <input id="atelier-price" name="atelier-tabs" type="radio" />
-        <input id="atelier-style" name="atelier-tabs" type="radio" />
+      <div className="poster-scenes">
+        {[
+          {
+            cls: "audience",
+            name: "Mira",
+            role: "бьюти-креатор • TikTok • Instagram",
+            main: ["184K", "аудитория"],
+            detail: "82% женщины · 34% США · 25–34",
+            dark: ["Подтверждено", "Цифры собраны аккуратно, без скринов и хаоса."],
+            pills: ["возраст", "география", "площадки"],
+          },
+          {
+            cls: "cases",
+            name: "Daniel",
+            role: "travel-креатор • Instagram • YouTube",
+            main: ["2.4M", "просмотров"],
+            detail: "14 кейсов · 680K охваты · hotel review",
+            dark: ["Кейсы", "Бренд видит реальные результаты интеграций."],
+            pills: ["запуски", "охваты", "ссылки"],
+          },
+          {
+            cls: "price",
+            name: "Emma",
+            role: "family-креатор • Instagram • TikTok",
+            main: ["$1400", "Reels + Stories"],
+            detail: "$950 Stories · $2200 пакет · условия в одном месте",
+            dark: ["Цены без неловкости", "Форматы и условия понятны до переписки."],
+            pills: ["Stories", "Reels", "пакеты"],
+          },
+          {
+            cls: "style",
+            name: "Alex",
+            role: "business-креатор • LinkedIn • Telegram",
+            main: ["1", "ссылка для бренда"],
+            detail: "деловой стиль · тёмный профиль · готово к отправке",
+            dark: ["Не шаблон", "Профиль выглядит как личный формат, а не PDF."],
+            pills: ["светлый", "тёмный", "брендовый"],
+          },
+        ].map((item) => (
+          <div key={item.cls} className={`poster-state ${item.cls}`}>
+            <div className="poster-side-note">
+              профиль • данные • предложение • бренд
+            </div>
 
-        <div className="atelier-tabs">
-          <label htmlFor="atelier-audience">Аудитория</label>
-          <label htmlFor="atelier-cases">Кейсы</label>
-          <label htmlFor="atelier-price">Цены</label>
-          <label htmlFor="atelier-style">Стиль</label>
-        </div>
+            <div className="poster-arch" />
 
-        <div className="atelier-scenes">
-          {[
-            {
-              cls: "audience",
-              name: "Mira",
-              role: "бьюти-креатор • TikTok • Instagram",
-              main: ["184K", "аудитория"],
-              detail: "82% женщины · 34% США · 25–34",
-              dark: ["Подтверждено", "Цифры собраны аккуратно, без скринов и хаоса."],
-              pills: ["возраст", "география", "площадки"],
-            },
-            {
-              cls: "cases",
-              name: "Daniel",
-              role: "travel-креатор • Instagram • YouTube",
-              main: ["2.4M", "просмотров"],
-              detail: "14 кейсов · 680K охваты · hotel review",
-              dark: ["Кейсы", "Бренд видит реальные результаты интеграций."],
-              pills: ["запуски", "охваты", "ссылки"],
-            },
-            {
-              cls: "price",
-              name: "Emma",
-              role: "family-креатор • Instagram • TikTok",
-              main: ["$1400", "Reels + Stories"],
-              detail: "$950 Stories · $2200 пакет · условия в одном месте",
-              dark: ["Цены без неловкости", "Форматы и условия понятны до переписки."],
-              pills: ["Stories", "Reels", "пакеты"],
-            },
-            {
-              cls: "style",
-              name: "Alex",
-              role: "business-креатор • LinkedIn • Telegram",
-              main: ["1", "ссылка для бренда"],
-              detail: "деловой стиль · тёмный профиль · готово к отправке",
-              dark: ["Не шаблон", "Профиль выглядит как личный формат, а не PDF."],
-              pills: ["светлый", "тёмный", "брендовый"],
-            },
-          ].map((item) => (
-            <div key={item.cls} className={`atelier-state ${item.cls}`}>
-              <div className="atelier-board">
-                <div className="atelier-profile">
-                  <div className="atelier-profile-content">
-                    <div className="atelier-name">{item.name}</div>
-                    <div className="atelier-role">{item.role}</div>
-                  </div>
-                </div>
-
-                <div
-                  className="atelier-card"
-                  style={{
-                    left: 52,
-                    top: 78,
-                    width: 260,
-                  }}
-                >
-                  <div className="atelier-label">{item.main[1]}</div>
-                  <div className="atelier-big">{item.main[0]}</div>
-                  <div className="atelier-small" style={{ marginTop: 8 }}>
-                    {item.detail}
-                  </div>
-                </div>
-
-                <div
-                  className="atelier-card dark"
-                  style={{
-                    right: 28,
-                    bottom: 54,
-                    width: 270,
-                  }}
-                >
-                  <div className="atelier-label">{item.dark[0]}</div>
-                  <div className="atelier-small">{item.dark[1]}</div>
-                </div>
-
-                <div className="atelier-pill-row">
-                  {item.pills.map((pill) => (
-                    <span key={pill} className="atelier-pill">
-                      {pill}
-                    </span>
-                  ))}
-                </div>
+            <div className="poster-object">
+              <div className="poster-person">
+                <div className="poster-name">{item.name}</div>
+                <div className="poster-role">{item.role}</div>
               </div>
             </div>
-          ))}
-        </div>
+
+            <div
+              className="poster-card"
+              style={{
+                left: 110,
+                top: 82,
+                width: 260,
+              }}
+            >
+              <div className="poster-label">{item.main[1]}</div>
+              <div className="poster-big">{item.main[0]}</div>
+              <div className="poster-small" style={{ marginTop: 8 }}>
+                {item.detail}
+              </div>
+            </div>
+
+            <div
+              className="poster-card dark"
+              style={{
+                right: 30,
+                bottom: 78,
+                width: 275,
+              }}
+            >
+              <div className="poster-label">{item.dark[0]}</div>
+              <div className="poster-small">{item.dark[1]}</div>
+            </div>
+
+            <div className="poster-pill-row">
+              {item.pills.map((pill) => (
+                <span key={pill} className="poster-pill">
+                  {pill}
+                </span>
+              ))}
+            </div>
+          </div>
+        ))}
       </div>
     </div>
   </div>
