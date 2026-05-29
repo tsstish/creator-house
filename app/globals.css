@@ -182,3 +182,50 @@ button {
     max-width: 100%;
   }
 }
+
+/* PREMIUM BACKGROUND + SCALE SYSTEM */
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: -1;
+  background:
+    radial-gradient(circle at 14% 18%, rgba(140, 109, 62, 0.075), transparent 34%),
+    radial-gradient(circle at 88% 34%, rgba(123, 75, 86, 0.055), transparent 38%),
+    radial-gradient(circle at 52% 82%, rgba(140, 109, 62, 0.05), transparent 42%);
+}
+
+.hero-page {
+  position: relative;
+  overflow-x: hidden;
+}
+
+.hero-page::after {
+  content: "";
+  position: absolute;
+  top: 760px;
+  right: -120px;
+  width: 420px;
+  height: 420px;
+  border-radius: 999px;
+  background: rgba(123, 75, 86, 0.045);
+  filter: blur(70px);
+  pointer-events: none;
+}
+
+.section-compact {
+  padding: 32px 0 52px;
+}
+
+.section-inner-compact {
+  max-width: 1120px;
+  margin: 0 auto;
+}
+
+@media (max-width: 1080px) {
+  .section-inner-compact {
+    max-width: 100%;
+  }
+}
