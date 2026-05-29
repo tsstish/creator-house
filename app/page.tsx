@@ -218,12 +218,14 @@ export default function Home() {
         
 {/* SHOWCASE SECTION */}
 
-<section style={{ padding: "42px 0 70px" }}>
+<section style={{ padding: "42px 0 68px" }}>
   <div
     style={{
+      maxWidth: 1160,
+      margin: "0 auto",
       display: "grid",
-      gridTemplateColumns: "minmax(420px, 0.9fr) minmax(500px, 1fr)",
-      gap: 56,
+      gridTemplateColumns: "minmax(420px, 0.95fr) minmax(420px, 0.85fr)",
+      gap: 48,
       alignItems: "center",
     }}
   >
@@ -251,11 +253,11 @@ export default function Home() {
           fontSize: 48,
           lineHeight: 1.08,
           letterSpacing: "-0.018em",
-          maxWidth: 600,
+          maxWidth: 560,
           margin: "0 0 22px",
         }}
       >
-        Не собирай презентацию вручную. Собери профиль для бренда.
+        Всё, что нужно бренду — по одной ссылке
       </h2>
 
       <p
@@ -263,72 +265,93 @@ export default function Home() {
           fontSize: 16,
           lineHeight: 1.55,
           color: "#5F5B55",
-          maxWidth: 520,
-          margin: "0 0 26px",
+          maxWidth: 510,
+          margin: "0 0 28px",
         }}
       >
-        Creator House превращает цифры, кейсы, форматы рекламы и цены в аккуратную
-        страницу, которую можно отправить бренду одной ссылкой.
+        Creator House превращает цифры, кейсы, форматы рекламы и цены в аккуратный
+        профиль, который можно отправить бренду вместо PDF, скринов и длинных сообщений.
       </p>
 
-      <div
-        style={{
-          display: "grid",
-          gap: 12,
-          maxWidth: 520,
-        }}
-      >
+      <div style={{ display: "grid", gap: 18, maxWidth: 520 }}>
         {[
-          ["Без дизайнера", "Профиль уже выглядит аккуратно и профессионально."],
-          ["Без маркетолога", "Сильные стороны блогера собраны в понятную структуру."],
-          ["Без PDF", "Не нужно каждый раз пересобирать файлы, скрины и ссылки."],
+          ["Без дизайнера", "Профиль выглядит профессионально сразу после заполнения."],
+          ["Без маркетолога", "Цифры, кейсы и форматы собраны в понятную структуру."],
+          ["Без PDF", "Больше не нужно пересобирать файлы, скрины и презентации."],
         ].map(([title, text]) => (
           <div
             key={title}
             style={{
               display: "grid",
-              gridTemplateColumns: "120px 1fr",
-              gap: 18,
+              gridTemplateColumns: "18px 1fr",
+              gap: 14,
               alignItems: "start",
-              padding: "16px 0",
-              borderBottom: "1px solid rgba(31,31,31,.08)",
             }}
           >
-            <div
+            <span
               style={{
-                fontSize: 13,
-                letterSpacing: ".13em",
-                textTransform: "uppercase",
-                color: "#7B4B56",
-                fontWeight: 700,
+                width: 9,
+                height: 9,
+                borderRadius: 99,
+                background: "#8C6D3E",
+                marginTop: 7,
               }}
-            >
-              {title}
-            </div>
+            />
 
-            <div
-              style={{
-                fontSize: 15,
-                lineHeight: 1.5,
-                color: "#625E58",
-              }}
-            >
-              {text}
+            <div>
+              <div
+                style={{
+                  fontSize: 13,
+                  letterSpacing: ".13em",
+                  textTransform: "uppercase",
+                  color: "#7B4B56",
+                  fontWeight: 700,
+                  marginBottom: 6,
+                }}
+              >
+                {title}
+              </div>
+
+              <div
+                style={{
+                  fontSize: 15,
+                  lineHeight: 1.5,
+                  color: "#625E58",
+                }}
+              >
+                {text}
+              </div>
             </div>
           </div>
         ))}
       </div>
     </div>
 
-    <div style={{ display: "flex", justifyContent: "center" }}>
+    <div>
       <div
         style={{
-          width: 500,
-          borderRadius: 32,
-          background: "rgba(255,255,255,.88)",
+          fontSize: 12,
+          letterSpacing: ".16em",
+          textTransform: "uppercase",
+          color: "#8C6D3E",
+          fontWeight: 700,
+          marginBottom: 16,
+          textAlign: "center",
+        }}
+      >
+        Так бренд увидит тебя
+      </div>
+
+      <div
+        style={{
+          width: 470,
+          maxWidth: "100%",
+          margin: "0 auto",
+          borderRadius: 30,
+          background: "rgba(255,255,255,.9)",
           border: "1px solid rgba(31,31,31,.06)",
-          boxShadow: "0 26px 72px rgba(31,31,31,.09)",
-          padding: 20,
+          boxShadow: "0 24px 64px rgba(31,31,31,.085)",
+          padding: 18,
         }}
       >
         <div
@@ -336,23 +359,23 @@ export default function Home() {
             display: "flex",
             justifyContent: "space-between",
             alignItems: "center",
-            marginBottom: 18,
+            marginBottom: 16,
           }}
         >
           <div>
             <div
               style={{
-                fontSize: 12,
+                fontSize: 11,
                 letterSpacing: ".14em",
                 textTransform: "uppercase",
                 color: "#7B4B56",
                 fontWeight: 700,
-                marginBottom: 6,
+                marginBottom: 5,
               }}
             >
               Панель Creator House
             </div>
-            <div style={{ fontSize: 15, color: "#625E58" }}>
+            <div style={{ fontSize: 14, color: "#625E58" }}>
               выбери, что увидит бренд
             </div>
           </div>
@@ -389,28 +412,28 @@ export default function Home() {
               key={label}
               style={{
                 background: "#f7f2ea",
-                borderRadius: 18,
-                padding: 16,
+                borderRadius: 17,
+                padding: 15,
               }}
             >
               <div
                 style={{
-                  fontSize: 11,
+                  fontSize: 10,
                   letterSpacing: ".12em",
                   textTransform: "uppercase",
                   color: "#7B4B56",
                   fontWeight: 700,
-                  marginBottom: 10,
+                  marginBottom: 9,
                 }}
               >
                 {label}
               </div>
 
-              <div className="display" style={{ fontSize: 30, lineHeight: 1, marginBottom: 6 }}>
+              <div className="display" style={{ fontSize: 27, lineHeight: 1, marginBottom: 5 }}>
                 {value}
               </div>
 
-              <div style={{ fontSize: 12, color: "#625E58" }}>{note}</div>
+              <div style={{ fontSize: 11, color: "#625E58" }}>{note}</div>
             </div>
           ))}
         </div>
@@ -418,26 +441,26 @@ export default function Home() {
         <div
           style={{
             background: "#f7f2ea",
-            borderRadius: 20,
-            padding: 16,
+            borderRadius: 18,
+            padding: 15,
             marginBottom: 10,
           }}
         >
           <div
             style={{
-              fontSize: 11,
+              fontSize: 10,
               letterSpacing: ".12em",
               textTransform: "uppercase",
               color: "#7B4B56",
               fontWeight: 700,
-              marginBottom: 12,
+              marginBottom: 10,
             }}
           >
             Что включить в профиль
           </div>
 
           <div style={{ display: "flex", flexWrap: "wrap", gap: 8 }}>
-            {["статистика", "кейсы", "цены", "форматы рекламы", "контакты"].map((item) => (
+            {["статистика", "кейсы", "цены", "форматы", "контакты"].map((item) => (
               <span
                 key={item}
                 style={{
@@ -465,24 +488,24 @@ export default function Home() {
           <div
             style={{
               background: "#f7f2ea",
-              borderRadius: 18,
-              padding: 16,
+              borderRadius: 17,
+              padding: 15,
             }}
           >
             <div
               style={{
-                fontSize: 11,
+                fontSize: 10,
                 letterSpacing: ".12em",
                 textTransform: "uppercase",
                 color: "#7B4B56",
                 fontWeight: 700,
-                marginBottom: 10,
+                marginBottom: 9,
               }}
             >
               Форматы
             </div>
 
-            <div style={{ fontSize: 13, lineHeight: 1.55, color: "#3F3A35" }}>
+            <div style={{ fontSize: 13, lineHeight: 1.5, color: "#3F3A35" }}>
               Reels
               <br />
               Stories
@@ -494,24 +517,24 @@ export default function Home() {
           <div
             style={{
               background: "#2F2D2A",
-              borderRadius: 18,
-              padding: 16,
+              borderRadius: 17,
+              padding: 15,
               color: "white",
             }}
           >
             <div
               style={{
-                fontSize: 11,
+                fontSize: 10,
                 letterSpacing: ".12em",
                 textTransform: "uppercase",
                 color: "#D7B47D",
-                marginBottom: 10,
+                marginBottom: 9,
               }}
             >
               предложение
             </div>
 
-            <div className="display" style={{ fontSize: 30, lineHeight: 1, marginBottom: 12 }}>
+            <div className="display" style={{ fontSize: 28, lineHeight: 1, marginBottom: 11 }}>
               от $1400
             </div>
 
@@ -521,7 +544,7 @@ export default function Home() {
                 background: "white",
                 color: "#1F1F1F",
                 borderRadius: 999,
-                padding: "10px 13px",
+                padding: "10px 12px",
                 fontSize: 12,
                 fontWeight: 650,
                 width: "100%",
