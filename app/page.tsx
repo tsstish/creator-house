@@ -1,54 +1,54 @@
 export default function Home() {
   return (
    <main className="hero-page">
-{/* POSTER HERO */}
+{/* ORBIT HERO */}
 
-<section className="poster-hero">
-  <div className="poster-shell">
-    <div className="poster-top">
-      <div className="poster-logo">Creator House</div>
+<section className="orbit-hero">
+  <div className="orbit-shell">
+    <div className="orbit-top">
+      <div className="orbit-logo">Creator House</div>
 
-      <div className="poster-nav">
+      <div className="orbit-top-actions">
         <button>Войти</button>
         <button className="dark">Создать профиль</button>
       </div>
     </div>
 
-    <h1 className="poster-title">
-      Один <em>живой</em> профиль вместо PDF и хаоса
+    <h1 className="orbit-title">
+      Один <em>живой</em> профиль вместо PDF
     </h1>
 
-    <p className="poster-text">
-      Creator House собирает цифры, кейсы, цены и предложения в одну красивую
-      ссылку, которую бренд действительно захочет открыть.
+    <p className="orbit-text">
+      Creator House собирает цифры, кейсы, цены и предложения в одну ссылку,
+      которую бренд действительно захочет открыть.
     </p>
 
-    <div className="poster-actions">
-      <button className="poster-primary">Создать Creator House</button>
-      <button className="poster-secondary">Посмотреть пример</button>
+    <div className="orbit-actions">
+      <button className="orbit-primary">Создать Creator House</button>
+      <button className="orbit-secondary">Посмотреть пример</button>
     </div>
 
-    <div className="poster-tags">
+    <div className="orbit-tags">
       <span>Без PDF</span>
       <span>Без дизайнера</span>
       <span>Без маркетолога</span>
       <span>Одна ссылка для бренда</span>
     </div>
 
-    <div className="poster-stage">
-      <input id="poster-audience" name="poster-tabs" type="radio" defaultChecked />
-      <input id="poster-cases" name="poster-tabs" type="radio" />
-      <input id="poster-price" name="poster-tabs" type="radio" />
-      <input id="poster-style" name="poster-tabs" type="radio" />
+    <div className="orbit-stage">
+      <input id="orbit-audience" name="orbit-tabs" type="radio" defaultChecked />
+      <input id="orbit-cases" name="orbit-tabs" type="radio" />
+      <input id="orbit-price" name="orbit-tabs" type="radio" />
+      <input id="orbit-style" name="orbit-tabs" type="radio" />
 
-      <div className="poster-tabs">
-        <label htmlFor="poster-audience">Аудитория</label>
-        <label htmlFor="poster-cases">Кейсы</label>
-        <label htmlFor="poster-price">Цены</label>
-        <label htmlFor="poster-style">Стиль</label>
+      <div className="orbit-tabs">
+        <label htmlFor="orbit-audience">Аудитория</label>
+        <label htmlFor="orbit-cases">Кейсы</label>
+        <label htmlFor="orbit-price">Цены</label>
+        <label htmlFor="orbit-style">Стиль</label>
       </div>
 
-      <div className="poster-scenes">
+      <div className="orbit-scenes">
         {[
           {
             cls: "audience",
@@ -56,7 +56,7 @@ export default function Home() {
             role: "бьюти-креатор • TikTok • Instagram",
             main: ["184K", "аудитория"],
             detail: "82% женщины · 34% США · 25–34",
-            dark: ["Подтверждено", "Цифры собраны аккуратно, без скринов и хаоса."],
+            dark: ["Подтверждено", "данные собраны без скринов и хаоса"],
             pills: ["возраст", "география", "площадки"],
           },
           {
@@ -65,7 +65,7 @@ export default function Home() {
             role: "travel-креатор • Instagram • YouTube",
             main: ["2.4M", "просмотров"],
             detail: "14 кейсов · 680K охваты · hotel review",
-            dark: ["Кейсы", "Бренд видит реальные результаты интеграций."],
+            dark: ["Кейсы", "бренд видит реальные результаты интеграций"],
             pills: ["запуски", "охваты", "ссылки"],
           },
           {
@@ -73,66 +73,59 @@ export default function Home() {
             name: "Emma",
             role: "family-креатор • Instagram • TikTok",
             main: ["$1400", "Reels + Stories"],
-            detail: "$950 Stories · $2200 пакет · условия в одном месте",
-            dark: ["Цены без неловкости", "Форматы и условия понятны до переписки."],
+            detail: "$950 Stories · $2200 пакет",
+            dark: ["Цены", "форматы и условия понятны до переписки"],
             pills: ["Stories", "Reels", "пакеты"],
           },
           {
             cls: "style",
             name: "Alex",
             role: "business-креатор • LinkedIn • Telegram",
-            main: ["1", "ссылка для бренда"],
-            detail: "деловой стиль · тёмный профиль · готово к отправке",
-            dark: ["Не шаблон", "Профиль выглядит как личный формат, а не PDF."],
+            main: ["1", "ссылка"],
+            detail: "деловой стиль · тёмный профиль",
+            dark: ["Не шаблон", "профиль выглядит как личный формат"],
             pills: ["светлый", "тёмный", "брендовый"],
           },
         ].map((item) => (
-          <div key={item.cls} className={`poster-state ${item.cls}`}>
-            <div className="poster-side-note">
-              профиль • данные • предложение • бренд
-            </div>
+          <div key={item.cls} className={`orbit-state ${item.cls}`}>
+            <div className="orbit-ring" />
+            <div className="orbit-arch" />
 
-            <div className="poster-arch" />
-
-            <div className="poster-object">
-              <div className="poster-person">
-                <div className="poster-name">{item.name}</div>
-                <div className="poster-role">{item.role}</div>
+            <div className="orbit-object">
+              <div className="orbit-person">
+                <div className="orbit-name">{item.name}</div>
+                <div className="orbit-role">{item.role}</div>
               </div>
             </div>
 
             <div
-              className="poster-card"
+              className="orbit-card"
               style={{
-                left: 110,
-                top: 82,
+                left: 70,
+                top: 74,
+                width: 250,
+              }}
+            >
+              <div className="orbit-label">{item.main[1]}</div>
+              <div className="orbit-big">{item.main[0]}</div>
+              <div className="orbit-small">{item.detail}</div>
+            </div>
+
+            <div
+              className="orbit-card dark"
+              style={{
+                right: 42,
+                bottom: 92,
                 width: 260,
               }}
             >
-              <div className="poster-label">{item.main[1]}</div>
-              <div className="poster-big">{item.main[0]}</div>
-              <div className="poster-small" style={{ marginTop: 8 }}>
-                {item.detail}
-              </div>
+              <div className="orbit-label">{item.dark[0]}</div>
+              <div className="orbit-small">{item.dark[1]}</div>
             </div>
 
-            <div
-              className="poster-card dark"
-              style={{
-                right: 30,
-                bottom: 78,
-                width: 275,
-              }}
-            >
-              <div className="poster-label">{item.dark[0]}</div>
-              <div className="poster-small">{item.dark[1]}</div>
-            </div>
-
-            <div className="poster-pill-row">
+            <div className="orbit-ribbon">
               {item.pills.map((pill) => (
-                <span key={pill} className="poster-pill">
-                  {pill}
-                </span>
+                <span key={pill}>{pill}</span>
               ))}
             </div>
           </div>
