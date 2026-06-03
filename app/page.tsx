@@ -1,136 +1,122 @@
 export default function Home() {
   return (
    <main className="hero-page">
-{/* ORBIT HERO */}
+{/* DESIGNER HERO */}
 
-<section className="orbit-hero">
-  <div className="orbit-shell">
-    <div className="orbit-top">
-      <div className="orbit-logo">Creator House</div>
+<section className="designer-hero">
+  <div className="designer-shell">
+    <div className="designer-orbit" />
+    <div className="designer-orbit two" />
 
-      <div className="orbit-top-actions">
+    <div className="designer-top">
+      <div className="designer-logo">Creator House</div>
+
+      <div className="designer-nav">
         <button>Войти</button>
         <button className="dark">Создать профиль</button>
       </div>
     </div>
 
-    <h1 className="orbit-title">
+    <h1 className="designer-title">
       Один <em>живой</em> профиль вместо PDF
     </h1>
 
-    <p className="orbit-text">
+    <p className="designer-text">
       Creator House собирает цифры, кейсы, цены и предложения в одну ссылку,
       которую бренд действительно захочет открыть.
     </p>
 
-    <div className="orbit-actions">
-      <button className="orbit-primary">Создать Creator House</button>
-      <button className="orbit-secondary">Посмотреть пример</button>
+    <div className="designer-actions">
+      <button className="designer-primary">Создать Creator House</button>
+      <button className="designer-secondary">Посмотреть пример</button>
     </div>
 
-    <div className="orbit-tags">
+    <div className="designer-tags">
       <span>Без PDF</span>
       <span>Без дизайнера</span>
       <span>Без маркетолога</span>
       <span>Одна ссылка для бренда</span>
     </div>
 
-    <div className="orbit-stage">
-      <input id="orbit-audience" name="orbit-tabs" type="radio" defaultChecked />
-      <input id="orbit-cases" name="orbit-tabs" type="radio" />
-      <input id="orbit-price" name="orbit-tabs" type="radio" />
-      <input id="orbit-style" name="orbit-tabs" type="radio" />
+    <input id="d-audience" name="designer-tabs" type="radio" defaultChecked />
+    <input id="d-cases" name="designer-tabs" type="radio" />
+    <input id="d-price" name="designer-tabs" type="radio" />
+    <input id="d-style" name="designer-tabs" type="radio" />
 
-      <div className="orbit-tabs">
-        <label htmlFor="orbit-audience">Аудитория</label>
-        <label htmlFor="orbit-cases">Кейсы</label>
-        <label htmlFor="orbit-price">Цены</label>
-        <label htmlFor="orbit-style">Стиль</label>
-      </div>
+    <div className="designer-tabs">
+      <label htmlFor="d-audience">Аудитория</label>
+      <label htmlFor="d-cases">Кейсы</label>
+      <label htmlFor="d-price">Цены</label>
+      <label htmlFor="d-style">Стиль</label>
+    </div>
 
-      <div className="orbit-scenes">
-        {[
-          {
-            cls: "audience",
-            name: "Mira",
-            role: "бьюти-креатор • TikTok • Instagram",
-            main: ["184K", "аудитория"],
-            detail: "82% женщины · 34% США · 25–34",
-            dark: ["Подтверждено", "данные собраны без скринов и хаоса"],
-            pills: ["возраст", "география", "площадки"],
-          },
-          {
-            cls: "cases",
-            name: "Daniel",
-            role: "travel-креатор • Instagram • YouTube",
-            main: ["2.4M", "просмотров"],
-            detail: "14 кейсов · 680K охваты · hotel review",
-            dark: ["Кейсы", "бренд видит реальные результаты интеграций"],
-            pills: ["запуски", "охваты", "ссылки"],
-          },
-          {
-            cls: "price",
-            name: "Emma",
-            role: "family-креатор • Instagram • TikTok",
-            main: ["$1400", "Reels + Stories"],
-            detail: "$950 Stories · $2200 пакет",
-            dark: ["Цены", "форматы и условия понятны до переписки"],
-            pills: ["Stories", "Reels", "пакеты"],
-          },
-          {
-            cls: "style",
-            name: "Alex",
-            role: "business-креатор • LinkedIn • Telegram",
-            main: ["1", "ссылка"],
-            detail: "деловой стиль · тёмный профиль",
-            dark: ["Не шаблон", "профиль выглядит как личный формат"],
-            pills: ["светлый", "тёмный", "брендовый"],
-          },
-        ].map((item) => (
-          <div key={item.cls} className={`orbit-state ${item.cls}`}>
-            <div className="orbit-ring" />
-            <div className="orbit-arch" />
+    <div className="designer-scenes">
+      {[
+        {
+          cls: "audience",
+          name: "Mira",
+          role: "бьюти-креатор • TikTok • Instagram",
+          main: ["184K", "аудитория"],
+          detail: "82% женщины · 34% США · 25–34",
+          dark: ["Подтверждено", "данные собраны без скринов и хаоса"],
+          pills: ["возраст", "география", "площадки"],
+        },
+        {
+          cls: "cases",
+          name: "Daniel",
+          role: "travel-креатор • Instagram • YouTube",
+          main: ["2.4M", "просмотров"],
+          detail: "14 кейсов · 680K охваты · hotel review",
+          dark: ["Кейсы", "бренд видит реальные результаты интеграций"],
+          pills: ["запуски", "охваты", "ссылки"],
+        },
+        {
+          cls: "price",
+          name: "Emma",
+          role: "family-креатор • Instagram • TikTok",
+          main: ["$1400", "Reels + Stories"],
+          detail: "$950 Stories · $2200 пакет",
+          dark: ["Цены", "форматы и условия понятны до переписки"],
+          pills: ["Stories", "Reels", "пакеты"],
+        },
+        {
+          cls: "style",
+          name: "Alex",
+          role: "business-креатор • LinkedIn • Telegram",
+          main: ["1", "ссылка"],
+          detail: "деловой стиль · тёмный профиль",
+          dark: ["Не шаблон", "профиль выглядит как личный формат"],
+          pills: ["светлый", "тёмный", "брендовый"],
+        },
+      ].map((item) => (
+        <div key={item.cls} className={`designer-state ${item.cls}`}>
+          <div className="arch-panel" />
 
-            <div className="orbit-object">
-              <div className="orbit-person">
-                <div className="orbit-name">{item.name}</div>
-                <div className="orbit-role">{item.role}</div>
-              </div>
-            </div>
-
-            <div
-              className="orbit-card"
-              style={{
-                left: 70,
-                top: 74,
-                width: 250,
-              }}
-            >
-              <div className="orbit-label">{item.main[1]}</div>
-              <div className="orbit-big">{item.main[0]}</div>
-              <div className="orbit-small">{item.detail}</div>
-            </div>
-
-            <div
-              className="orbit-card dark"
-              style={{
-                right: 42,
-                bottom: 92,
-                width: 260,
-              }}
-            >
-              <div className="orbit-label">{item.dark[0]}</div>
-              <div className="orbit-small">{item.dark[1]}</div>
-            </div>
-
-            <div className="orbit-ribbon">
-              {item.pills.map((pill) => (
-                <span key={pill}>{pill}</span>
-              ))}
+          <div className="creator-object">
+            <div className="creator-person">
+              <div className="creator-name">{item.name}</div>
+              <div className="creator-role">{item.role}</div>
             </div>
           </div>
-        ))}
-      </div>
+
+          <div className="info-card" style={{ left: 70, top: 74, width: 250 }}>
+            <div className="info-label">{item.main[1]}</div>
+            <div className="info-big">{item.main[0]}</div>
+            <div className="info-small">{item.detail}</div>
+          </div>
+
+          <div className="info-card dark" style={{ right: 42, bottom: 92, width: 260 }}>
+            <div className="info-label">{item.dark[0]}</div>
+            <div className="info-small">{item.dark[1]}</div>
+          </div>
+
+          <div className="pill-row">
+            {item.pills.map((pill) => (
+              <span key={pill}>{pill}</span>
+            ))}
+          </div>
+        </div>
+      ))}
     </div>
   </div>
 </section>
